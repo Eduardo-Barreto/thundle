@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="color-scheme: dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0A0A">
+<title>thundle.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --yellow: #FFE500;
+  --bg: #0A0A0A;
+  --grid-line: rgba(255, 255, 255, 0.035);
+  --navy-40: rgba(27, 27, 75, 0.4);
+  --yellow-04: rgba(255, 229, 0, 0.04);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Space Mono', monospace;
+  background: var(--bg);
+  color: #E5E5E5;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 10%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 10%, transparent 70%);
+  opacity: 0.6;
+}
+
+.glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 50% 30% at 50% 50%, var(--navy-40) 0%, transparent 100%),
+    radial-gradient(ellipse 30% 15% at 50% 45%, var(--yellow-04) 0%, transparent 100%);
+}
+
+h1 {
+  font-size: clamp(36px, 8vw, 64px);
+  font-weight: 700;
+  letter-spacing: -1px;
+  position: relative;
+}
+
+h1 .dot {
+  color: var(--yellow);
+  filter: drop-shadow(0 0 8px rgba(255, 229, 0, 0.3));
+}
+</style>
+</head>
+<body>
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
+<h1>calma zé<span class="dot">.</span></h1>
+</body>
+</html>
