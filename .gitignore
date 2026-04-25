@@ -3,3 +3,12 @@ dist/
 .vite/
 *.local
 .DS_Store
+
+# Dev tools
+.playwright-cli/
+scripts/.venv/
+
+# Design artifacts (not source code)
+docs/refs/
+docs/mockups/
+*.xlsx
