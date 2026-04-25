@@ -1,9 +1,32 @@
+import { Background } from "@/components/background"
+import { GuessGrid } from "@/components/guess-grid"
+import { Header } from "@/components/header"
+import { HintBar } from "@/components/hint-bar"
+import { SearchInput } from "@/components/search-input"
+import { useGame } from "@/hooks/use-game"
+
 export function App() {
+  const game = useGame()
+
   return (
     <div className="text-t1 min-h-dvh bg-[#0A0A0A] font-sans">
-      <p className="pt-48 text-center font-mono text-2xl font-bold">
-        thundle<span className="text-thunder-yellow">.</span>
-      </p>
+      <Background />
+      <div className="relative mx-auto max-w-[820px] px-5 pb-12">
+        <Header puzzleNumber={game.puzzleNumber} onOpenPuzzles={() => {}} onOpenStats={() => {}} />
+        <SearchInput
+          robots={game.robots}
+          guessedNames={game.guessedNames}
+          disabled={game.completed}
+          onSelect={game.submitGuess}
+        />
+        <HintBar
+          usedHint={game.usedHint}
+          hintAttribute={game.hintAttribute}
+          answer={game.answer}
+          onRequestHint={game.requestHint}
+        />
+        <GuessGrid results={game.results} />
+      </div>
     </div>
   )
 }
