@@ -5,7 +5,7 @@ type HeaderProps = {
 }
 
 export function Header({ puzzleNumber, onOpenPuzzles, onOpenStats }: HeaderProps) {
-  const num = String(puzzleNumber).padStart(3, "0")
+  const num = puzzleNumber >= 0 ? String(puzzleNumber).padStart(3, "0") : String(puzzleNumber)
   return (
     <header className="flex flex-col items-center gap-3 px-4 pt-6 pb-6 md:relative md:flex-row md:justify-center md:gap-5 md:px-6 md:pt-10 md:pb-10">
       <div className="flex items-baseline gap-3">
