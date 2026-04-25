@@ -50,7 +50,7 @@ export function getPuzzleNumber(dateStr: string): number {
 
 export function getDateFromPuzzleNumber(puzzleNumber: number): string {
   const epoch = new Date(EPOCH)
-  epoch.setDate(epoch.getDate() + puzzleNumber - 1)
+  epoch.setDate(epoch.getDate() + puzzleNumber)
   const y = epoch.getFullYear()
   const m = String(epoch.getMonth() + 1).padStart(2, "0")
   const d = String(epoch.getDate()).padStart(2, "0")
