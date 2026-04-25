@@ -14,7 +14,7 @@ export function GuessGrid({ results }: GuessGridProps) {
       <div className="overflow-x-auto">
         {results.length > 0 && (
           <div
-            className="grid grid-cols-[140px_repeat(7,minmax(90px,1fr))] gap-[5px] pb-0.5 md:grid-cols-[180px_repeat(7,minmax(110px,1fr))]"
+            className="grid grid-cols-[100px_repeat(7,minmax(80px,1fr))] gap-[5px] pb-0.5 md:grid-cols-[120px_repeat(7,minmax(100px,1fr))]"
             aria-hidden="true"
           >
             {COLUMN_LABELS.map((label, i) => (
