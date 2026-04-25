@@ -11,10 +11,10 @@ const COLUMN_LABELS = ["Robô", ...Object.values(gameConfig.attributes).map((a) 
 export function GuessGrid({ results }: GuessGridProps) {
   return (
     <section aria-label="Tentativas">
-      <div className="flex flex-col gap-3 overflow-x-auto md:gap-4">
+      <div className="overflow-x-auto">
         {results.length > 0 && (
           <div
-            className="grid grid-cols-[100px_repeat(7,minmax(80px,1fr))] gap-2 pb-0.5 md:grid-cols-[160px_repeat(7,minmax(120px,1fr))]"
+            className="grid grid-cols-[100px_repeat(7,minmax(80px,1fr))] gap-2 pb-1 md:grid-cols-[160px_repeat(7,minmax(120px,1fr))]"
             aria-hidden="true"
           >
             {COLUMN_LABELS.map((label, i) => (
@@ -27,9 +27,11 @@ export function GuessGrid({ results }: GuessGridProps) {
             ))}
           </div>
         )}
-        {results.map((result, i) => (
-          <GuessRow key={result.robotName} result={result} rowDelay={i * 60} />
-        ))}
+        <div className="flex flex-col-reverse gap-3 md:gap-4">
+          {results.map((result, i) => (
+            <GuessRow key={result.robotName} result={result} isLatest={i === results.length - 1} />
+          ))}
+        </div>
       </div>
     </section>
   )

@@ -3,16 +3,14 @@ import type { GuessResult } from "@/types"
 
 type GuessRowProps = {
   result: GuessResult
-  rowDelay: number
+  isLatest: boolean
 }
 
-export function GuessRow({ result, rowDelay }: GuessRowProps) {
+export function GuessRow({ result, isLatest }: GuessRowProps) {
   return (
     <div
       className="grid grid-cols-[100px_repeat(7,minmax(80px,1fr))] gap-2 md:grid-cols-[160px_repeat(7,minmax(120px,1fr))]"
-      style={{
-        animation: `row-in 300ms cubic-bezier(0.23,1,0.32,1) ${rowDelay}ms both`,
-      }}
+      style={isLatest ? { animation: "row-in 300ms cubic-bezier(0.23,1,0.32,1) both" } : undefined}
     >
       <div className="sticky left-0 z-20 overflow-visible bg-[#0A0A0A]">
         <div className="relative flex min-h-[72px] items-center justify-center overflow-hidden rounded-[10px] md:min-h-[120px]">
@@ -30,7 +28,6 @@ export function GuessRow({ result, rowDelay }: GuessRowProps) {
             </span>
           )}
         </div>
-        {/* Progressive blur+fade zone extending into tile area */}
         <div
           className="pointer-events-none absolute inset-y-0 left-full z-[5]"
           style={{
@@ -44,7 +41,7 @@ export function GuessRow({ result, rowDelay }: GuessRowProps) {
         />
       </div>
       {result.cells.map((cell, i) => (
-        <Tile key={cell.attribute} cell={cell} delay={rowDelay + (i + 1) * 60} />
+        <Tile key={cell.attribute} cell={cell} delay={isLatest ? (i + 1) * 60 : 0} />
       ))}
     </div>
   )
