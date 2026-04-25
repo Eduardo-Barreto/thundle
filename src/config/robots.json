@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Perse",
+    "slug": "perse",
+    "year": 2020,
+    "superCategory": "Autonomo",
+    "category": "Trekking",
+    "active": true,
+    "trophies": { "gold": 2, "silver": 0, "bronze": 1 },
+    "imageUrl": "/images/perse.webp",
+    "description": "Robô de trekking da ThundeRatz."
+  },
+  {
+    "name": "REDRUM",
+    "slug": "redrum",
+    "year": 2019,
+    "superCategory": "Combate",
+    "category": "Featherweight",
+    "active": true,
+    "trophies": { "gold": 1, "silver": 2, "bronze": 0 },
+    "imageUrl": "/images/redrum.webp",
+    "description": "Robô de combate Featherweight da ThundeRatz."
+  },
+  {
+    "name": "Onix",
+    "slug": "onix",
+    "year": 2018,
+    "superCategory": "Sumo",
+    "category": "Mini Sumo",
+    "active": false,
+    "trophies": { "gold": 0, "silver": 1, "bronze": 1 },
+    "imageUrl": "/images/onix.webp",
+    "description": "Robô de Mini Sumo da ThundeRatz."
+  },
+  {
+    "name": "ThunderVolt",
+    "slug": "thundervolt",
+    "year": 2022,
+    "superCategory": "Autonomo",
+    "category": "VSSS",
+    "active": true,
+    "trophies": { "gold": 0, "silver": 0, "bronze": 0 },
+    "imageUrl": "/images/thundervolt.webp",
+    "description": "Time de futebol de robôs VSSS da ThundeRatz."
+  },
+  {
+    "name": "Time Olympus",
+    "slug": "time-olympus",
+    "year": 2021,
+    "superCategory": "Hockey",
+    "category": "Hockey Pro",
+    "active": true,
+    "trophies": { "gold": 1, "silver": 0, "bronze": 0 },
+    "imageUrl": "/images/time-olympus.webp",
+    "description": "Time de hockey da ThundeRatz."
+  }
+]

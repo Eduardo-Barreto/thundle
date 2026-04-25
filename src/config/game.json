@@ -1,0 +1,37 @@
+{
+  "superCategories": {
+    "Combate": {
+      "label": "Combate",
+      "categories": [
+        "Fairyweight",
+        "Antweight",
+        "Beetleweight",
+        "Hobbyweight",
+        "Featherweight",
+        "Lightweight",
+        "Middleweight"
+      ]
+    },
+    "Sumo": {
+      "label": "Sumo",
+      "categories": ["Mini Sumo", "Micro Sumo", "Sumo 3kg Auto", "Sumo 3kg RC", "Sumo LEGO"]
+    },
+    "Autonomo": {
+      "label": "Autônomo",
+      "categories": ["Seguidor de Linha", "Trekking", "VSSS", "RCSS", "Humanoide"]
+    },
+    "Hockey": {
+      "label": "Hockey",
+      "categories": ["Hockey Pro"]
+    }
+  },
+  "attributes": {
+    "year": { "label": "Ano", "type": "number", "hintEligible": true },
+    "superCategory": { "label": "Cat.", "type": "superCategory", "hintEligible": true },
+    "category": { "label": "Sub.", "type": "category", "hintEligible": true },
+    "active": { "label": "Ativo", "type": "boolean", "hintEligible": true },
+    "trophies.gold": { "label": "Ouro", "type": "trophies", "hintEligible": true },
+    "trophies.silver": { "label": "Prata", "type": "trophies", "hintEligible": true },
+    "trophies.bronze": { "label": "Bronze", "type": "trophies", "hintEligible": true }
+  }
+}
