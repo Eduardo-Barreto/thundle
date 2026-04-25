@@ -3,6 +3,7 @@ import { GuessGrid } from "@/components/guess-grid"
 import { Header } from "@/components/header"
 import { HintBar } from "@/components/hint-bar"
 import { SearchInput } from "@/components/search-input"
+import { WinOverlay } from "@/components/win-overlay"
 import { useGame } from "@/hooks/use-game"
 
 export function App() {
@@ -26,6 +27,14 @@ export function App() {
           onRequestHint={game.requestHint}
         />
         <GuessGrid results={game.results} />
+        {game.completed && (
+          <WinOverlay
+            answer={game.answer}
+            puzzleNumber={game.puzzleNumber}
+            results={game.results}
+            usedHint={game.usedHint}
+          />
+        )}
       </div>
     </div>
   )
