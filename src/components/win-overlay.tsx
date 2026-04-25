@@ -9,9 +9,10 @@ type WinOverlayProps = {
   puzzleNumber: number
   results: GuessResult[]
   usedHint: boolean
+  onClose: () => void
 }
 
-export function WinOverlay({ answer, puzzleNumber, results, usedHint }: WinOverlayProps) {
+export function WinOverlay({ answer, puzzleNumber, results, usedHint, onClose }: WinOverlayProps) {
   const stats = loadStats()
   const [copied, setCopied] = useState(false)
   const totalTrophies = answer.trophies.gold + answer.trophies.silver + answer.trophies.bronze
@@ -44,6 +45,13 @@ export function WinOverlay({ answer, puzzleNumber, results, usedHint }: WinOverl
         className="relative mx-auto flex w-full max-w-md flex-col items-center gap-8 rounded-2xl border border-white/6 bg-[#0A0A0A]/95 p-8 shadow-[0_32px_80px_rgba(0,0,0,0.6)]"
         style={{ animation: "win-card 500ms cubic-bezier(0.23,1,0.32,1) 100ms both" }}
       >
+        <button
+          onClick={onClose}
+          aria-label="Fechar"
+          className="text-t3 hover:text-t2 absolute top-4 right-4 cursor-pointer transition-colors"
+        >
+          ✕
+        </button>
         {/* Typography — hero moment, reveals first */}
         {answer.typographyUrl ? (
           <img
@@ -149,9 +157,9 @@ export function WinOverlay({ answer, puzzleNumber, results, usedHint }: WinOverl
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-elevated rounded-lg border border-white/6 px-3 py-2.5 text-center">
+    <div className="bg-elevated overflow-hidden rounded-lg border border-white/6 px-2 py-2.5 text-center">
       <p className="text-t3 font-mono text-[9px] font-bold tracking-widest uppercase">{label}</p>
-      <p className="text-t1 mt-1 font-mono text-sm font-bold">{value}</p>
+      <p className="text-t1 mt-1 truncate font-mono text-xs font-bold">{value}</p>
     </div>
   )
 }

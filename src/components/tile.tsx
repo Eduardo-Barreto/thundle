@@ -16,7 +16,7 @@ type TileProps = {
 export function Tile({ cell, delay }: TileProps) {
   return (
     <div
-      className={`flex min-h-[84px] flex-col items-center justify-center gap-0.5 rounded-lg border tabular-nums ${STYLES[cell.status]}`}
+      className={`flex min-h-[84px] min-w-0 flex-col items-center justify-center gap-0.5 overflow-hidden rounded-lg border px-1 tabular-nums ${STYLES[cell.status]}`}
       style={{
         animation: `tile-in 250ms cubic-bezier(0.23,1,0.32,1) ${delay}ms both`,
       }}
@@ -24,7 +24,9 @@ export function Tile({ cell, delay }: TileProps) {
       {cell.direction && (
         <span className="text-lg leading-none opacity-85">{ARROWS[cell.direction]}</span>
       )}
-      <span className="font-mono text-sm leading-none font-bold">{String(cell.value)}</span>
+      <span className="w-full truncate text-center font-mono text-xs leading-none font-bold">
+        {String(cell.value)}
+      </span>
     </div>
   )
 }

@@ -13,12 +13,13 @@ import { useGame } from "@/hooks/use-game"
 export function App() {
   const [showStats, setShowStats] = useState(false)
   const [showPuzzles, setShowPuzzles] = useState(false)
+  const [showWin, setShowWin] = useState(true)
   const [selectedDate, setSelectedDate] = useState<string | undefined>()
 
   const game = useGame(selectedDate)
 
   return (
-    <div className="text-t1 min-h-dvh bg-[#0A0A0A] font-sans">
+    <div className="text-t1 min-h-dvh bg-[#0A0A0A] font-sans" key={game.date}>
       <Background />
       <div className="relative mx-auto max-w-[820px] px-5 pb-12">
         <Header
@@ -39,12 +40,13 @@ export function App() {
           onRequestHint={game.requestHint}
         />
         <GuessGrid results={game.results} />
-        {game.completed && (
+        {game.completed && showWin && (
           <WinOverlay
             answer={game.answer}
             puzzleNumber={game.puzzleNumber}
             results={game.results}
             usedHint={game.usedHint}
+            onClose={() => setShowWin(false)}
           />
         )}
       </div>
