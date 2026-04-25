@@ -34,10 +34,10 @@ export function SearchInput({ robots, guessedNames, disabled, onSelect }: Search
         onKeyDown={(e) => handleKeyDown(e, onSelect)}
         onFocus={() => query.length >= 2 && updateQuery(query)}
         disabled={disabled}
-        placeholder="Chute um rob\u00f4\u2026"
+        placeholder="Chute um robô…"
         autoComplete="off"
         spellCheck={false}
-        aria-label="Buscar rob\u00f4"
+        aria-label="Buscar robô"
         className="bg-surface text-t1 placeholder:text-t3 focus:border-thunder-yellow/20 h-[54px] w-full rounded-lg border border-white/6 pr-5 pl-12 font-sans text-[15px] font-medium transition-all duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] outline-none focus:shadow-[0_0_0_3px_rgba(255,229,0,0.04)] disabled:opacity-40"
       />
       <svg
