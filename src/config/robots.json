@@ -1,5 +1,155 @@
 [
   {
+    "name": "K-7",
+    "slug": "k-7",
+    "year": 2026,
+    "superCategory": "Combate",
+    "category": "Feather",
+    "active": true,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
+    "name": "Milho",
+    "slug": "milho",
+    "year": 2026,
+    "superCategory": "Combate",
+    "category": "Fairy",
+    "active": true,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
+    "name": "Opala",
+    "slug": "opala",
+    "year": 2026,
+    "superCategory": "Sumo",
+    "category": "Mini Sumo",
+    "active": true,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
+    "name": "Plant",
+    "slug": "plant",
+    "year": 2026,
+    "superCategory": "Combate",
+    "category": "Ant",
+    "active": true,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
+    "name": "Esmeralda",
+    "slug": "esmeralda",
+    "year": 2025,
+    "superCategory": "Sumo",
+    "category": "Mini Sumo",
+    "active": true,
+    "trophies": {
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
+    "name": "Gnomo",
+    "slug": "gnomo",
+    "year": 2025,
+    "superCategory": "Combate",
+    "category": "Ant",
+    "active": true,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
+    "name": "Knight",
+    "slug": "knight",
+    "year": 2025,
+    "superCategory": "Combate",
+    "category": "Beetle",
+    "active": true,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
+    "name": "Os Limpinhos",
+    "slug": "os-limpinhos",
+    "year": 2025,
+    "superCategory": "Hockey",
+    "category": "Hockey",
+    "active": true,
+    "trophies": {
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
+    "name": "Pedregulho",
+    "slug": "pedregulho",
+    "year": 2025,
+    "superCategory": "Sumo",
+    "category": "3kg",
+    "active": true,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
+    "name": "Rubi",
+    "slug": "rubi",
+    "year": 2025,
+    "superCategory": "Sumo",
+    "category": "Mini Sumo",
+    "active": true,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
     "name": "3vTracer",
     "slug": "3vtracer",
     "year": 2024,
@@ -15,9 +165,24 @@
     "description": "O 3vTracer é o atual Seguidor de Linha da Thunder. É um reprojeto do Tracer 2.0"
   },
   {
+    "name": "Safira",
+    "slug": "safira",
+    "year": 2024,
+    "superCategory": "Sumo",
+    "category": "Mini Sumo",
+    "active": true,
+    "trophies": {
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
     "name": "Perse",
     "slug": "perse",
-    "year": 2020,
+    "year": 2022,
     "superCategory": "Autonomo",
     "category": "Trekking",
     "active": true,
@@ -29,6 +194,21 @@
     "imageUrl": "https://thunderatz.org/media/projects/perse/card_PErse.png",
     "description": "O Perse é um robô autônomo que compete na categoria Trekking. Seu projeto desenvolveu novas áreas na equipe, como o campo de visão computacional, que é de extrema importância e será utilizado em projetos inteligentes futuros.",
     "typographyUrl": "https://thunderatz.org/media/project_typography/Tipo-Perse-final_dcuwI1R.png"
+  },
+  {
+    "name": "Galena",
+    "slug": "galena",
+    "year": 2021,
+    "superCategory": "Sumo",
+    "category": "3kg",
+    "active": true,
+    "trophies": {
+      "gold": 2,
+      "silver": 5,
+      "bronze": 6
+    },
+    "imageUrl": "",
+    "description": ""
   },
   {
     "name": "ThunderVolt",
@@ -102,29 +282,58 @@
     "category": "Hobby",
     "active": true,
     "trophies": {
-      "gold": 3,
+      "gold": 4,
       "silver": 0,
-      "bronze": 2
+      "bronze": 3
     },
     "imageUrl": "https://thunderatz.org/media/projects/Cachorro%20Louco/card_CachorroLouco_1.jpg",
     "description": "Na categoria Hobbyweight (5,5 kg) de combate, tendo como base exemplos internacionais de sucesso e também o aprendizado acumulado, a Equipe desenvolveu o Cachorro Louco: um robô com uma barra poderosa de aço 4340 tratado de 1 kg que gira a 6 mil rotações por minuto, com energia suficiente para lançar um oponente à 18 metros, sem comprometer sua agilidade e mobilidade.",
     "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_CLv2-1_7ytCxUO.png"
   },
   {
-    "name": "Time Olympus",
-    "slug": "time-olympus",
-    "year": 2008,
-    "superCategory": "Hockey",
-    "category": "Hockey",
-    "active": true,
+    "name": "Pedrinha",
+    "slug": "pedrinha",
+    "year": 2024,
+    "superCategory": "Sumo",
+    "category": "Mini Sumo",
+    "active": false,
     "trophies": {
-      "gold": 2,
-      "silver": 3,
-      "bronze": 8
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0
     },
-    "imageUrl": "https://thunderatz.org/media/projects/time-olympus/card_Card.jpg",
-    "description": "O Hockey de Robôs é muito semelhante ao hockey de verdade, cujo objetivo é marcar o maior número de gols com um disco. Nessa categoria, cada time conta com 3 robôs radiocontrolados de até 6,8kg para disputar uma partida de 5 minutos, no Brasil, e 10 minutos, nos EUA.",
-    "typographyUrl": "https://thunderatz.org/media/project_typography/Tipo_Olympus_VWuiYSU.png"
+    "imageUrl": "",
+    "description": ""
+  },
+  {
+    "name": "K-Buto",
+    "slug": "k-buto",
+    "year": 2022,
+    "superCategory": "Combate",
+    "category": "Beetle",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
+    "name": "Cerebro",
+    "slug": "cerebro",
+    "year": 2019,
+    "superCategory": "Sumo",
+    "category": "LEGO",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
   },
   {
     "name": "Jardineiro",
@@ -175,6 +384,21 @@
     "typographyUrl": "https://thunderatz.org/media/project_typography/tipog_atom_5S4YvUp.png"
   },
   {
+    "name": "Lig3irinho",
+    "slug": "lig3irinho",
+    "year": 2018,
+    "superCategory": "Sumo",
+    "category": "LEGO",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
     "name": "Ônix",
     "slug": "onix",
     "year": 2018,
@@ -205,6 +429,21 @@
     "imageUrl": "https://thunderatz.org/media/projects/Boladinho/card_Boladinho_1.jpg",
     "description": "O Boladinho é um robô voltado às categorias humanoides de kits comprados, nas quais os componentes estruturais e eletrônicos são previamente adquiridos, cabendo aos competidores programarem os seus movimentos. Um robô humanoide pode participar de uma vasta variedade de categorias. Não obstante, até o momento, o Boladinho participou apenas das categorias Kung-Fu LightWeight, Freestyle – kit e Sumô Humanoide.",
     "typographyUrl": "https://thunderatz.org/media/project_typography/Tipografia_Boladinho_S5wCjHM.png"
+  },
+  {
+    "name": "P1nky",
+    "slug": "p1nky",
+    "year": 2017,
+    "superCategory": "Sumo",
+    "category": "LEGO",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
   },
   {
     "name": "Pepita",
@@ -287,6 +526,21 @@
     "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_DArc_9MQQHFk.png"
   },
   {
+    "name": "Sasori",
+    "slug": "sasori",
+    "year": 2016,
+    "superCategory": "Sumo",
+    "category": "LEGO",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
     "name": "Sharkhai",
     "slug": "sharkhai",
     "year": 2016,
@@ -351,6 +605,21 @@
     "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_ROZETA_21mIgRT.png"
   },
   {
+    "name": "Thunder-Struck",
+    "slug": "thunder-struck",
+    "year": 2015,
+    "superCategory": "Sumo",
+    "category": "LEGO",
+    "active": false,
+    "trophies": {
+      "gold": 1,
+      "silver": 1,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
     "name": "ThunderMaps",
     "slug": "thundermaps",
     "year": 2015,
@@ -374,7 +643,7 @@
     "category": "Feather",
     "active": false,
     "trophies": {
-      "gold": 2,
+      "gold": 3,
       "silver": 2,
       "bronze": 5
     },
@@ -406,13 +675,28 @@
     "category": "3kg",
     "active": false,
     "trophies": {
-      "gold": 3,
+      "gold": 4,
       "silver": 7,
-      "bronze": 3
+      "bronze": 4
     },
     "imageUrl": "https://thunderatz.org/media/projects/Moai/card_WhatsApp_Image_2018-10-12_at_21.55.00.jpeg",
     "description": "O robô Moai é o primeiro Sumô 3kg Autônomo da equipe. Seu nome segue a mesma linha de pensamento de seu irmão mais velho, o Stonehenge, de monumentos antigos que resistiram ao tempo, desta vez fazendo referência às famosas estátuas da ilha de Páscoa.",
     "typographyUrl": "https://thunderatz.org/media/project_typography/tipografia_Moai-Claro2_0AJ8jn4.png"
+  },
+  {
+    "name": "Thunder Block",
+    "slug": "thunder-block",
+    "year": 2014,
+    "superCategory": "Sumo",
+    "category": "LEGO",
+    "active": false,
+    "trophies": {
+      "gold": 2,
+      "silver": 1,
+      "bronze": 3
+    },
+    "imageUrl": "",
+    "description": ""
   },
   {
     "name": "ThunderWaze",
@@ -447,6 +731,21 @@
     "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_RATNIK_ky6xJDW.png"
   },
   {
+    "name": "Thunder-Truck",
+    "slug": "thunder-truck",
+    "year": 2013,
+    "superCategory": "Sumo",
+    "category": "LEGO",
+    "active": false,
+    "trophies": {
+      "gold": 2,
+      "silver": 1,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
     "name": "Adão",
     "slug": "adao",
     "year": 2012,
@@ -472,7 +771,7 @@
     "trophies": {
       "gold": 0,
       "silver": 1,
-      "bronze": 1
+      "bronze": 2
     },
     "imageUrl": "https://thunderatz.org/media/projects/Quadradinho/card_quadradinho2.jpg",
     "description": "O robô quadradinho desde sua criação mostrou um excelente desempenho quando comparado a maioria dos outros seguidores. Porém, por ser um dos primeiros projetos de robô follow-line inteiramente desenvolvido pela equipe, o robô possui limitações mecânicas e eletrônicas que o impede de alcançar os lugares de destaque no pódio das competições.",
@@ -504,11 +803,26 @@
     "trophies": {
       "gold": 13,
       "silver": 4,
-      "bronze": 3
+      "bronze": 6
     },
     "imageUrl": "https://thunderatz.org/media/projects/Stonehenge/card_Stonehenge_IRST2017.jpg",
     "description": "Stonehenge é um robô da categoria Sumô 3kg Rádio Controlado que teve sua estreia em 2012. Seu nome é uma referência direta ao monumento pré-histórico localizado no Reino Unido : a formação circular de enormes blocos de pedra denominada Stonehenge.",
     "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_Stonehenge_7xCeq73.png"
+  },
+  {
+    "name": "Skunk",
+    "slug": "skunk",
+    "year": 2011,
+    "superCategory": "Sumo",
+    "category": "LEGO",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0
+    },
+    "imageUrl": "",
+    "description": ""
   },
   {
     "name": "Time LEGO",
@@ -518,9 +832,9 @@
     "category": "LEGO",
     "active": false,
     "trophies": {
-      "gold": 5,
-      "silver": 5,
-      "bronze": 3
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0
     },
     "imageUrl": "https://thunderatz.org/media/projects/Time%20LEGO/card_LEGO_1.jpg",
     "description": "O sumô LEGO é uma categoria com robôs de até 1kg que, com a restrição de utilizar apenas peças da empresa LEGO, tem a finalidade de autonomamente encontrar o adversário e empurrá-lo para fora do dojô.",
@@ -605,6 +919,37 @@
     "imageUrl": "https://thunderatz.org/media/projects/Lenhador/card_9286624160_ee236f6185_o.jpg",
     "description": "O Lenhador marcou uma mudança na metodologia fabril da equipe, pois foi nosso primeiro robô cuja estrutura foi feita totalmente em máquinas controladas por computador. Outra ferramenta bastante utilizada em seu desenvolvimento, foi a simulação dinâmica via método de elementos finitos (MEF) para que pudéssemos fazer um trabalho de otimização topológica em cada peça. Tal desenvolvimento possibilitou construir o robô de maior relação entre potência e peso em atividade no Brasil.",
     "typographyUrl": "https://thunderatz.org/media/project_typography/Lenhador.png"
+  },
+  {
+    "name": "ThundeRatz Hockey Team",
+    "slug": "thunderatz-hockey-team",
+    "year": 2008,
+    "superCategory": "Hockey",
+    "category": "Hockey",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 2,
+      "bronze": 3
+    },
+    "imageUrl": "",
+    "description": ""
+  },
+  {
+    "name": "Time Olympus",
+    "slug": "time-olympus",
+    "year": 2008,
+    "superCategory": "Hockey",
+    "category": "Hockey",
+    "active": false,
+    "trophies": {
+      "gold": 2,
+      "silver": 3,
+      "bronze": 9
+    },
+    "imageUrl": "https://thunderatz.org/media/projects/time-olympus/card_Card.jpg",
+    "description": "O Hockey de Robôs é muito semelhante ao hockey de verdade, cujo objetivo é marcar o maior número de gols com um disco. Nessa categoria, cada time conta com 3 robôs radiocontrolados de até 6,8kg para disputar uma partida de 5 minutos, no Brasil, e 10 minutos, nos EUA.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Tipo_Olympus_VWuiYSU.png"
   },
   {
     "name": "Nanolico",
