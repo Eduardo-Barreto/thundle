@@ -126,10 +126,10 @@ export function WinOverlay({ answer, puzzleNumber, results, usedHint, onClose }:
 
         {/* Player stats */}
         <div
-          className="flex w-full items-center justify-between"
+          className="flex w-full flex-col items-center gap-5"
           style={{ animation: "win-element 400ms cubic-bezier(0.23,1,0.32,1) 600ms both" }}
         >
-          <div className="text-t3 flex gap-5 font-mono text-xs tracking-wider uppercase">
+          <div className="text-t3 flex gap-6 font-mono text-xs tracking-wider uppercase">
             <div className="text-center">
               <p className="text-t1 text-base font-bold">{results.length}</p>
               <p>Tentativas</p>
@@ -145,7 +145,7 @@ export function WinOverlay({ answer, puzzleNumber, results, usedHint, onClose }:
           </div>
           <button
             onClick={handleShare}
-            className="bg-thunder-navy text-thunder-yellow focus-visible:outline-thunder-yellow cursor-pointer rounded-lg px-5 py-2.5 font-mono text-xs font-bold tracking-wider uppercase transition-all duration-160 ease-[cubic-bezier(0.23,1,0.32,1)] hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-97"
+            className="bg-thunder-navy text-thunder-yellow focus-visible:outline-thunder-yellow w-full cursor-pointer rounded-lg px-5 py-3 font-mono text-xs font-bold tracking-wider uppercase transition-all duration-160 ease-[cubic-bezier(0.23,1,0.32,1)] hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-97"
           >
             {copied ? "Copiado!" : "Compartilhar"}
           </button>
@@ -157,9 +157,11 @@ export function WinOverlay({ answer, puzzleNumber, results, usedHint, onClose }:
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-elevated overflow-hidden rounded-lg border border-white/6 px-2 py-2.5 text-center">
-      <p className="text-t3 font-mono text-[9px] font-bold tracking-widest uppercase">{label}</p>
-      <p className="text-t1 mt-1 truncate font-mono text-xs font-bold">{value}</p>
+    <div className="bg-elevated overflow-hidden rounded-lg border border-white/6 px-2 py-2 text-center">
+      <p className="text-t3 font-mono text-[8px] font-bold tracking-widest uppercase">{label}</p>
+      <p className="text-t1 mt-0.5 font-mono text-[10px] leading-tight font-bold break-words">
+        {value}
+      </p>
     </div>
   )
 }

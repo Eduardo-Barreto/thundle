@@ -14,15 +14,25 @@ export function GuessRow({ result, rowDelay }: GuessRowProps) {
         animation: `row-in 300ms cubic-bezier(0.23,1,0.32,1) ${rowDelay}ms both`,
       }}
     >
-      <div className="sticky left-0 z-10 flex min-h-[72px] flex-col items-center justify-center gap-1.5 bg-[#0A0A0A] px-1 md:min-h-[100px]">
-        <span className="text-t1 w-full truncate text-center font-mono text-[11px] leading-tight font-bold md:text-xs">
-          {result.robotName}
-        </span>
-        <img
-          src={result.imageUrl}
-          alt={result.robotName}
-          className="size-10 shrink-0 rounded-lg object-cover md:size-14"
-        />
+      <div className="sticky left-0 z-20 overflow-hidden rounded-lg shadow-[4px_0_12px_rgba(0,0,0,0.5)]">
+        <div className="relative flex min-h-[72px] items-end justify-center bg-[#0A0A0A] md:min-h-[100px]">
+          <img
+            src={result.imageUrl}
+            alt=""
+            className="absolute inset-0 size-full object-cover brightness-50"
+          />
+          {result.typographyUrl ? (
+            <img
+              src={result.typographyUrl}
+              alt={result.robotName}
+              className="relative z-10 mb-1.5 h-5 max-w-[90%] object-contain drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] md:mb-2 md:h-7"
+            />
+          ) : (
+            <span className="relative z-10 mb-1.5 truncate px-1 text-center font-mono text-[11px] font-bold text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] md:mb-2 md:text-xs">
+              {result.robotName}
+            </span>
+          )}
+        </div>
       </div>
       {result.cells.map((cell, i) => (
         <Tile key={cell.attribute} cell={cell} delay={rowDelay + (i + 1) * 60} />

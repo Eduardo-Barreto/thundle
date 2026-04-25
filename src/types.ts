@@ -44,6 +44,7 @@ export type CellResult = {
 export type GuessResult = {
   robotName: string
   imageUrl: string
+  typographyUrl?: string
   cells: CellResult[]
   isCorrect: boolean
 }

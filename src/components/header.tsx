@@ -7,15 +7,17 @@ type HeaderProps = {
 export function Header({ puzzleNumber, onOpenPuzzles, onOpenStats }: HeaderProps) {
   const num = String(puzzleNumber).padStart(3, "0")
   return (
-    <header className="relative flex items-baseline justify-center gap-4 px-6 pt-6 pb-7">
-      <h1 className="font-mono text-3xl font-bold tracking-tight md:text-[44px]">
-        thundle
-        <span className="text-thunder-yellow drop-shadow-[0_0_6px_rgba(255,229,0,0.25)]">.</span>
-      </h1>
-      <p className="text-t3 font-mono text-xs tracking-wider uppercase md:text-base">
-        <span className="text-thunder-yellow/20">#{num}</span>
-      </p>
-      <div className="absolute right-6 flex gap-2">
+    <header className="flex flex-col items-center gap-3 px-4 pt-6 pb-6 md:relative md:flex-row md:justify-center md:gap-4 md:px-6 md:pb-7">
+      <div className="flex items-baseline gap-3">
+        <h1 className="font-mono text-3xl font-bold tracking-tight md:text-[44px]">
+          thundle
+          <span className="text-thunder-yellow drop-shadow-[0_0_6px_rgba(255,229,0,0.25)]">.</span>
+        </h1>
+        <p className="text-t3 font-mono text-xs tracking-wider uppercase md:text-base">
+          <span className="text-thunder-yellow/20">#{num}</span>
+        </p>
+      </div>
+      <div className="flex gap-2 md:absolute md:right-6">
         <IconButton label="Puzzles anteriores" onClick={onOpenPuzzles}>
           <rect x="3" y="4" width="18" height="18" rx="2" />
           <line x1="16" y1="2" x2="16" y2="6" />
