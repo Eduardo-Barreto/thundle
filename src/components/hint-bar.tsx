@@ -32,11 +32,11 @@ export function HintBar({ usedHint, hintAttribute, answer, onRequestHint }: Hint
         onClick={onRequestHint}
         disabled={usedHint}
         aria-label="Pedir dica"
-        className="text-t3 hover:border-thunder-yellow/20 hover:text-t2 focus-visible:outline-thunder-yellow disabled:hover:text-t3 inline-flex cursor-pointer items-center gap-1.5 rounded-md border border-white/6 px-3.5 py-1.5 font-mono text-[10px] font-bold tracking-wider uppercase transition-all duration-160 ease-[cubic-bezier(0.23,1,0.32,1)] focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-97 disabled:cursor-default disabled:opacity-30 disabled:hover:border-white/6"
+        className="text-t3 hover:border-thunder-yellow/20 hover:text-t2 focus-visible:outline-thunder-yellow disabled:hover:text-t3 inline-flex cursor-pointer items-center gap-1.5 rounded-md border border-white/6 px-4 py-2 font-mono text-xs font-bold tracking-wider uppercase transition-all duration-160 ease-[cubic-bezier(0.23,1,0.32,1)] focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-97 disabled:cursor-default disabled:opacity-30 disabled:hover:border-white/6 md:text-sm"
       >
         <svg
           aria-hidden="true"
-          className="size-3"
+          className="size-3.5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -53,7 +53,7 @@ export function HintBar({ usedHint, hintAttribute, answer, onRequestHint }: Hint
       {usedHint && hintConfig && (
         <div
           role="status"
-          className="border-thunder-navy/80 bg-thunder-navy text-t2 rounded-md border px-3 py-1.5 font-mono text-[10px] font-bold tracking-wider uppercase"
+          className="border-thunder-navy/80 bg-thunder-navy text-t2 rounded-md border px-3 py-2 font-mono text-xs font-bold tracking-wider uppercase md:text-sm"
         >
           {hintConfig.label} &rarr; <span className="text-t1">{displayValue}</span>
         </div>

@@ -6,26 +6,31 @@ type GuessGridProps = {
   results: GuessResult[]
 }
 
-const COLUMN_LABELS = ["Rob\u00f4", ...Object.values(gameConfig.attributes).map((a) => a.label)]
+const COLUMN_LABELS = ["Robô", ...Object.values(gameConfig.attributes).map((a) => a.label)]
 
 export function GuessGrid({ results }: GuessGridProps) {
   return (
     <section aria-label="Tentativas" className="flex flex-col gap-[5px]">
-      {results.length > 0 && (
-        <div className="grid grid-cols-[110px_repeat(7,1fr)] gap-[5px] pb-0.5" aria-hidden="true">
-          {COLUMN_LABELS.map((label) => (
-            <span
-              key={label}
-              className="text-t3 text-center font-mono text-[9px] font-bold tracking-widest uppercase first:text-left"
-            >
-              {label}
-            </span>
-          ))}
-        </div>
-      )}
-      {results.map((result, i) => (
-        <GuessRow key={result.robotName} result={result} rowDelay={i * 60} />
-      ))}
+      <div className="overflow-x-auto">
+        {results.length > 0 && (
+          <div
+            className="grid grid-cols-[140px_repeat(7,minmax(90px,1fr))] gap-[5px] pb-0.5 md:grid-cols-[180px_repeat(7,minmax(110px,1fr))]"
+            aria-hidden="true"
+          >
+            {COLUMN_LABELS.map((label, i) => (
+              <span
+                key={label}
+                className={`text-t3 text-center font-mono text-[11px] font-bold tracking-widest uppercase md:text-xs ${i === 0 ? "sticky left-0 z-10 bg-[#0A0A0A] text-left" : ""}`}
+              >
+                {label}
+              </span>
+            ))}
+          </div>
+        )}
+        {results.map((result, i) => (
+          <GuessRow key={result.robotName} result={result} rowDelay={i * 60} />
+        ))}
+      </div>
     </section>
   )
 }

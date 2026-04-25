@@ -26,7 +26,7 @@ export function SearchInput({ robots, guessedNames, disabled, onSelect }: Search
   }, [close])
 
   return (
-    <div ref={containerRef} className="relative mx-auto mb-8 max-w-[460px]">
+    <div ref={containerRef} className="relative mx-auto mb-8 w-full max-w-[540px]">
       <input
         type="text"
         value={query}
@@ -38,11 +38,11 @@ export function SearchInput({ robots, guessedNames, disabled, onSelect }: Search
         autoComplete="off"
         spellCheck={false}
         aria-label="Buscar robô"
-        className="bg-surface text-t1 placeholder:text-t3 focus:border-thunder-yellow/20 h-[54px] w-full rounded-lg border border-white/6 pr-5 pl-12 font-sans text-[15px] font-medium transition-all duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] outline-none focus:shadow-[0_0_0_3px_rgba(255,229,0,0.04)] disabled:opacity-40"
+        className="bg-surface text-t1 placeholder:text-t3 focus:border-thunder-yellow/20 h-12 w-full rounded-lg border border-white/6 pr-5 pl-12 font-sans text-base font-medium transition-all duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] outline-none focus:shadow-[0_0_0_3px_rgba(255,229,0,0.04)] disabled:opacity-40 md:h-14"
       />
       <svg
         aria-hidden="true"
-        className="text-t3 pointer-events-none absolute top-1/2 left-4 size-[18px] -translate-y-1/2"
+        className="text-t3 pointer-events-none absolute top-1/2 left-4 size-5 -translate-y-1/2"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -82,12 +82,12 @@ export function SearchInput({ robots, guessedNames, disabled, onSelect }: Search
                     close()
                   }
                 }}
-                className={`text-t2 flex cursor-pointer items-center gap-2.5 border-b border-white/3 px-4 py-2.5 font-mono text-[13px] font-medium transition-colors duration-100 last:border-b-0 ${
+                className={`text-t2 flex cursor-pointer items-center gap-2.5 border-b border-white/3 px-4 py-2.5 font-mono text-sm font-medium transition-colors duration-100 last:border-b-0 ${
                   i === activeIndex ? "bg-thunder-yellow/4 text-t1" : ""
                 } ${isUsed ? "pointer-events-none line-through opacity-20" : ""}`}
               >
                 <span
-                  className={`text-t3 font-mono text-[11px] ${i === activeIndex ? "opacity-100" : "opacity-0"}`}
+                  className={`text-t3 font-mono text-xs ${i === activeIndex ? "opacity-100" : "opacity-0"}`}
                 >
                   &gt;
                 </span>

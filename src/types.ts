@@ -43,6 +43,7 @@ export type CellResult = {
 
 export type GuessResult = {
   robotName: string
+  imageUrl: string
   cells: CellResult[]
   isCorrect: boolean
 }

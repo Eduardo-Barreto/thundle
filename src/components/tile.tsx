@@ -16,15 +16,15 @@ type TileProps = {
 export function Tile({ cell, delay }: TileProps) {
   return (
     <div
-      className={`flex min-h-[84px] min-w-0 flex-col items-center justify-center gap-0.5 overflow-hidden rounded-lg border px-1 tabular-nums ${STYLES[cell.status]}`}
+      className={`flex min-h-[72px] min-w-0 flex-col items-center justify-center gap-0.5 overflow-hidden rounded-lg border px-1 tabular-nums md:min-h-[100px] ${STYLES[cell.status]}`}
       style={{
         animation: `tile-in 250ms cubic-bezier(0.23,1,0.32,1) ${delay}ms both`,
       }}
     >
       {cell.direction && (
-        <span className="text-lg leading-none opacity-85">{ARROWS[cell.direction]}</span>
+        <span className="text-lg leading-none opacity-85 md:text-xl">{ARROWS[cell.direction]}</span>
       )}
-      <span className="w-full truncate text-center font-mono text-xs leading-none font-bold">
+      <span className="w-full truncate text-center font-mono text-[13px] leading-none font-bold md:text-sm">
         {String(cell.value)}
       </span>
     </div>

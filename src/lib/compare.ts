@@ -49,5 +49,5 @@ export function compareGuess(guess: Robot, answer: Robot): GuessResult {
   })
 
   const isCorrect = cells.every((c) => c.status === "correct")
-  return { robotName: guess.name, cells, isCorrect }
+  return { robotName: guess.name, imageUrl: guess.imageUrl, cells, isCorrect }
 }
