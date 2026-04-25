@@ -14,8 +14,8 @@ export function GuessRow({ result, rowDelay }: GuessRowProps) {
         animation: `row-in 300ms cubic-bezier(0.23,1,0.32,1) ${rowDelay}ms both`,
       }}
     >
-      <div className="sticky left-0 z-20 overflow-hidden rounded-lg shadow-[4px_0_12px_rgba(0,0,0,0.5)]">
-        <div className="relative flex min-h-[72px] items-end justify-center bg-[#0A0A0A] md:min-h-[100px]">
+      <div className="sticky left-0 z-20 overflow-hidden rounded-lg bg-[#0A0A0A] pr-[5px] shadow-[8px_0_16px_rgba(0,0,0,0.7)]">
+        <div className="relative flex min-h-[72px] items-end justify-center overflow-hidden rounded-lg md:min-h-[100px]">
           <img
             src={result.imageUrl}
             alt=""
