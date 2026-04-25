@@ -64,7 +64,7 @@ export function LoseOverlay({
               className="text-t2 max-w-sm text-center text-sm leading-relaxed"
               style={{ animation: "win-element 400ms cubic-bezier(0.23,1,0.32,1) 300ms both" }}
             >
-              Esse puzzle ainda não existe. Volta quando chegar o dia certo, jovem padawan.
+              Calma pai, esse puzzle ainda não existe. Volta quando chegar o dia certo.
             </p>
           </>
         ) : (
