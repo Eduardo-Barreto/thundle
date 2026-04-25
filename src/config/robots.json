@@ -11,7 +11,7 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/3vtracer.webp",
+    "imageUrl": "https://thunderatz.org/media/projects/3vtracer/card_3vTracer.jpg",
     "description": "O 3vTracer é o atual Seguidor de Linha da Thunder. É um reprojeto do Tracer 2.0"
   },
   {
@@ -26,8 +26,9 @@
       "silver": 5,
       "bronze": 0
     },
-    "imageUrl": "/images/perse.webp",
-    "description": "O Perse é um robô autônomo que compete na categoria Trekking. Seu projeto desenvolveu novas áreas na equipe, como o campo de visão computacional, que é de extrema importância e será utilizado em projetos inteligentes futuros."
+    "imageUrl": "https://thunderatz.org/media/projects/perse/card_PErse.png",
+    "description": "O Perse é um robô autônomo que compete na categoria Trekking. Seu projeto desenvolveu novas áreas na equipe, como o campo de visão computacional, que é de extrema importância e será utilizado em projetos inteligentes futuros.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Tipo-Perse-final_dcuwI1R.png"
   },
   {
     "name": "ThunderVolt",
@@ -41,8 +42,9 @@
       "silver": 7,
       "bronze": 1
     },
-    "imageUrl": "/images/thundervolt.webp",
-    "description": "Já ouviu falar de futebol de robôs? Esse é o princípio da categoria VSSS, Very Small Size Soccer, na qual dois times disputam para ver quem marca a maior quantidade de gols, sendo tudo feito autonomamente! Um time é composto por três robôs, cada um com dimensões máximas de 75mm x 75mm x 75mm. A partida é disputada em um campo preto com marcações em branco e é composta por 2 períodos iguais, cada qual com 5 minutos, com um intervalo de meio tempo de 10 minutos."
+    "imageUrl": "https://thunderatz.org/media/projects/thundervolt/card_vss_2.JPG",
+    "description": "Já ouviu falar de futebol de robôs? Esse é o princípio da categoria VSSS, Very Small Size Soccer, na qual dois times disputam para ver quem marca a maior quantidade de gols, sendo tudo feito autonomamente! Um time é composto por três robôs, cada um com dimensões máximas de 75mm x 75mm x 75mm. A partida é disputada em um campo preto com marcações em branco e é composta por 2 períodos iguais, cada qual com 5 minutos, com um intervalo de meio tempo de 10 minutos.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Bras%C3%A3o-ThunderVolt.png"
   },
   {
     "name": "PiPolka",
@@ -56,8 +58,9 @@
       "silver": 2,
       "bronze": 2
     },
-    "imageUrl": "/images/pipolka.webp",
-    "description": "A PiPolka é um robô de combate da categoria Fairyweight (150 g)."
+    "imageUrl": "https://thunderatz.org/media/projects/pipolka/card_PiPolka_site.png",
+    "description": "A PiPolka é um robô de combate da categoria Fairyweight (150 g).",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipografia_pipolka_cor_mais_rosada.png"
   },
   {
     "name": "ThunderLeague",
@@ -71,8 +74,9 @@
       "silver": 6,
       "bronze": 1
     },
-    "imageUrl": "/images/thunderleague.webp",
-    "description": "O ThunderLeague é um projeto da categoria RoboCup Soccer Simulation 2D. Estreou em 2018 e já conquistou seu primeiro troféu, no Winter Challenge XV, com grande estilo, em primeiro lugar."
+    "imageUrl": "https://thunderatz.org/media/projects/thunderleague/card_fut2d.png",
+    "description": "O ThunderLeague é um projeto da categoria RoboCup Soccer Simulation 2D. Estreou em 2018 e já conquistou seu primeiro troféu, no Winter Challenge XV, com grande estilo, em primeiro lugar.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/no_back.png"
   },
   {
     "name": "K-Torze",
@@ -86,8 +90,9 @@
       "silver": 0,
       "bronze": 4
     },
-    "imageUrl": "/images/ktorze.webp",
-    "description": "Nomeado em homenagem ao robô K2, do Team Velocity, o K-Torze teve sua estreia no Winter Challenge X, em 2014."
+    "imageUrl": "https://thunderatz.org/media/projects/ktorze/card_K-Torze_RCX24.jpeg",
+    "description": "Nomeado em homenagem ao robô K2, do Team Velocity, o K-Torze teve sua estreia no Winter Challenge X, em 2014.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Tipo_KTorze-2_BR7UEek.png"
   },
   {
     "name": "Cachorro Louco",
@@ -101,8 +106,9 @@
       "silver": 0,
       "bronze": 2
     },
-    "imageUrl": "/images/cachorro-louco.webp",
-    "description": "Na categoria Hobbyweight (5,5 kg) de combate, tendo como base exemplos internacionais de sucesso e também o aprendizado acumulado, a Equipe desenvolveu o Cachorro Louco: um robô com uma barra poderosa de aço 4340 tratado de 1 kg que gira a 6 mil rotações por minuto, com energia suficiente para lançar um oponente à 18 metros, sem comprometer sua agilidade e mobilidade."
+    "imageUrl": "https://thunderatz.org/media/projects/Cachorro%20Louco/card_CachorroLouco_1.jpg",
+    "description": "Na categoria Hobbyweight (5,5 kg) de combate, tendo como base exemplos internacionais de sucesso e também o aprendizado acumulado, a Equipe desenvolveu o Cachorro Louco: um robô com uma barra poderosa de aço 4340 tratado de 1 kg que gira a 6 mil rotações por minuto, com energia suficiente para lançar um oponente à 18 metros, sem comprometer sua agilidade e mobilidade.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_CLv2-1_7ytCxUO.png"
   },
   {
     "name": "Time Olympus",
@@ -116,8 +122,9 @@
       "silver": 3,
       "bronze": 8
     },
-    "imageUrl": "/images/time-olympus.webp",
-    "description": "O Hockey de Robôs é muito semelhante ao hockey de verdade, cujo objetivo é marcar o maior número de gols com um disco. Nessa categoria, cada time conta com 3 robôs radiocontrolados de até 6,8kg para disputar uma partida de 5 minutos, no Brasil, e 10 minutos, nos EUA."
+    "imageUrl": "https://thunderatz.org/media/projects/time-olympus/card_Card.jpg",
+    "description": "O Hockey de Robôs é muito semelhante ao hockey de verdade, cujo objetivo é marcar o maior número de gols com um disco. Nessa categoria, cada time conta com 3 robôs radiocontrolados de até 6,8kg para disputar uma partida de 5 minutos, no Brasil, e 10 minutos, nos EUA.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Tipo_Olympus_VWuiYSU.png"
   },
   {
     "name": "Jardineiro",
@@ -131,8 +138,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/jardineiro.webp",
-    "description": "O Jardineiro é um robô da categoria Featherweight."
+    "imageUrl": "https://thunderatz.org/media/projects/jardineiro/card_jardineiro_NC1Z5Od.JPG",
+    "description": "O Jardineiro é um robô da categoria Featherweight.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_jardineiro.png"
   },
   {
     "name": "Leprechaun",
@@ -146,8 +154,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/leprechaun.webp",
-    "description": "O Leprechaun é um robô da categoria Antweight."
+    "imageUrl": "https://thunderatz.org/media/projects/leprechaun/card_leprechaun.JPG",
+    "description": "O Leprechaun é um robô da categoria Antweight.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Tipo_Leprechaun_bg_branco_ZwC3E0C.png"
   },
   {
     "name": "Atom",
@@ -161,8 +170,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/atom.webp",
-    "description": "O Atom é um robô da categoria Antweight (454 g), que estreou no Winter Challenge 2018, sendo o mais recente projeto da equipe. Ele é um robô undercutter, ou seja, tem um disco de impacto horizontal rente à arena, e foi inspirado em nosso robô Apolkalipse, também do tipo undercutter."
+    "imageUrl": "https://thunderatz.org/media/projects/atom/card_atom_4lMHAqu.jpg",
+    "description": "O Atom é um robô da categoria Antweight (454 g), que estreou no Winter Challenge 2018, sendo o mais recente projeto da equipe. Ele é um robô undercutter, ou seja, tem um disco de impacto horizontal rente à arena, e foi inspirado em nosso robô Apolkalipse, também do tipo undercutter.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipog_atom_5S4YvUp.png"
   },
   {
     "name": "Ônix",
@@ -176,8 +186,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/onix.webp",
-    "description": "O Ônix é um projeto desenvolvido para a categoria Mini-Sumô (de robôs de até 500g). Seu nome vem da pedra semipreciosa ônix, usada para confecção de jóias."
+    "imageUrl": "https://thunderatz.org/media/projects/onix/card_onix_crKM8lN.jpg",
+    "description": "O Ônix é um projeto desenvolvido para a categoria Mini-Sumô (de robôs de até 500g). Seu nome vem da pedra semipreciosa ônix, usada para confecção de jóias.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_onix_kH5l2zs.png"
   },
   {
     "name": "Boladinho",
@@ -191,8 +202,9 @@
       "silver": 1,
       "bronze": 0
     },
-    "imageUrl": "/images/boladinho.webp",
-    "description": "O Boladinho é um robô voltado às categorias humanoides de kits comprados, nas quais os componentes estruturais e eletrônicos são previamente adquiridos, cabendo aos competidores programarem os seus movimentos. Um robô humanoide pode participar de uma vasta variedade de categorias. Não obstante, até o momento, o Boladinho participou apenas das categorias Kung-Fu LightWeight, Freestyle – kit e Sumô Humanoide."
+    "imageUrl": "https://thunderatz.org/media/projects/Boladinho/card_Boladinho_1.jpg",
+    "description": "O Boladinho é um robô voltado às categorias humanoides de kits comprados, nas quais os componentes estruturais e eletrônicos são previamente adquiridos, cabendo aos competidores programarem os seus movimentos. Um robô humanoide pode participar de uma vasta variedade de categorias. Não obstante, até o momento, o Boladinho participou apenas das categorias Kung-Fu LightWeight, Freestyle – kit e Sumô Humanoide.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Tipografia_Boladinho_S5wCjHM.png"
   },
   {
     "name": "Pepita",
@@ -206,8 +218,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/pepita.webp",
-    "description": "Pepita é nosso robô da categoria Micro Sumô  (100 g). Seu nome e logo são baseados em pepitas de ouro, seguido a mesma lógica de nomes dos outros robôs de sumô da equipe, que também são pedras."
+    "imageUrl": "https://thunderatz.org/media/projects/Pepita/card_Pepita_1.jpg",
+    "description": "Pepita é nosso robô da categoria Micro Sumô  (100 g). Seu nome e logo são baseados em pepitas de ouro, seguido a mesma lógica de nomes dos outros robôs de sumô da equipe, que também são pedras.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Tipo_Pepita_2C6g44R.png"
   },
   {
     "name": "REDRUM",
@@ -221,8 +234,9 @@
       "silver": 1,
       "bronze": 0
     },
-    "imageUrl": "/images/redrum.webp",
-    "description": "O robô REDRUM é o terceiro projeto da Equipe ThundeRatz a competir na categoria de combate Featherweight (13,6kg), sua estreia aconteceu no Winter Challenge XIII, no qual ele conquistou o segundo lugar na competição. O robô é o segundo da equipe a utilizar um tambor de impacto como arma e foi fruto de muito desenvolvimento e conhecimento adquirido com o projeto anterior da equipe na categoria, o robô Armagedrum."
+    "imageUrl": "https://thunderatz.org/media/projects/REDRUM/card_REDRUM_1.jpg",
+    "description": "O robô REDRUM é o terceiro projeto da Equipe ThundeRatz a competir na categoria de combate Featherweight (13,6kg), sua estreia aconteceu no Winter Challenge XIII, no qual ele conquistou o segundo lugar na competição. O robô é o segundo da equipe a utilizar um tambor de impacto como arma e foi fruto de muito desenvolvimento e conhecimento adquirido com o projeto anterior da equipe na categoria, o robô Armagedrum.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Tipo_REDRUM_Na7xoT6.png"
   },
   {
     "name": "Spintronic",
@@ -236,8 +250,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/spintronic.webp",
-    "description": "O Spintronic foi um robô da categoria Fairyweight, de até 150g, sendo o menor robô de combate da ThundeRatz. Seu nome vem do campo da nanotecnologia que estuda a rotação dos elétrons."
+    "imageUrl": "https://thunderatz.org/media/projects/Spintronic/card_Spintronic_1.jpg",
+    "description": "O Spintronic foi um robô da categoria Fairyweight, de até 150g, sendo o menor robô de combate da ThundeRatz. Seu nome vem do campo da nanotecnologia que estuda a rotação dos elétrons.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Tipo_Spintronic_xYh0Va6.png"
   },
   {
     "name": "Tracer",
@@ -251,8 +266,9 @@
       "silver": 1,
       "bronze": 4
     },
-    "imageUrl": "/images/tracer.webp",
-    "description": "O Tracer é um robô autônomo que participa da categoria Seguidor de Linha. Ele utiliza como estrutura básica a sua própria PCB (placa eletrônica), juntamente com rodas e peças em 3D projetadas para atender às necessidades durante as competições."
+    "imageUrl": "https://thunderatz.org/media/projects/tracer/card_Tracer.png",
+    "description": "O Tracer é um robô autônomo que participa da categoria Seguidor de Linha. Ele utiliza como estrutura básica a sua própria PCB (placa eletrônica), juntamente com rodas e peças em 3D projetadas para atender às necessidades durante as competições.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Tipografia-Tracer-4_yJ9gscm.png"
   },
   {
     "name": "D'Arc",
@@ -266,8 +282,9 @@
       "silver": 0,
       "bronze": 1
     },
-    "imageUrl": "/images/darc.webp",
-    "description": "Tendo como objetivo uma maior competitividade na categoria Beetleweight (1,36 kg), a equipe desenvolveu a D’Arc, um robô que possui uma arma de impacto vertical, do tipo Egg Beater, que gira a aproximadamente 9000 RPM. Seu nome foi inspirado na guerreira, heroína e mártir francesa, Joana d’Arc."
+    "imageUrl": "https://thunderatz.org/media/projects/darc/card_card_DArc_1_Wn2qUpz.jpg",
+    "description": "Tendo como objetivo uma maior competitividade na categoria Beetleweight (1,36 kg), a equipe desenvolveu a D’Arc, um robô que possui uma arma de impacto vertical, do tipo Egg Beater, que gira a aproximadamente 9000 RPM. Seu nome foi inspirado na guerreira, heroína e mártir francesa, Joana d’Arc.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_DArc_9MQQHFk.png"
   },
   {
     "name": "Sharkhai",
@@ -281,8 +298,9 @@
       "silver": 0,
       "bronze": 3
     },
-    "imageUrl": "/images/sharkhai.webp",
-    "description": "O Sharkhai é um robô da categoria Antweight (454g), que teve sua estréia nas arenas da Robogames 2016. O projeto teve seu nome inspirado pelo formato de sua antena, que é semelhante ao de uma barbatana de tubarão. Sharkhai é uma composição do termo em inglês Shark e do alemão Hai, ambos usados para designar esse predador marinho."
+    "imageUrl": "https://thunderatz.org/media/projects/Sharkhai/card_Sharkhai_1.jpg",
+    "description": "O Sharkhai é um robô da categoria Antweight (454g), que teve sua estréia nas arenas da Robogames 2016. O projeto teve seu nome inspirado pelo formato de sua antena, que é semelhante ao de uma barbatana de tubarão. Sharkhai é uma composição do termo em inglês Shark e do alemão Hai, ambos usados para designar esse predador marinho.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipografia_Sharkhai.png"
   },
   {
     "name": "Apolkalipse",
@@ -296,8 +314,9 @@
       "silver": 1,
       "bronze": 1
     },
-    "imageUrl": "/images/apolkalipse.webp",
-    "description": "O Apolkalipse é um robô de combate da categoria Middleweight (54,4kg). Ele possui como arma um disco de impacto horizontal de 10kg, girando a 2500 rpm bem próximo ao chão, sendo chamado então de um robô do tipo undercutter."
+    "imageUrl": "https://thunderatz.org/media/projects/Apolkalipse/card_Apolkalipse_1.jpg",
+    "description": "O Apolkalipse é um robô de combate da categoria Middleweight (54,4kg). Ele possui como arma um disco de impacto horizontal de 10kg, girando a 2500 rpm bem próximo ao chão, sendo chamado então de um robô do tipo undercutter.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipo-APOLKA_mTH0iDx.png"
   },
   {
     "name": "Duende",
@@ -311,8 +330,9 @@
       "silver": 2,
       "bronze": 1
     },
-    "imageUrl": "/images/duende.webp",
-    "description": "O Duende foi o primeiro robô da equipe na categoria Antweight, de 454 gramas. A ideia inicial do projeto contava com uma arma de impacto vertical do tipo tambor, contudo, para atender às restrições de peso da categoria e ainda maximizar sua inércia, optou-se por fazer um tipo de arma incomum nas competições brasileiras: o eggbeater, que representou uma grande inovação para a Equipe."
+    "imageUrl": "https://thunderatz.org/media/projects/Duende/card_Duende_2.jpg",
+    "description": "O Duende foi o primeiro robô da equipe na categoria Antweight, de 454 gramas. A ideia inicial do projeto contava com uma arma de impacto vertical do tipo tambor, contudo, para atender às restrições de peso da categoria e ainda maximizar sua inércia, optou-se por fazer um tipo de arma incomum nas competições brasileiras: o eggbeater, que representou uma grande inovação para a Equipe.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_Duende_E5szr9F.png"
   },
   {
     "name": "RoZeta",
@@ -326,8 +346,9 @@
       "silver": 2,
       "bronze": 3
     },
-    "imageUrl": "/images/rozeta.webp",
-    "description": "RoZeta é um robô da categoria Mini-Sumô (de robôs de até 500g). O projeto foi financiado pelo Orçamento Participativo Minerva (OPMin) do Grêmio Politécnico em 2015. Seu nome é inspirado na famosa Pedra de Roseta, cujo texto foi crucial para compreensão dos hieróglifos egípcios."
+    "imageUrl": "https://thunderatz.org/media/projects/Rozeta/card_Rozeta_2.jpg",
+    "description": "RoZeta é um robô da categoria Mini-Sumô (de robôs de até 500g). O projeto foi financiado pelo Orçamento Participativo Minerva (OPMin) do Grêmio Politécnico em 2015. Seu nome é inspirado na famosa Pedra de Roseta, cujo texto foi crucial para compreensão dos hieróglifos egípcios.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_ROZETA_21mIgRT.png"
   },
   {
     "name": "ThunderMaps",
@@ -341,8 +362,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/thundermaps.webp",
-    "description": "O ThunderMaps foi o segundo robô autônomo da equipe a competir na categoria Trekking. Ele foi criado com o objetivo de desenvolver novas funcionalidades para serem implementadas no ThunderWaze."
+    "imageUrl": "https://thunderatz.org/media/projects/ThunderMaps/card_1-1024x683.jpg",
+    "description": "O ThunderMaps foi o segundo robô autônomo da equipe a competir na categoria Trekking. Ele foi criado com o objetivo de desenvolver novas funcionalidades para serem implementadas no ThunderWaze.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/ThunderMaps_NPgZELG.png"
   },
   {
     "name": "Armagedrum",
@@ -356,8 +378,9 @@
       "silver": 2,
       "bronze": 5
     },
-    "imageUrl": "/images/armagedrum.webp",
-    "description": "O robô Armagedrum, da categoria Featherweight (13,6kg), fez sua estreia no Winter Challenge X e é o primeiro projeto da Equipe ThundeRatz a utilizar um tambor de impacto vertical como arma."
+    "imageUrl": "https://thunderatz.org/media/projects/Armagedrum/card_Armagedrum_1.jpg",
+    "description": "O robô Armagedrum, da categoria Featherweight (13,6kg), fez sua estreia no Winter Challenge X e é o primeiro projeto da Equipe ThundeRatz a utilizar um tambor de impacto vertical como arma.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_Armagedrum_hM4eeg3.png"
   },
   {
     "name": "Iskeiro",
@@ -371,8 +394,9 @@
       "silver": 1,
       "bronze": 0
     },
-    "imageUrl": "/images/iskeiro.webp",
-    "description": "O robô Iskeiro, da categoria Beetleweight (1,36 kg), surgiu com o intuito de desenvolver duas características que ainda não eram presentes em projetos da equipe: o uso de um compacto lança-chamas e uma locomoção omnidirecional (que tinha o intuito de deixar o robô sempre de frente ao adversário), unidos a uma rampa como principal método para atacar e contra-atacar. A locomoção omnidirecional foi abandonada por demonstrar imprecisões na pilotagem e perdas de potência."
+    "imageUrl": "https://thunderatz.org/media/projects/iskeiro/card_oi.png",
+    "description": "O robô Iskeiro, da categoria Beetleweight (1,36 kg), surgiu com o intuito de desenvolver duas características que ainda não eram presentes em projetos da equipe: o uso de um compacto lança-chamas e uma locomoção omnidirecional (que tinha o intuito de deixar o robô sempre de frente ao adversário), unidos a uma rampa como principal método para atacar e contra-atacar. A locomoção omnidirecional foi abandonada por demonstrar imprecisões na pilotagem e perdas de potência.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Tipo-iskeiro_jxHsRiI.png"
   },
   {
     "name": "Moai",
@@ -386,8 +410,9 @@
       "silver": 7,
       "bronze": 3
     },
-    "imageUrl": "/images/moai.webp",
-    "description": "O robô Moai é o primeiro Sumô 3kg Autônomo da equipe. Seu nome segue a mesma linha de pensamento de seu irmão mais velho, o Stonehenge, de monumentos antigos que resistiram ao tempo, desta vez fazendo referência às famosas estátuas da ilha de Páscoa."
+    "imageUrl": "https://thunderatz.org/media/projects/Moai/card_WhatsApp_Image_2018-10-12_at_21.55.00.jpeg",
+    "description": "O robô Moai é o primeiro Sumô 3kg Autônomo da equipe. Seu nome segue a mesma linha de pensamento de seu irmão mais velho, o Stonehenge, de monumentos antigos que resistiram ao tempo, desta vez fazendo referência às famosas estátuas da ilha de Páscoa.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipografia_Moai-Claro2_0AJ8jn4.png"
   },
   {
     "name": "ThunderWaze",
@@ -401,8 +426,9 @@
       "silver": 1,
       "bronze": 4
     },
-    "imageUrl": "/images/thunderwaze.webp",
-    "description": "O ThunderWaze é um robô autônomo que compete nas categorias Trekking e RoboMagellan. Seu projeto desenvolveu novas áreas na equipe, como o campo de visão computacional, que é de extrema importância e será utilizado em projetos inteligentes futuros."
+    "imageUrl": "https://thunderatz.org/media/projects/ThunderWaze/card_Waze_1.jpg",
+    "description": "O ThunderWaze é um robô autônomo que compete nas categorias Trekking e RoboMagellan. Seu projeto desenvolveu novas áreas na equipe, como o campo de visão computacional, que é de extrema importância e será utilizado em projetos inteligentes futuros.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_WAZE_8176AoW.png"
   },
   {
     "name": "Ratnik",
@@ -416,8 +442,9 @@
       "silver": 0,
       "bronze": 1
     },
-    "imageUrl": "/images/ratnik.webp",
-    "description": "O Ratnik foi um robô da categoria Beetleweight (1,36kg) que conta com uma barra de impacto horizontal de 2 dentes que gira a 7000 rpm. O projeto começou a ser desenvolvido em 2012 e teve sua estreia no Winter Challenge 2013, sendo o primeiro robô da equipe na categoria."
+    "imageUrl": "https://thunderatz.org/media/projects/Ratnik/card_Ratnik_1.jpg",
+    "description": "O Ratnik foi um robô da categoria Beetleweight (1,36kg) que conta com uma barra de impacto horizontal de 2 dentes que gira a 7000 rpm. O projeto começou a ser desenvolvido em 2012 e teve sua estreia no Winter Challenge 2013, sendo o primeiro robô da equipe na categoria.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_RATNIK_ky6xJDW.png"
   },
   {
     "name": "Adão",
@@ -431,8 +458,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/adao.webp",
-    "description": "Neste projeto, aliamos conceitos de sucesso vistos tanto dentro da Equipe como fora dela para construir um robô competitivo a nível mundial. O Adão (nome este que faz referencia ao antigo middleweight da equipe Adam, predecessor do Lenhador) alia grande robustez em sua estrutura capaz de aguentar os ataques dos mais fortes robôs adversários por utilizar como armadura uma combinação de alumínio aeroespacial e poliaramida (material utilizado em colete a prova de balas), grande mobilidade com sua locomoção 4×4 e um disco maciço de mais de 8 kg de aço capaz de causar grandes danos físicos ao adversário."
+    "imageUrl": "https://thunderatz.org/media/projects/Ad%C3%A3o/card_9286304475_466833e3d3_o.jpg",
+    "description": "Neste projeto, aliamos conceitos de sucesso vistos tanto dentro da Equipe como fora dela para construir um robô competitivo a nível mundial. O Adão (nome este que faz referencia ao antigo middleweight da equipe Adam, predecessor do Lenhador) alia grande robustez em sua estrutura capaz de aguentar os ataques dos mais fortes robôs adversários por utilizar como armadura uma combinação de alumínio aeroespacial e poliaramida (material utilizado em colete a prova de balas), grande mobilidade com sua locomoção 4×4 e um disco maciço de mais de 8 kg de aço capaz de causar grandes danos físicos ao adversário.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Ad%C3%A3o.png"
   },
   {
     "name": "Quadradinho",
@@ -446,8 +474,9 @@
       "silver": 1,
       "bronze": 1
     },
-    "imageUrl": "/images/quadradinho.webp",
-    "description": "O robô quadradinho desde sua criação mostrou um excelente desempenho quando comparado a maioria dos outros seguidores. Porém, por ser um dos primeiros projetos de robô follow-line inteiramente desenvolvido pela equipe, o robô possui limitações mecânicas e eletrônicas que o impede de alcançar os lugares de destaque no pódio das competições."
+    "imageUrl": "https://thunderatz.org/media/projects/Quadradinho/card_quadradinho2.jpg",
+    "description": "O robô quadradinho desde sua criação mostrou um excelente desempenho quando comparado a maioria dos outros seguidores. Porém, por ser um dos primeiros projetos de robô follow-line inteiramente desenvolvido pela equipe, o robô possui limitações mecânicas e eletrônicas que o impede de alcançar os lugares de destaque no pódio das competições.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Quadradinho.png"
   },
   {
     "name": "Redondinho",
@@ -461,8 +490,9 @@
       "silver": 0,
       "bronze": 1
     },
-    "imageUrl": "/images/redondinho.webp",
-    "description": "Campeão nacional da categoria em 2013, onde competiu contra robôs de equipes internacionais. A plataforma é comprada, consiste no modelo 3pi da Polulu®, porém a programação é toda desenvolvida pela equipe, aplicando conceitos de controle digital para melhorar seu desempenho e estabilidade na pista."
+    "imageUrl": "https://thunderatz.org/media/projects/Redondinho/card_redondinho.jpg",
+    "description": "Campeão nacional da categoria em 2013, onde competiu contra robôs de equipes internacionais. A plataforma é comprada, consiste no modelo 3pi da Polulu®, porém a programação é toda desenvolvida pela equipe, aplicando conceitos de controle digital para melhorar seu desempenho e estabilidade na pista.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Redondinho.png"
   },
   {
     "name": "Stonehenge",
@@ -476,8 +506,9 @@
       "silver": 4,
       "bronze": 3
     },
-    "imageUrl": "/images/stonehenge.webp",
-    "description": "Stonehenge é um robô da categoria Sumô 3kg Rádio Controlado que teve sua estreia em 2012. Seu nome é uma referência direta ao monumento pré-histórico localizado no Reino Unido : a formação circular de enormes blocos de pedra denominada Stonehenge."
+    "imageUrl": "https://thunderatz.org/media/projects/Stonehenge/card_Stonehenge_IRST2017.jpg",
+    "description": "Stonehenge é um robô da categoria Sumô 3kg Rádio Controlado que teve sua estreia em 2012. Seu nome é uma referência direta ao monumento pré-histórico localizado no Reino Unido : a formação circular de enormes blocos de pedra denominada Stonehenge.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/tipo_Stonehenge_7xCeq73.png"
   },
   {
     "name": "Time LEGO",
@@ -491,8 +522,9 @@
       "silver": 5,
       "bronze": 3
     },
-    "imageUrl": "/images/lego.webp",
-    "description": "O sumô LEGO é uma categoria com robôs de até 1kg que, com a restrição de utilizar apenas peças da empresa LEGO, tem a finalidade de autonomamente encontrar o adversário e empurrá-lo para fora do dojô."
+    "imageUrl": "https://thunderatz.org/media/projects/Time%20LEGO/card_LEGO_1.jpg",
+    "description": "O sumô LEGO é uma categoria com robôs de até 1kg que, com a restrição de utilizar apenas peças da empresa LEGO, tem a finalidade de autonomamente encontrar o adversário e empurrá-lo para fora do dojô.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Tipo_Spintronic_ow9mpei.png"
   },
   {
     "name": "Hypnos",
@@ -506,8 +538,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/hypnos.webp",
-    "description": "A estrutura interna do robô é feita de alumínio aeroespacial (7075-T6), escolhido pela alta relação resistência/peso e tenacidade, que não transporta acelerações fortíssimas aos componentes fixados na estrutura, como motores e eletrônicas, que se mostra prejudicial. Os alívios de peso foram posicionados estrategicamente em pontos que não sofrem tensões altas, mantendo assim a eficiência dela. Esse sistema consiste nas peças que transportam o conjugado do motor da arma para o eixo principal do robô e é composto pelo MagMotor S28-150 (motor DC de 2500 W)."
+    "imageUrl": "https://thunderatz.org/media/projects/Hypnos/card_hypnos02.jpg",
+    "description": "A estrutura interna do robô é feita de alumínio aeroespacial (7075-T6), escolhido pela alta relação resistência/peso e tenacidade, que não transporta acelerações fortíssimas aos componentes fixados na estrutura, como motores e eletrônicas, que se mostra prejudicial. Os alívios de peso foram posicionados estrategicamente em pontos que não sofrem tensões altas, mantendo assim a eficiência dela. Esse sistema consiste nas peças que transportam o conjugado do motor da arma para o eixo principal do robô e é composto pelo MagMotor S28-150 (motor DC de 2500 W).",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Hypnos.png"
   },
   {
     "name": "Racha Cuca",
@@ -521,8 +554,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/racha-cuca.webp",
-    "description": "O robô veio para substituir o Catatau da categoria Hobbyweight (até 5,5kg). Possui um disco de impacto horinzontal que se assemelha a do robô Lenhador da categoria Middleweight (até 55kg). Competiu apenas no Winter Challenge 2009 onde consquistou o 4º lugar."
+    "imageUrl": "https://thunderatz.org/media/projects/Racha%20Cuca/card_racha-cuca.jpg",
+    "description": "O robô veio para substituir o Catatau da categoria Hobbyweight (até 5,5kg). Possui um disco de impacto horinzontal que se assemelha a do robô Lenhador da categoria Middleweight (até 55kg). Competiu apenas no Winter Challenge 2009 onde consquistou o 4º lugar.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Racha_Cuca.png"
   },
   {
     "name": "Seninha",
@@ -536,8 +570,9 @@
       "silver": 1,
       "bronze": 1
     },
-    "imageUrl": "/images/seninha.webp",
-    "description": "O projeto follower consiste na construção de um robô autônomo que deve seguir um circuito demarcado por linhas no chão e executar alguma ação predeterminada quando chegar a uma marca especial da pista. O vencedor da competição é aquele que consegue fazer todo o circuito em menor tempo. Vale ressaltar que o circuito a ser percorrido não é previamente conhecido pelos competidores."
+    "imageUrl": "https://thunderatz.org/media/projects/Seninha/card_seninha2.jpg",
+    "description": "O projeto follower consiste na construção de um robô autônomo que deve seguir um circuito demarcado por linhas no chão e executar alguma ação predeterminada quando chegar a uma marca especial da pista. O vencedor da competição é aquele que consegue fazer todo o circuito em menor tempo. Vale ressaltar que o circuito a ser percorrido não é previamente conhecido pelos competidores.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Seninha.png"
   },
   {
     "name": "Catatau",
@@ -551,8 +586,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/catatau.webp",
-    "description": "O robô Catatau possui um disco de impacto vertical e estrutura de perfis de aço. Os benefícios dessa opção foram o baixo custo e a experiência já adquirida pela equipe quando da construção de um Middleweight de mesmo modelo. O robô foi basicamente projetado e construído por novatos da equipe."
+    "imageUrl": "https://thunderatz.org/media/projects/Catatau/card_catatau1.jpg",
+    "description": "O robô Catatau possui um disco de impacto vertical e estrutura de perfis de aço. Os benefícios dessa opção foram o baixo custo e a experiência já adquirida pela equipe quando da construção de um Middleweight de mesmo modelo. O robô foi basicamente projetado e construído por novatos da equipe.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Catatau.png"
   },
   {
     "name": "Lenhador",
@@ -566,8 +602,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/lenhador.webp",
-    "description": "O Lenhador marcou uma mudança na metodologia fabril da equipe, pois foi nosso primeiro robô cuja estrutura foi feita totalmente em máquinas controladas por computador. Outra ferramenta bastante utilizada em seu desenvolvimento, foi a simulação dinâmica via método de elementos finitos (MEF) para que pudéssemos fazer um trabalho de otimização topológica em cada peça. Tal desenvolvimento possibilitou construir o robô de maior relação entre potência e peso em atividade no Brasil."
+    "imageUrl": "https://thunderatz.org/media/projects/Lenhador/card_9286624160_ee236f6185_o.jpg",
+    "description": "O Lenhador marcou uma mudança na metodologia fabril da equipe, pois foi nosso primeiro robô cuja estrutura foi feita totalmente em máquinas controladas por computador. Outra ferramenta bastante utilizada em seu desenvolvimento, foi a simulação dinâmica via método de elementos finitos (MEF) para que pudéssemos fazer um trabalho de otimização topológica em cada peça. Tal desenvolvimento possibilitou construir o robô de maior relação entre potência e peso em atividade no Brasil.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Lenhador.png"
   },
   {
     "name": "Nanolico",
@@ -581,8 +618,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/nanolico.webp",
-    "description": "O Nanolico foi o primeiro e unico robô da equipe que utiliza a alavanca com um mecanismo de 4 barras como arma. Além disso, uma rampa é usada como sua arma secundária."
+    "imageUrl": "https://thunderatz.org/media/projects/Nanolico/card_nanico1.jpg",
+    "description": "O Nanolico foi o primeiro e unico robô da equipe que utiliza a alavanca com um mecanismo de 4 barras como arma. Além disso, uma rampa é usada como sua arma secundária.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Nanolico.png"
   },
   {
     "name": "PiRaT",
@@ -596,8 +634,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/pirat.webp",
-    "description": "O PiRaT foi construído em 3 meses e participou do Winter Challenge 2007 e do 7º ENECA e conquistou junto com o nosso outro robô principal, Adam, o 4º e o 3º, respectivamente."
+    "imageUrl": "https://thunderatz.org/media/projects/PiRaT/card_pirat1.jpg",
+    "description": "O PiRaT foi construído em 3 meses e participou do Winter Challenge 2007 e do 7º ENECA e conquistou junto com o nosso outro robô principal, Adam, o 4º e o 3º, respectivamente.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/PiRaT.png"
   },
   {
     "name": "Adam",
@@ -611,8 +650,9 @@
       "silver": 0,
       "bronze": 1
     },
-    "imageUrl": "/images/adam.webp",
-    "description": "O Adam I é uma evolução do Adamowski II. Ele manteve o velho losango usado como arma, porém apresentou melhorias no sistema de movimentação e a estrutura e armadura ficaram mais resistentes."
+    "imageUrl": "https://thunderatz.org/media/projects/Adam/card_adam081.jpg",
+    "description": "O Adam I é uma evolução do Adamowski II. Ele manteve o velho losango usado como arma, porém apresentou melhorias no sistema de movimentação e a estrutura e armadura ficaram mais resistentes.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Adam.png"
   },
   {
     "name": "Adam Jr",
@@ -626,8 +666,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/adam-jr.webp",
-    "description": "A equipe levou apenas 3 horas para construir o robô Filho do Adam. Ele foi desenvolvido na véspera da competição, em Amparo mesmo, com tudo o que sobrou do antigo Adam. Este possui um losango de impacto vertical como arma e consquistou o 4° lugar no Winter Challenge 2006."
+    "imageUrl": "https://thunderatz.org/media/projects/Adam%20Jr/card_filhodoadam.jpg",
+    "description": "A equipe levou apenas 3 horas para construir o robô Filho do Adam. Ele foi desenvolvido na véspera da competição, em Amparo mesmo, com tudo o que sobrou do antigo Adam. Este possui um losango de impacto vertical como arma e consquistou o 4° lugar no Winter Challenge 2006.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Adam_Jr.png"
   },
   {
     "name": "USP Recicla",
@@ -641,8 +682,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/usp-recicla.webp",
-    "description": "O USP Recicla é um robô resistente de baixo custo. Ele foi totalmente feito com materiais reciclados, com exceção dos parafusos. A sua armadura e estrutura, de aço ABNT1020, pertenciam ao nosso antigo robô Pikachu."
+    "imageUrl": "https://thunderatz.org/media/projects/USP%20Recicla/card_usprecicla1.jpg",
+    "description": "O USP Recicla é um robô resistente de baixo custo. Ele foi totalmente feito com materiais reciclados, com exceção dos parafusos. A sua armadura e estrutura, de aço ABNT1020, pertenciam ao nosso antigo robô Pikachu.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/USP_Recicla.png"
   },
   {
     "name": "Crank Slider",
@@ -656,8 +698,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/crank-slider.webp",
-    "description": "Um disco de impacto horizontal acionado por motor à combustão é a principal arma do robô Crank Slider cuja potência é de 7HP. A armadura é feita de policarbonato 2 mm e a estrutura de aço ABNT1020."
+    "imageUrl": "https://thunderatz.org/media/projects/Crank%20Slider/card_crank1.jpg",
+    "description": "Um disco de impacto horizontal acionado por motor à combustão é a principal arma do robô Crank Slider cuja potência é de 7HP. A armadura é feita de policarbonato 2 mm e a estrutura de aço ABNT1020.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Crank_Slider.png"
   },
   {
     "name": "Adamowski",
@@ -671,8 +714,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/adamowski.webp",
-    "description": "O Adamowski I, construído em 2004, possui um losango de impacto vertical como arma principal. Sua armadura é feita de zinco 1 mm e sua estrutura de aço ABNT1020. A segunda versão desse robô, o Adamowski II, construída em 2005, apresentou uma considerável evolução em relação a primeira, ele ficou mais compacto com motor e baterias superiores."
+    "imageUrl": "https://thunderatz.org/media/projects/Adamowski/card_adamowskiii1.jpg",
+    "description": "O Adamowski I, construído em 2004, possui um losango de impacto vertical como arma principal. Sua armadura é feita de zinco 1 mm e sua estrutura de aço ABNT1020. A segunda versão desse robô, o Adamowski II, construída em 2005, apresentou uma considerável evolução em relação a primeira, ele ficou mais compacto com motor e baterias superiores.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Adamowski.png"
   },
   {
     "name": "Pikachu",
@@ -686,8 +730,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/pikachu.webp",
-    "description": "O robô Pikachu tem o poder de dar choque elétrico nos oponentes. Além disso, possui alta resistência mecânica, sua armadura e estrutura são feitas de aço ABNT1020. Em 2004, o projeto apresentou evoluções – ele obteve melhorias na armadura e na estrutura e teve o acréscimo de lanças traseiras."
+    "imageUrl": "https://thunderatz.org/media/projects/Pikachu/card_pikachu.jpg",
+    "description": "O robô Pikachu tem o poder de dar choque elétrico nos oponentes. Além disso, possui alta resistência mecânica, sua armadura e estrutura são feitas de aço ABNT1020. Em 2004, o projeto apresentou evoluções – ele obteve melhorias na armadura e na estrutura e teve o acréscimo de lanças traseiras.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Pikachu.png"
   },
   {
     "name": "Heleonor",
@@ -701,8 +746,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/heleonor.webp",
-    "description": "O robô Heleonor possui como arma principal um disco abrasivo e utiliza um motor de kart."
+    "imageUrl": "https://thunderatz.org/media/projects/Heleonor/card_heleonor.jpg-nggid03404-ngg0dyn-300x200x100-00f0w010c010r110f110r010t010.jpg",
+    "description": "O robô Heleonor possui como arma principal um disco abrasivo e utiliza um motor de kart.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Heleonor.png"
   },
   {
     "name": "Mata Cachorro",
@@ -716,8 +762,9 @@
       "silver": 0,
       "bronze": 0
     },
-    "imageUrl": "/images/mata-cachorro.webp",
-    "description": "O robô Mata Cachorro possui como arma principal um losango de impacto vertical. Esta foi a primeira atuação do losango como arma."
+    "imageUrl": "https://thunderatz.org/media/projects/Mata%20Cachorro/card_matacachorro.jpg-nggid03405-ngg0dyn-300x200x100-00f0w010c010_c4g1bI7.jpg",
+    "description": "O robô Mata Cachorro possui como arma principal um losango de impacto vertical. Esta foi a primeira atuação do losango como arma.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Mata_Cachorro.png"
   },
   {
     "name": "Cuervo",
@@ -731,7 +778,8 @@
       "silver": 1,
       "bronze": 0
     },
-    "imageUrl": "/images/cuervo.webp",
-    "description": "O Cuervo foi primeiro robô desenvolvido pela equipe, ele é extremamente resistente e sua arma principal é uma rampa. Ele participou da 1ª Guerra de Robôs, o primeiro evento do gênero a ser realizado no país, no qual conquistou o segundo lugar."
+    "imageUrl": "https://thunderatz.org/media/projects/Cuervo/card_cuervo.jpg-nggid03403-ngg0dyn-300x200x100-00f0w010c010r110f110r010t010.jpg",
+    "description": "O Cuervo foi primeiro robô desenvolvido pela equipe, ele é extremamente resistente e sua arma principal é uma rampa. Ele participou da 1ª Guerra de Robôs, o primeiro evento do gênero a ser realizado no país, no qual conquistou o segundo lugar.",
+    "typographyUrl": "https://thunderatz.org/media/project_typography/Cuervo.png"
   }
 ]
