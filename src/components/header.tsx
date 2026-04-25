@@ -7,13 +7,13 @@ type HeaderProps = {
 export function Header({ puzzleNumber, onOpenPuzzles, onOpenStats }: HeaderProps) {
   const num = String(puzzleNumber).padStart(3, "0")
   return (
-    <header className="flex flex-col items-center gap-3 px-4 pt-6 pb-6 md:relative md:flex-row md:justify-center md:gap-4 md:px-6 md:pb-7">
+    <header className="flex flex-col items-center gap-3 px-4 pt-6 pb-6 md:relative md:flex-row md:justify-center md:gap-5 md:px-6 md:pt-10 md:pb-10">
       <div className="flex items-baseline gap-3">
-        <h1 className="font-mono text-3xl font-bold tracking-tight md:text-[44px]">
+        <h1 className="font-mono text-3xl font-bold tracking-tight md:text-6xl">
           thundle
           <span className="text-thunder-yellow drop-shadow-[0_0_6px_rgba(255,229,0,0.25)]">.</span>
         </h1>
-        <p className="text-t3 font-mono text-xs tracking-wider uppercase md:text-base">
+        <p className="text-t3 font-mono text-xs tracking-wider uppercase md:text-lg">
           <span className="text-thunder-yellow/20">#{num}</span>
         </p>
       </div>

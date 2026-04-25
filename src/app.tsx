@@ -52,7 +52,7 @@ function GameScreen({
   const [showWin, setShowWin] = useState(true)
 
   return (
-    <div className="relative mx-auto max-w-[1000px] px-4 pb-12 md:px-5">
+    <div className="relative mx-auto max-w-6xl px-4 pb-12 md:px-6">
       <Header
         puzzleNumber={game.puzzleNumber}
         onOpenPuzzles={onOpenPuzzles}

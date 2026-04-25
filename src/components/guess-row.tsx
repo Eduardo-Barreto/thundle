@@ -9,14 +9,14 @@ type GuessRowProps = {
 export function GuessRow({ result, rowDelay }: GuessRowProps) {
   return (
     <div
-      className="grid grid-cols-[100px_repeat(7,minmax(80px,1fr))] gap-[5px] md:grid-cols-[120px_repeat(7,minmax(100px,1fr))]"
+      className="grid grid-cols-[100px_repeat(7,minmax(80px,1fr))] gap-2 md:grid-cols-[160px_repeat(7,minmax(120px,1fr))]"
       style={{
         animation: `row-in 300ms cubic-bezier(0.23,1,0.32,1) ${rowDelay}ms both`,
       }}
     >
       {/* Robot card — darkened photo bg + centered typography (like thunderatz.org) */}
-      <div className="sticky left-0 z-20 rounded-lg bg-[#0A0A0A]/80 pr-[5px] backdrop-blur-md">
-        <div className="relative flex min-h-[72px] items-center justify-center overflow-hidden rounded-lg shadow-[3px_0_8px_rgba(0,0,0,0.25)] md:min-h-[100px]">
+      <div className="sticky left-0 z-20 rounded-lg bg-[#0A0A0A]/80 pr-[5px] backdrop-blur-xl">
+        <div className="relative flex min-h-[72px] items-center justify-center overflow-hidden rounded-lg md:min-h-[120px]">
           <img src={result.imageUrl} alt="" className="absolute inset-0 size-full object-cover" />
           {/* Dark overlay — 50% like thunderatz.org */}
           <div className="absolute inset-0 bg-black/50" />

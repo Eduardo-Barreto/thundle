@@ -30,6 +30,10 @@ export function WinOverlay({ answer, puzzleNumber, results, usedHint, onClose }:
     <div
       className="fixed inset-0 z-40 flex items-center justify-center overflow-y-auto bg-black/70 px-4 py-8 backdrop-blur-sm"
       style={{ animation: "win-backdrop 400ms cubic-bezier(0.23,1,0.32,1) forwards" }}
+      onClick={(e) => e.target === e.currentTarget && onClose()}
+      onKeyDown={(e) => e.key === "Escape" && onClose()}
+      role="dialog"
+      tabIndex={-1}
     >
       {/* Team background image — blurred atmosphere like mcdle */}
       <div
@@ -42,7 +46,7 @@ export function WinOverlay({ answer, puzzleNumber, results, usedHint, onClose }:
       />
 
       <div
-        className="relative mx-auto flex w-full max-w-md flex-col items-center gap-8 rounded-2xl border border-white/6 bg-[#0A0A0A]/95 p-8 shadow-[0_32px_80px_rgba(0,0,0,0.6)]"
+        className="relative mx-auto flex w-full max-w-md flex-col items-center gap-8 rounded-2xl border border-white/6 bg-[#0A0A0A]/95 p-6 shadow-[0_32px_80px_rgba(0,0,0,0.6)] md:max-w-lg md:gap-10 md:p-10"
         style={{ animation: "win-card 500ms cubic-bezier(0.23,1,0.32,1) 100ms both" }}
       >
         <button

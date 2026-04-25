@@ -27,7 +27,7 @@ export function HintBar({ usedHint, hintAttribute, answer, onRequestHint }: Hint
     typeof hintValue === "boolean" ? (hintValue ? "Sim" : "N\u00e3o") : String(hintValue ?? "")
 
   return (
-    <div className="mb-7 flex items-center justify-center gap-3">
+    <div className="mb-7 flex items-center justify-center gap-3 md:mb-10 md:gap-4">
       <button
         onClick={onRequestHint}
         disabled={usedHint}
