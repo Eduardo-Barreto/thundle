@@ -825,22 +825,6 @@
     "description": ""
   },
   {
-    "name": "Time LEGO",
-    "slug": "lego",
-    "year": 2011,
-    "superCategory": "Sumo",
-    "category": "LEGO",
-    "active": false,
-    "trophies": {
-      "gold": 0,
-      "silver": 1,
-      "bronze": 0
-    },
-    "imageUrl": "https://thunderatz.org/media/projects/Time%20LEGO/card_LEGO_1.jpg",
-    "description": "O sumô LEGO é uma categoria com robôs de até 1kg que, com a restrição de utilizar apenas peças da empresa LEGO, tem a finalidade de autonomamente encontrar o adversário e empurrá-lo para fora do dojô.",
-    "typographyUrl": "https://thunderatz.org/media/project_typography/Tipo_Spintronic_ow9mpei.png"
-  },
-  {
     "name": "Hypnos",
     "slug": "hypnos",
     "year": 2010,
