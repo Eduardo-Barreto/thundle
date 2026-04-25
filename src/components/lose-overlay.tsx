@@ -23,7 +23,7 @@ export function LoseOverlay({
   const [copied, setCopied] = useState(false)
 
   async function handleShare() {
-    const text = generateShareText(puzzleNumber, results, usedHint)
+    const text = generateShareText(puzzleNumber, results, usedHint, false, 0, isFuture)
     const ok = await copyToClipboard(text)
     if (ok) {
       setCopied(true)

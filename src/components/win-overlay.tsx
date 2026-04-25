@@ -18,7 +18,7 @@ export function WinOverlay({ answer, puzzleNumber, results, usedHint, onClose }:
   const totalTrophies = answer.trophies.gold + answer.trophies.silver + answer.trophies.bronze
 
   async function handleShare() {
-    const text = generateShareText(puzzleNumber, results, usedHint)
+    const text = generateShareText(puzzleNumber, results, usedHint, true, stats.currentStreak)
     const ok = await copyToClipboard(text)
     if (ok) {
       setCopied(true)
