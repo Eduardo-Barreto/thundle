@@ -14,13 +14,10 @@ export function GuessRow({ result, rowDelay }: GuessRowProps) {
         animation: `row-in 300ms cubic-bezier(0.23,1,0.32,1) ${rowDelay}ms both`,
       }}
     >
-      {/* Robot card — darkened photo bg + centered typography (like thunderatz.org) */}
-      <div className="sticky left-0 z-20 bg-[#0A0A0A]/80 pr-2 backdrop-blur-md">
-        <div className="relative flex min-h-[72px] items-center justify-center overflow-hidden rounded-lg md:min-h-[120px]">
+      <div className="sticky left-0 z-20 overflow-visible bg-[#0A0A0A]">
+        <div className="relative flex min-h-[72px] items-center justify-center overflow-hidden rounded-[10px] md:min-h-[120px]">
           <img src={result.imageUrl} alt="" className="absolute inset-0 size-full object-cover" />
-          {/* Dark overlay — 50% like thunderatz.org */}
           <div className="absolute inset-0 bg-black/50" />
-          {/* Typography or name — centered, max-width 80% like thunderatz.org */}
           {result.typographyUrl ? (
             <img
               src={result.typographyUrl}
@@ -33,6 +30,18 @@ export function GuessRow({ result, rowDelay }: GuessRowProps) {
             </span>
           )}
         </div>
+        {/* Progressive blur+fade zone extending into tile area */}
+        <div
+          className="pointer-events-none absolute inset-y-0 left-full z-[5]"
+          style={{
+            width: "14px",
+            backdropFilter: "blur(14px)",
+            WebkitBackdropFilter: "blur(14px)",
+            maskImage: "linear-gradient(to right, rgba(0,0,0,0.9), transparent)",
+            WebkitMaskImage: "linear-gradient(to right, rgba(0,0,0,0.9), transparent)",
+            background: "linear-gradient(to right, rgba(10,10,10,0.5), transparent)",
+          }}
+        />
       </div>
       {result.cells.map((cell, i) => (
         <Tile key={cell.attribute} cell={cell} delay={rowDelay + (i + 1) * 60} />
