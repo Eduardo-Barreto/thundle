@@ -1,57 +1,737 @@
 [
   {
+    "name": "3vTracer",
+    "slug": "3vtracer",
+    "year": 2024,
+    "superCategory": "Autonomo",
+    "category": "Seguidor de Linha",
+    "active": true,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/3vtracer.webp",
+    "description": "O 3vTracer é o atual Seguidor de Linha da Thunder. É um reprojeto do Tracer 2.0"
+  },
+  {
     "name": "Perse",
     "slug": "perse",
     "year": 2020,
     "superCategory": "Autonomo",
     "category": "Trekking",
     "active": true,
-    "trophies": { "gold": 2, "silver": 0, "bronze": 1 },
+    "trophies": {
+      "gold": 3,
+      "silver": 5,
+      "bronze": 0
+    },
     "imageUrl": "/images/perse.webp",
-    "description": "Robô de trekking da ThundeRatz."
-  },
-  {
-    "name": "REDRUM",
-    "slug": "redrum",
-    "year": 2019,
-    "superCategory": "Combate",
-    "category": "Featherweight",
-    "active": true,
-    "trophies": { "gold": 1, "silver": 2, "bronze": 0 },
-    "imageUrl": "/images/redrum.webp",
-    "description": "Robô de combate Featherweight da ThundeRatz."
-  },
-  {
-    "name": "Onix",
-    "slug": "onix",
-    "year": 2018,
-    "superCategory": "Sumo",
-    "category": "Mini Sumo",
-    "active": false,
-    "trophies": { "gold": 0, "silver": 1, "bronze": 1 },
-    "imageUrl": "/images/onix.webp",
-    "description": "Robô de Mini Sumo da ThundeRatz."
+    "description": "O Perse é um robô autônomo que compete na categoria Trekking. Seu projeto desenvolveu novas áreas na equipe, como o campo de visão computacional, que é de extrema importância e será utilizado em projetos inteligentes futuros."
   },
   {
     "name": "ThunderVolt",
     "slug": "thundervolt",
-    "year": 2022,
+    "year": 2020,
     "superCategory": "Autonomo",
     "category": "VSSS",
     "active": true,
-    "trophies": { "gold": 0, "silver": 0, "bronze": 0 },
+    "trophies": {
+      "gold": 3,
+      "silver": 7,
+      "bronze": 1
+    },
     "imageUrl": "/images/thundervolt.webp",
-    "description": "Time de futebol de robôs VSSS da ThundeRatz."
+    "description": "Já ouviu falar de futebol de robôs? Esse é o princípio da categoria VSSS, Very Small Size Soccer, na qual dois times disputam para ver quem marca a maior quantidade de gols, sendo tudo feito autonomamente! Um time é composto por três robôs, cada um com dimensões máximas de 75mm x 75mm x 75mm. A partida é disputada em um campo preto com marcações em branco e é composta por 2 períodos iguais, cada qual com 5 minutos, com um intervalo de meio tempo de 10 minutos."
+  },
+  {
+    "name": "PiPolka",
+    "slug": "pipolka",
+    "year": 2019,
+    "superCategory": "Combate",
+    "category": "Fairyweight",
+    "active": true,
+    "trophies": {
+      "gold": 0,
+      "silver": 2,
+      "bronze": 2
+    },
+    "imageUrl": "/images/pipolka.webp",
+    "description": "A PiPolka é um robô de combate da categoria Fairyweight (150 g)."
+  },
+  {
+    "name": "ThunderLeague",
+    "slug": "thunderleague",
+    "year": 2018,
+    "superCategory": "Autonomo",
+    "category": "RCSS",
+    "active": true,
+    "trophies": {
+      "gold": 5,
+      "silver": 6,
+      "bronze": 1
+    },
+    "imageUrl": "/images/thunderleague.webp",
+    "description": "O ThunderLeague é um projeto da categoria RoboCup Soccer Simulation 2D. Estreou em 2018 e já conquistou seu primeiro troféu, no Winter Challenge XV, com grande estilo, em primeiro lugar."
+  },
+  {
+    "name": "K-Torze",
+    "slug": "ktorze",
+    "year": 2014,
+    "superCategory": "Combate",
+    "category": "Lightweight",
+    "active": true,
+    "trophies": {
+      "gold": 1,
+      "silver": 0,
+      "bronze": 4
+    },
+    "imageUrl": "/images/ktorze.webp",
+    "description": "Nomeado em homenagem ao robô K2, do Team Velocity, o K-Torze teve sua estreia no Winter Challenge X, em 2014."
+  },
+  {
+    "name": "Cachorro Louco",
+    "slug": "cachorro-louco",
+    "year": 2011,
+    "superCategory": "Combate",
+    "category": "Hobbyweight",
+    "active": true,
+    "trophies": {
+      "gold": 3,
+      "silver": 0,
+      "bronze": 2
+    },
+    "imageUrl": "/images/cachorro-louco.webp",
+    "description": "Na categoria Hobbyweight (5,5 kg) de combate, tendo como base exemplos internacionais de sucesso e também o aprendizado acumulado, a Equipe desenvolveu o Cachorro Louco: um robô com uma barra poderosa de aço 4340 tratado de 1 kg que gira a 6 mil rotações por minuto, com energia suficiente para lançar um oponente à 18 metros, sem comprometer sua agilidade e mobilidade."
   },
   {
     "name": "Time Olympus",
     "slug": "time-olympus",
-    "year": 2021,
+    "year": 2008,
     "superCategory": "Hockey",
     "category": "Hockey Pro",
     "active": true,
-    "trophies": { "gold": 1, "silver": 0, "bronze": 0 },
+    "trophies": {
+      "gold": 2,
+      "silver": 3,
+      "bronze": 8
+    },
     "imageUrl": "/images/time-olympus.webp",
-    "description": "Time de hockey da ThundeRatz."
+    "description": "O Hockey de Robôs é muito semelhante ao hockey de verdade, cujo objetivo é marcar o maior número de gols com um disco. Nessa categoria, cada time conta com 3 robôs radiocontrolados de até 6,8kg para disputar uma partida de 5 minutos, no Brasil, e 10 minutos, nos EUA."
+  },
+  {
+    "name": "Jardineiro",
+    "slug": "jardineiro",
+    "year": 2019,
+    "superCategory": "Combate",
+    "category": "Featherweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/jardineiro.webp",
+    "description": "O Jardineiro é um robô da categoria Featherweight."
+  },
+  {
+    "name": "Leprechaun",
+    "slug": "leprechaun",
+    "year": 2019,
+    "superCategory": "Combate",
+    "category": "Antweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/leprechaun.webp",
+    "description": "O Leprechaun é um robô da categoria Antweight."
+  },
+  {
+    "name": "Atom",
+    "slug": "atom",
+    "year": 2018,
+    "superCategory": "Combate",
+    "category": "Antweight",
+    "active": false,
+    "trophies": {
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/atom.webp",
+    "description": "O Atom é um robô da categoria Antweight (454 g), que estreou no Winter Challenge 2018, sendo o mais recente projeto da equipe. Ele é um robô undercutter, ou seja, tem um disco de impacto horizontal rente à arena, e foi inspirado em nosso robô Apolkalipse, também do tipo undercutter."
+  },
+  {
+    "name": "Ônix",
+    "slug": "onix",
+    "year": 2018,
+    "superCategory": "Sumo",
+    "category": "Mini Sumô",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/onix.webp",
+    "description": "O Ônix é um projeto desenvolvido para a categoria Mini-Sumô (de robôs de até 500g). Seu nome vem da pedra semipreciosa ônix, usada para confecção de jóias."
+  },
+  {
+    "name": "Boladinho",
+    "slug": "boladinho",
+    "year": 2017,
+    "superCategory": "Autonomo",
+    "category": "Humanoide",
+    "active": false,
+    "trophies": {
+      "gold": 1,
+      "silver": 1,
+      "bronze": 0
+    },
+    "imageUrl": "/images/boladinho.webp",
+    "description": "O Boladinho é um robô voltado às categorias humanoides de kits comprados, nas quais os componentes estruturais e eletrônicos são previamente adquiridos, cabendo aos competidores programarem os seus movimentos. Um robô humanoide pode participar de uma vasta variedade de categorias. Não obstante, até o momento, o Boladinho participou apenas das categorias Kung-Fu LightWeight, Freestyle – kit e Sumô Humanoide."
+  },
+  {
+    "name": "Pepita",
+    "slug": "pepita",
+    "year": 2017,
+    "superCategory": "Sumo",
+    "category": "Micro Sumô",
+    "active": false,
+    "trophies": {
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/pepita.webp",
+    "description": "Pepita é nosso robô da categoria Micro Sumô  (100 g). Seu nome e logo são baseados em pepitas de ouro, seguido a mesma lógica de nomes dos outros robôs de sumô da equipe, que também são pedras."
+  },
+  {
+    "name": "REDRUM",
+    "slug": "redrum",
+    "year": 2017,
+    "superCategory": "Combate",
+    "category": "Featherweight",
+    "active": false,
+    "trophies": {
+      "gold": 2,
+      "silver": 1,
+      "bronze": 0
+    },
+    "imageUrl": "/images/redrum.webp",
+    "description": "O robô REDRUM é o terceiro projeto da Equipe ThundeRatz a competir na categoria de combate Featherweight (13,6kg), sua estreia aconteceu no Winter Challenge XIII, no qual ele conquistou o segundo lugar na competição. O robô é o segundo da equipe a utilizar um tambor de impacto como arma e foi fruto de muito desenvolvimento e conhecimento adquirido com o projeto anterior da equipe na categoria, o robô Armagedrum."
+  },
+  {
+    "name": "Spintronic",
+    "slug": "spintronic",
+    "year": 2017,
+    "superCategory": "Combate",
+    "category": "Fairyweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/spintronic.webp",
+    "description": "O Spintronic foi um robô da categoria Fairyweight, de até 150g, sendo o menor robô de combate da ThundeRatz. Seu nome vem do campo da nanotecnologia que estuda a rotação dos elétrons."
+  },
+  {
+    "name": "Tracer",
+    "slug": "tracer",
+    "year": 2017,
+    "superCategory": "Autonomo",
+    "category": "Seguidor de Linha",
+    "active": false,
+    "trophies": {
+      "gold": 4,
+      "silver": 1,
+      "bronze": 4
+    },
+    "imageUrl": "/images/tracer.webp",
+    "description": "O Tracer é um robô autônomo que participa da categoria Seguidor de Linha. Ele utiliza como estrutura básica a sua própria PCB (placa eletrônica), juntamente com rodas e peças em 3D projetadas para atender às necessidades durante as competições."
+  },
+  {
+    "name": "D'Arc",
+    "slug": "darc",
+    "year": 2016,
+    "superCategory": "Combate",
+    "category": "Beetleweight",
+    "active": false,
+    "trophies": {
+      "gold": 2,
+      "silver": 0,
+      "bronze": 1
+    },
+    "imageUrl": "/images/darc.webp",
+    "description": "Tendo como objetivo uma maior competitividade na categoria Beetleweight (1,36 kg), a equipe desenvolveu a D’Arc, um robô que possui uma arma de impacto vertical, do tipo Egg Beater, que gira a aproximadamente 9000 RPM. Seu nome foi inspirado na guerreira, heroína e mártir francesa, Joana d’Arc."
+  },
+  {
+    "name": "Sharkhai",
+    "slug": "sharkhai",
+    "year": 2016,
+    "superCategory": "Combate",
+    "category": "Antweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 3
+    },
+    "imageUrl": "/images/sharkhai.webp",
+    "description": "O Sharkhai é um robô da categoria Antweight (454g), que teve sua estréia nas arenas da Robogames 2016. O projeto teve seu nome inspirado pelo formato de sua antena, que é semelhante ao de uma barbatana de tubarão. Sharkhai é uma composição do termo em inglês Shark e do alemão Hai, ambos usados para designar esse predador marinho."
+  },
+  {
+    "name": "Apolkalipse",
+    "slug": "apolkalipse",
+    "year": 2015,
+    "superCategory": "Combate",
+    "category": "Middleweight",
+    "active": false,
+    "trophies": {
+      "gold": 1,
+      "silver": 1,
+      "bronze": 1
+    },
+    "imageUrl": "/images/apolkalipse.webp",
+    "description": "O Apolkalipse é um robô de combate da categoria Middleweight (54,4kg). Ele possui como arma um disco de impacto horizontal de 10kg, girando a 2500 rpm bem próximo ao chão, sendo chamado então de um robô do tipo undercutter."
+  },
+  {
+    "name": "Duende",
+    "slug": "duende",
+    "year": 2015,
+    "superCategory": "Combate",
+    "category": "Antweight",
+    "active": false,
+    "trophies": {
+      "gold": 1,
+      "silver": 2,
+      "bronze": 1
+    },
+    "imageUrl": "/images/duende.webp",
+    "description": "O Duende foi o primeiro robô da equipe na categoria Antweight, de 454 gramas. A ideia inicial do projeto contava com uma arma de impacto vertical do tipo tambor, contudo, para atender às restrições de peso da categoria e ainda maximizar sua inércia, optou-se por fazer um tipo de arma incomum nas competições brasileiras: o eggbeater, que representou uma grande inovação para a Equipe."
+  },
+  {
+    "name": "RoZeta",
+    "slug": "rozeta",
+    "year": 2015,
+    "superCategory": "Sumo",
+    "category": "Mini Sumô",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 2,
+      "bronze": 3
+    },
+    "imageUrl": "/images/rozeta.webp",
+    "description": "RoZeta é um robô da categoria Mini-Sumô (de robôs de até 500g). O projeto foi financiado pelo Orçamento Participativo Minerva (OPMin) do Grêmio Politécnico em 2015. Seu nome é inspirado na famosa Pedra de Roseta, cujo texto foi crucial para compreensão dos hieróglifos egípcios."
+  },
+  {
+    "name": "ThunderMaps",
+    "slug": "thundermaps",
+    "year": 2015,
+    "superCategory": "Autonomo",
+    "category": "Trekking",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/thundermaps.webp",
+    "description": "O ThunderMaps foi o segundo robô autônomo da equipe a competir na categoria Trekking. Ele foi criado com o objetivo de desenvolver novas funcionalidades para serem implementadas no ThunderWaze."
+  },
+  {
+    "name": "Armagedrum",
+    "slug": "armagedrum",
+    "year": 2014,
+    "superCategory": "Combate",
+    "category": "Featherweight",
+    "active": false,
+    "trophies": {
+      "gold": 2,
+      "silver": 2,
+      "bronze": 5
+    },
+    "imageUrl": "/images/armagedrum.webp",
+    "description": "O robô Armagedrum, da categoria Featherweight (13,6kg), fez sua estreia no Winter Challenge X e é o primeiro projeto da Equipe ThundeRatz a utilizar um tambor de impacto vertical como arma."
+  },
+  {
+    "name": "Iskeiro",
+    "slug": "iskeiro",
+    "year": 2014,
+    "superCategory": "Combate",
+    "category": "Beetleweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0
+    },
+    "imageUrl": "/images/iskeiro.webp",
+    "description": "O robô Iskeiro, da categoria Beetleweight (1,36 kg), surgiu com o intuito de desenvolver duas características que ainda não eram presentes em projetos da equipe: o uso de um compacto lança-chamas e uma locomoção omnidirecional (que tinha o intuito de deixar o robô sempre de frente ao adversário), unidos a uma rampa como principal método para atacar e contra-atacar. A locomoção omnidirecional foi abandonada por demonstrar imprecisões na pilotagem e perdas de potência."
+  },
+  {
+    "name": "Moai",
+    "slug": "moai",
+    "year": 2014,
+    "superCategory": "Sumo",
+    "category": "Sumô 3 kg (Auto)",
+    "active": false,
+    "trophies": {
+      "gold": 3,
+      "silver": 7,
+      "bronze": 3
+    },
+    "imageUrl": "/images/moai.webp",
+    "description": "O robô Moai é o primeiro Sumô 3kg Autônomo da equipe. Seu nome segue a mesma linha de pensamento de seu irmão mais velho, o Stonehenge, de monumentos antigos que resistiram ao tempo, desta vez fazendo referência às famosas estátuas da ilha de Páscoa."
+  },
+  {
+    "name": "ThunderWaze",
+    "slug": "thunderwaze",
+    "year": 2014,
+    "superCategory": "Autonomo",
+    "category": "Trekking",
+    "active": false,
+    "trophies": {
+      "gold": 1,
+      "silver": 1,
+      "bronze": 4
+    },
+    "imageUrl": "/images/thunderwaze.webp",
+    "description": "O ThunderWaze é um robô autônomo que compete nas categorias Trekking e RoboMagellan. Seu projeto desenvolveu novas áreas na equipe, como o campo de visão computacional, que é de extrema importância e será utilizado em projetos inteligentes futuros."
+  },
+  {
+    "name": "Ratnik",
+    "slug": "ratnik",
+    "year": 2013,
+    "superCategory": "Combate",
+    "category": "Beetleweight",
+    "active": false,
+    "trophies": {
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1
+    },
+    "imageUrl": "/images/ratnik.webp",
+    "description": "O Ratnik foi um robô da categoria Beetleweight (1,36kg) que conta com uma barra de impacto horizontal de 2 dentes que gira a 7000 rpm. O projeto começou a ser desenvolvido em 2012 e teve sua estreia no Winter Challenge 2013, sendo o primeiro robô da equipe na categoria."
+  },
+  {
+    "name": "Adão",
+    "slug": "adao",
+    "year": 2012,
+    "superCategory": "Combate",
+    "category": "Middleweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/adao.webp",
+    "description": "Neste projeto, aliamos conceitos de sucesso vistos tanto dentro da Equipe como fora dela para construir um robô competitivo a nível mundial. O Adão (nome este que faz referencia ao antigo middleweight da equipe Adam, predecessor do Lenhador) alia grande robustez em sua estrutura capaz de aguentar os ataques dos mais fortes robôs adversários por utilizar como armadura uma combinação de alumínio aeroespacial e poliaramida (material utilizado em colete a prova de balas), grande mobilidade com sua locomoção 4×4 e um disco maciço de mais de 8 kg de aço capaz de causar grandes danos físicos ao adversário."
+  },
+  {
+    "name": "Quadradinho",
+    "slug": "quadradinho",
+    "year": 2012,
+    "superCategory": "Autonomo",
+    "category": "Seguidor de Linha",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 1,
+      "bronze": 1
+    },
+    "imageUrl": "/images/quadradinho.webp",
+    "description": "O robô quadradinho desde sua criação mostrou um excelente desempenho quando comparado a maioria dos outros seguidores. Porém, por ser um dos primeiros projetos de robô follow-line inteiramente desenvolvido pela equipe, o robô possui limitações mecânicas e eletrônicas que o impede de alcançar os lugares de destaque no pódio das competições."
+  },
+  {
+    "name": "Redondinho",
+    "slug": "redondinho",
+    "year": 2012,
+    "superCategory": "Autonomo",
+    "category": "Seguidor de Linha",
+    "active": false,
+    "trophies": {
+      "gold": 3,
+      "silver": 0,
+      "bronze": 1
+    },
+    "imageUrl": "/images/redondinho.webp",
+    "description": "Campeão nacional da categoria em 2013, onde competiu contra robôs de equipes internacionais. A plataforma é comprada, consiste no modelo 3pi da Polulu®, porém a programação é toda desenvolvida pela equipe, aplicando conceitos de controle digital para melhorar seu desempenho e estabilidade na pista."
+  },
+  {
+    "name": "Stonehenge",
+    "slug": "stonehenge",
+    "year": 2012,
+    "superCategory": "Sumo",
+    "category": "Sumô 3 kg (RC)",
+    "active": false,
+    "trophies": {
+      "gold": 13,
+      "silver": 4,
+      "bronze": 3
+    },
+    "imageUrl": "/images/stonehenge.webp",
+    "description": "Stonehenge é um robô da categoria Sumô 3kg Rádio Controlado que teve sua estreia em 2012. Seu nome é uma referência direta ao monumento pré-histórico localizado no Reino Unido : a formação circular de enormes blocos de pedra denominada Stonehenge."
+  },
+  {
+    "name": "Time LEGO",
+    "slug": "lego",
+    "year": 2011,
+    "superCategory": "Sumo",
+    "category": "Sumô LEGO",
+    "active": false,
+    "trophies": {
+      "gold": 5,
+      "silver": 5,
+      "bronze": 3
+    },
+    "imageUrl": "/images/lego.webp",
+    "description": "O sumô LEGO é uma categoria com robôs de até 1kg que, com a restrição de utilizar apenas peças da empresa LEGO, tem a finalidade de autonomamente encontrar o adversário e empurrá-lo para fora do dojô."
+  },
+  {
+    "name": "Hypnos",
+    "slug": "hypnos",
+    "year": 2010,
+    "superCategory": "Combate",
+    "category": "Featherweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/hypnos.webp",
+    "description": "A estrutura interna do robô é feita de alumínio aeroespacial (7075-T6), escolhido pela alta relação resistência/peso e tenacidade, que não transporta acelerações fortíssimas aos componentes fixados na estrutura, como motores e eletrônicas, que se mostra prejudicial. Os alívios de peso foram posicionados estrategicamente em pontos que não sofrem tensões altas, mantendo assim a eficiência dela. Esse sistema consiste nas peças que transportam o conjugado do motor da arma para o eixo principal do robô e é composto pelo MagMotor S28-150 (motor DC de 2500 W)."
+  },
+  {
+    "name": "Racha Cuca",
+    "slug": "racha-cuca",
+    "year": 2009,
+    "superCategory": "Combate",
+    "category": "Hobbyweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/racha-cuca.webp",
+    "description": "O robô veio para substituir o Catatau da categoria Hobbyweight (até 5,5kg). Possui um disco de impacto horinzontal que se assemelha a do robô Lenhador da categoria Middleweight (até 55kg). Competiu apenas no Winter Challenge 2009 onde consquistou o 4º lugar."
+  },
+  {
+    "name": "Seninha",
+    "slug": "seninha",
+    "year": 2009,
+    "superCategory": "Autonomo",
+    "category": "Seguidor de Linha",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 1,
+      "bronze": 1
+    },
+    "imageUrl": "/images/seninha.webp",
+    "description": "O projeto follower consiste na construção de um robô autônomo que deve seguir um circuito demarcado por linhas no chão e executar alguma ação predeterminada quando chegar a uma marca especial da pista. O vencedor da competição é aquele que consegue fazer todo o circuito em menor tempo. Vale ressaltar que o circuito a ser percorrido não é previamente conhecido pelos competidores."
+  },
+  {
+    "name": "Catatau",
+    "slug": "catatau",
+    "year": 2008,
+    "superCategory": "Combate",
+    "category": "Hobbyweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/catatau.webp",
+    "description": "O robô Catatau possui um disco de impacto vertical e estrutura de perfis de aço. Os benefícios dessa opção foram o baixo custo e a experiência já adquirida pela equipe quando da construção de um Middleweight de mesmo modelo. O robô foi basicamente projetado e construído por novatos da equipe."
+  },
+  {
+    "name": "Lenhador",
+    "slug": "lenhador",
+    "year": 2008,
+    "superCategory": "Combate",
+    "category": "Middleweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/lenhador.webp",
+    "description": "O Lenhador marcou uma mudança na metodologia fabril da equipe, pois foi nosso primeiro robô cuja estrutura foi feita totalmente em máquinas controladas por computador. Outra ferramenta bastante utilizada em seu desenvolvimento, foi a simulação dinâmica via método de elementos finitos (MEF) para que pudéssemos fazer um trabalho de otimização topológica em cada peça. Tal desenvolvimento possibilitou construir o robô de maior relação entre potência e peso em atividade no Brasil."
+  },
+  {
+    "name": "Nanolico",
+    "slug": "nanolico",
+    "year": 2007,
+    "superCategory": "Combate",
+    "category": "Hobbyweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/nanolico.webp",
+    "description": "O Nanolico foi o primeiro e unico robô da equipe que utiliza a alavanca com um mecanismo de 4 barras como arma. Além disso, uma rampa é usada como sua arma secundária."
+  },
+  {
+    "name": "PiRaT",
+    "slug": "pirat",
+    "year": 2007,
+    "superCategory": "Combate",
+    "category": "Middleweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/pirat.webp",
+    "description": "O PiRaT foi construído em 3 meses e participou do Winter Challenge 2007 e do 7º ENECA e conquistou junto com o nosso outro robô principal, Adam, o 4º e o 3º, respectivamente."
+  },
+  {
+    "name": "Adam",
+    "slug": "adam",
+    "year": 2006,
+    "superCategory": "Combate",
+    "category": "Middleweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1
+    },
+    "imageUrl": "/images/adam.webp",
+    "description": "O Adam I é uma evolução do Adamowski II. Ele manteve o velho losango usado como arma, porém apresentou melhorias no sistema de movimentação e a estrutura e armadura ficaram mais resistentes."
+  },
+  {
+    "name": "Adam Jr",
+    "slug": "adam-jr",
+    "year": 2006,
+    "superCategory": "Combate",
+    "category": "Hobbyweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/adam-jr.webp",
+    "description": "A equipe levou apenas 3 horas para construir o robô Filho do Adam. Ele foi desenvolvido na véspera da competição, em Amparo mesmo, com tudo o que sobrou do antigo Adam. Este possui um losango de impacto vertical como arma e consquistou o 4° lugar no Winter Challenge 2006."
+  },
+  {
+    "name": "USP Recicla",
+    "slug": "usp-recicla",
+    "year": 2006,
+    "superCategory": "Combate",
+    "category": "Middleweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/usp-recicla.webp",
+    "description": "O USP Recicla é um robô resistente de baixo custo. Ele foi totalmente feito com materiais reciclados, com exceção dos parafusos. A sua armadura e estrutura, de aço ABNT1020, pertenciam ao nosso antigo robô Pikachu."
+  },
+  {
+    "name": "Crank Slider",
+    "slug": "crank-slider",
+    "year": 2005,
+    "superCategory": "Combate",
+    "category": "Middleweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/crank-slider.webp",
+    "description": "Um disco de impacto horizontal acionado por motor à combustão é a principal arma do robô Crank Slider cuja potência é de 7HP. A armadura é feita de policarbonato 2 mm e a estrutura de aço ABNT1020."
+  },
+  {
+    "name": "Adamowski",
+    "slug": "adamowski",
+    "year": 2004,
+    "superCategory": "Combate",
+    "category": "Middleweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/adamowski.webp",
+    "description": "O Adamowski I, construído em 2004, possui um losango de impacto vertical como arma principal. Sua armadura é feita de zinco 1 mm e sua estrutura de aço ABNT1020. A segunda versão desse robô, o Adamowski II, construída em 2005, apresentou uma considerável evolução em relação a primeira, ele ficou mais compacto com motor e baterias superiores."
+  },
+  {
+    "name": "Pikachu",
+    "slug": "pikachu",
+    "year": 2003,
+    "superCategory": "Combate",
+    "category": "Middleweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/pikachu.webp",
+    "description": "O robô Pikachu tem o poder de dar choque elétrico nos oponentes. Além disso, possui alta resistência mecânica, sua armadura e estrutura são feitas de aço ABNT1020. Em 2004, o projeto apresentou evoluções – ele obteve melhorias na armadura e na estrutura e teve o acréscimo de lanças traseiras."
+  },
+  {
+    "name": "Heleonor",
+    "slug": "heleonor",
+    "year": 2002,
+    "superCategory": "Combate",
+    "category": "Middleweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/heleonor.webp",
+    "description": "O robô Heleonor possui como arma principal um disco abrasivo e utiliza um motor de kart."
+  },
+  {
+    "name": "Mata Cachorro",
+    "slug": "mata-cachorro",
+    "year": 2002,
+    "superCategory": "Combate",
+    "category": "Middleweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    "imageUrl": "/images/mata-cachorro.webp",
+    "description": "O robô Mata Cachorro possui como arma principal um losango de impacto vertical. Esta foi a primeira atuação do losango como arma."
+  },
+  {
+    "name": "Cuervo",
+    "slug": "cuervo",
+    "year": 2001,
+    "superCategory": "Combate",
+    "category": "Middleweight",
+    "active": false,
+    "trophies": {
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0
+    },
+    "imageUrl": "/images/cuervo.webp",
+    "description": "O Cuervo foi primeiro robô desenvolvido pela equipe, ele é extremamente resistente e sua arma principal é uma rampa. Ele participou da 1ª Guerra de Robôs, o primeiro evento do gênero a ser realizado no país, no qual conquistou o segundo lugar."
   }
 ]
