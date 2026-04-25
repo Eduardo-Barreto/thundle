@@ -8,10 +8,12 @@ import { loadGame, saveGame, recordWin } from "@/lib/storage"
 import type { Robot, GuessResult } from "@/types"
 
 const robots = robotsData as Robot[]
+const MAX_GUESSES = 10
 
 export function useGame(dateStr?: string) {
   const date = dateStr ?? getTodayStr()
   const puzzleNumber = getPuzzleNumber(date)
+  const isFuture = date > getTodayStr()
   const answer = useMemo(() => getDailyRobot(robots, date), [date])
 
   const saved = loadGame(date)
@@ -20,6 +22,9 @@ export function useGame(dateStr?: string) {
   const [usedHint, setUsedHint] = useState(saved?.usedHint ?? false)
   const [hintAttribute, setHintAttribute] = useState<string | undefined>(saved?.hintAttribute)
   const [completed, setCompleted] = useState(saved?.completed ?? false)
+  const [lost, setLost] = useState(
+    saved?.completed === false && (saved?.guesses.length ?? 0) >= MAX_GUESSES,
+  )
 
   const results: GuessResult[] = useMemo(
     () =>
@@ -35,7 +40,7 @@ export function useGame(dateStr?: string) {
 
   const submitGuess = useCallback(
     (robotName: string) => {
-      if (completed || guessedNames.has(robotName)) return
+      if (completed || lost || guessedNames.has(robotName)) return
 
       const newGuesses = [...guessNames, robotName]
       setGuessNames(newGuesses)
@@ -43,12 +48,17 @@ export function useGame(dateStr?: string) {
       const robot = robots.find((r) => r.name === robotName)
       if (!robot) return
 
-      const result = compareGuess(robot, answer)
+      const result = compareGuess(robot, answer, date)
       const isWin = result.isCorrect
+      const isLoss = !isWin && newGuesses.length >= MAX_GUESSES
 
       if (isWin) {
         setCompleted(true)
         recordWin(date, newGuesses.length)
+      }
+
+      if (isLoss) {
+        setLost(true)
       }
 
       saveGame(date, {
@@ -58,7 +68,7 @@ export function useGame(dateStr?: string) {
         completed: isWin,
       })
     },
-    [completed, guessedNames, guessNames, answer, date, usedHint, hintAttribute],
+    [completed, lost, guessedNames, guessNames, answer, date, usedHint, hintAttribute],
   )
 
   const requestHint = useCallback(() => {
@@ -82,6 +92,8 @@ export function useGame(dateStr?: string) {
     })
   }, [usedHint, date, guessNames, completed])
 
+  const remainingGuesses = MAX_GUESSES - guessNames.length
+
   return {
     date,
     puzzleNumber,
@@ -90,8 +102,11 @@ export function useGame(dateStr?: string) {
     results,
     guessedNames,
     completed,
+    lost,
+    isFuture,
     usedHint,
     hintAttribute,
+    remainingGuesses,
     submitGuess,
     requestHint,
   }

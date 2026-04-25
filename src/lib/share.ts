@@ -11,11 +11,14 @@ export function generateShareText(
   results: GuessResult[],
   usedHint: boolean,
 ): string {
-  const header = `thundle. #${String(puzzleNumber).padStart(3, "0")}${usedHint ? " 💡" : ""}`
+  const num = puzzleNumber >= 0 ? String(puzzleNumber).padStart(3, "0") : String(puzzleNumber)
+  const header = `thundle. #${num}${usedHint ? " 💡" : ""}`
 
   const rows = results.map((r) => r.cells.map((c) => EMOJI[c.status]).join(""))
 
-  return [header, ...rows, "thundle.io"].join("\n")
+  const url = puzzleNumber === 1 ? "thundle.io" : `thundle.io?p=${puzzleNumber}`
+
+  return [header, ...rows, url].join("\n")
 }
 
 export async function copyToClipboard(text: string): Promise<boolean> {

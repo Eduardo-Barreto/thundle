@@ -4,6 +4,7 @@ import { Background } from "@/components/background"
 import { GuessGrid } from "@/components/guess-grid"
 import { Header } from "@/components/header"
 import { HintBar } from "@/components/hint-bar"
+import { LoseOverlay } from "@/components/lose-overlay"
 import { PuzzlePickerModal } from "@/components/puzzle-picker-modal"
 import { SearchInput } from "@/components/search-input"
 import { StatsModal } from "@/components/stats-modal"
@@ -73,7 +74,8 @@ function GameScreen({
   onOpenStats: () => void
 }) {
   const game = useGame(dateStr)
-  const [showWin, setShowWin] = useState(true)
+  const [showOverlay, setShowOverlay] = useState(true)
+  const gameOver = game.completed || game.lost
 
   return (
     <div className="relative mx-auto max-w-6xl px-4 pb-12 md:px-6">
@@ -85,7 +87,7 @@ function GameScreen({
       <SearchInput
         robots={game.robots}
         guessedNames={game.guessedNames}
-        disabled={game.completed}
+        disabled={gameOver}
         onSelect={game.submitGuess}
       />
       <HintBar
@@ -94,20 +96,35 @@ function GameScreen({
         answer={game.answer}
         onRequestHint={game.requestHint}
       />
+      {!gameOver && (
+        <p className="text-t3 mb-4 text-center font-mono text-[10px] tracking-wider uppercase">
+          {game.remainingGuesses} tentativas restantes
+        </p>
+      )}
       <GuessGrid results={game.results} />
-      {game.completed && showWin && (
+      {game.completed && showOverlay && (
         <WinOverlay
           answer={game.answer}
           puzzleNumber={game.puzzleNumber}
           results={game.results}
           usedHint={game.usedHint}
-          onClose={() => setShowWin(false)}
+          onClose={() => setShowOverlay(false)}
         />
       )}
-      {game.completed && !showWin && (
+      {game.lost && showOverlay && (
+        <LoseOverlay
+          answer={game.answer}
+          puzzleNumber={game.puzzleNumber}
+          results={game.results}
+          usedHint={game.usedHint}
+          isFuture={game.isFuture}
+          onClose={() => setShowOverlay(false)}
+        />
+      )}
+      {gameOver && !showOverlay && (
         <div className="fixed right-4 bottom-4 z-30 md:right-6 md:bottom-6">
           <button
-            onClick={() => setShowWin(true)}
+            onClick={() => setShowOverlay(true)}
             className="bg-thunder-navy text-thunder-yellow focus-visible:outline-thunder-yellow cursor-pointer rounded-lg px-4 py-2.5 font-mono text-xs font-bold tracking-wider uppercase shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-160 ease-[cubic-bezier(0.23,1,0.32,1)] hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-97 md:px-5 md:text-sm"
           >
             Ver resultado
