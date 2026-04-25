@@ -2,27 +2,19 @@
   "superCategories": {
     "Combate": {
       "label": "Combate",
-      "categories": [
-        "Fairyweight",
-        "Antweight",
-        "Beetleweight",
-        "Hobbyweight",
-        "Featherweight",
-        "Lightweight",
-        "Middleweight"
-      ]
+      "categories": ["Fairy", "Ant", "Beetle", "Hobby", "Feather", "Light", "Middle"]
     },
     "Sumo": {
       "label": "Sumo",
-      "categories": ["Mini Sumo", "Micro Sumo", "Sumo 3kg Auto", "Sumo 3kg RC", "Sumo LEGO"]
+      "categories": ["Micro Sumo", "Mini Sumo", "3kg", "LEGO"]
     },
     "Autonomo": {
       "label": "Autônomo",
-      "categories": ["Seguidor de Linha", "Trekking", "VSSS", "RCSS", "Humanoide"]
+      "categories": ["Seguidor", "Trekking", "VSSS", "RCSS", "Humanoide"]
     },
     "Hockey": {
       "label": "Hockey",
-      "categories": ["Hockey Pro"]
+      "categories": ["Hockey"]
     }
   },
   "attributes": {

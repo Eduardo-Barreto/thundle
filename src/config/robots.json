@@ -4,7 +4,7 @@
     "slug": "3vtracer",
     "year": 2024,
     "superCategory": "Autonomo",
-    "category": "Seguidor de Linha",
+    "category": "Seguidor",
     "active": true,
     "trophies": {
       "gold": 0,
@@ -51,7 +51,7 @@
     "slug": "pipolka",
     "year": 2019,
     "superCategory": "Combate",
-    "category": "Fairyweight",
+    "category": "Fairy",
     "active": true,
     "trophies": {
       "gold": 0,
@@ -83,7 +83,7 @@
     "slug": "ktorze",
     "year": 2014,
     "superCategory": "Combate",
-    "category": "Lightweight",
+    "category": "Light",
     "active": true,
     "trophies": {
       "gold": 1,
@@ -99,7 +99,7 @@
     "slug": "cachorro-louco",
     "year": 2011,
     "superCategory": "Combate",
-    "category": "Hobbyweight",
+    "category": "Hobby",
     "active": true,
     "trophies": {
       "gold": 3,
@@ -115,7 +115,7 @@
     "slug": "time-olympus",
     "year": 2008,
     "superCategory": "Hockey",
-    "category": "Hockey Pro",
+    "category": "Hockey",
     "active": true,
     "trophies": {
       "gold": 2,
@@ -131,7 +131,7 @@
     "slug": "jardineiro",
     "year": 2019,
     "superCategory": "Combate",
-    "category": "Featherweight",
+    "category": "Feather",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -147,7 +147,7 @@
     "slug": "leprechaun",
     "year": 2019,
     "superCategory": "Combate",
-    "category": "Antweight",
+    "category": "Ant",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -163,7 +163,7 @@
     "slug": "atom",
     "year": 2018,
     "superCategory": "Combate",
-    "category": "Antweight",
+    "category": "Ant",
     "active": false,
     "trophies": {
       "gold": 1,
@@ -179,7 +179,7 @@
     "slug": "onix",
     "year": 2018,
     "superCategory": "Sumo",
-    "category": "Mini Sumô",
+    "category": "Mini Sumo",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -211,7 +211,7 @@
     "slug": "pepita",
     "year": 2017,
     "superCategory": "Sumo",
-    "category": "Micro Sumô",
+    "category": "Micro Sumo",
     "active": false,
     "trophies": {
       "gold": 1,
@@ -227,7 +227,7 @@
     "slug": "redrum",
     "year": 2017,
     "superCategory": "Combate",
-    "category": "Featherweight",
+    "category": "Feather",
     "active": false,
     "trophies": {
       "gold": 2,
@@ -243,7 +243,7 @@
     "slug": "spintronic",
     "year": 2017,
     "superCategory": "Combate",
-    "category": "Fairyweight",
+    "category": "Fairy",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -259,7 +259,7 @@
     "slug": "tracer",
     "year": 2017,
     "superCategory": "Autonomo",
-    "category": "Seguidor de Linha",
+    "category": "Seguidor",
     "active": false,
     "trophies": {
       "gold": 4,
@@ -275,7 +275,7 @@
     "slug": "darc",
     "year": 2016,
     "superCategory": "Combate",
-    "category": "Beetleweight",
+    "category": "Beetle",
     "active": false,
     "trophies": {
       "gold": 2,
@@ -291,7 +291,7 @@
     "slug": "sharkhai",
     "year": 2016,
     "superCategory": "Combate",
-    "category": "Antweight",
+    "category": "Ant",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -307,7 +307,7 @@
     "slug": "apolkalipse",
     "year": 2015,
     "superCategory": "Combate",
-    "category": "Middleweight",
+    "category": "Middle",
     "active": false,
     "trophies": {
       "gold": 1,
@@ -323,7 +323,7 @@
     "slug": "duende",
     "year": 2015,
     "superCategory": "Combate",
-    "category": "Antweight",
+    "category": "Ant",
     "active": false,
     "trophies": {
       "gold": 1,
@@ -339,7 +339,7 @@
     "slug": "rozeta",
     "year": 2015,
     "superCategory": "Sumo",
-    "category": "Mini Sumô",
+    "category": "Mini Sumo",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -371,7 +371,7 @@
     "slug": "armagedrum",
     "year": 2014,
     "superCategory": "Combate",
-    "category": "Featherweight",
+    "category": "Feather",
     "active": false,
     "trophies": {
       "gold": 2,
@@ -387,7 +387,7 @@
     "slug": "iskeiro",
     "year": 2014,
     "superCategory": "Combate",
-    "category": "Beetleweight",
+    "category": "Beetle",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -403,7 +403,7 @@
     "slug": "moai",
     "year": 2014,
     "superCategory": "Sumo",
-    "category": "Sumô 3 kg (Auto)",
+    "category": "3kg",
     "active": false,
     "trophies": {
       "gold": 3,
@@ -435,7 +435,7 @@
     "slug": "ratnik",
     "year": 2013,
     "superCategory": "Combate",
-    "category": "Beetleweight",
+    "category": "Beetle",
     "active": false,
     "trophies": {
       "gold": 1,
@@ -451,7 +451,7 @@
     "slug": "adao",
     "year": 2012,
     "superCategory": "Combate",
-    "category": "Middleweight",
+    "category": "Middle",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -467,7 +467,7 @@
     "slug": "quadradinho",
     "year": 2012,
     "superCategory": "Autonomo",
-    "category": "Seguidor de Linha",
+    "category": "Seguidor",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -483,7 +483,7 @@
     "slug": "redondinho",
     "year": 2012,
     "superCategory": "Autonomo",
-    "category": "Seguidor de Linha",
+    "category": "Seguidor",
     "active": false,
     "trophies": {
       "gold": 3,
@@ -499,7 +499,7 @@
     "slug": "stonehenge",
     "year": 2012,
     "superCategory": "Sumo",
-    "category": "Sumô 3 kg (RC)",
+    "category": "3kg",
     "active": false,
     "trophies": {
       "gold": 13,
@@ -515,7 +515,7 @@
     "slug": "lego",
     "year": 2011,
     "superCategory": "Sumo",
-    "category": "Sumô LEGO",
+    "category": "LEGO",
     "active": false,
     "trophies": {
       "gold": 5,
@@ -531,7 +531,7 @@
     "slug": "hypnos",
     "year": 2010,
     "superCategory": "Combate",
-    "category": "Featherweight",
+    "category": "Feather",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -547,7 +547,7 @@
     "slug": "racha-cuca",
     "year": 2009,
     "superCategory": "Combate",
-    "category": "Hobbyweight",
+    "category": "Hobby",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -563,7 +563,7 @@
     "slug": "seninha",
     "year": 2009,
     "superCategory": "Autonomo",
-    "category": "Seguidor de Linha",
+    "category": "Seguidor",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -579,7 +579,7 @@
     "slug": "catatau",
     "year": 2008,
     "superCategory": "Combate",
-    "category": "Hobbyweight",
+    "category": "Hobby",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -595,7 +595,7 @@
     "slug": "lenhador",
     "year": 2008,
     "superCategory": "Combate",
-    "category": "Middleweight",
+    "category": "Middle",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -611,7 +611,7 @@
     "slug": "nanolico",
     "year": 2007,
     "superCategory": "Combate",
-    "category": "Hobbyweight",
+    "category": "Hobby",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -627,7 +627,7 @@
     "slug": "pirat",
     "year": 2007,
     "superCategory": "Combate",
-    "category": "Middleweight",
+    "category": "Middle",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -643,7 +643,7 @@
     "slug": "adam",
     "year": 2006,
     "superCategory": "Combate",
-    "category": "Middleweight",
+    "category": "Middle",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -659,7 +659,7 @@
     "slug": "adam-jr",
     "year": 2006,
     "superCategory": "Combate",
-    "category": "Hobbyweight",
+    "category": "Hobby",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -675,7 +675,7 @@
     "slug": "usp-recicla",
     "year": 2006,
     "superCategory": "Combate",
-    "category": "Middleweight",
+    "category": "Middle",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -691,7 +691,7 @@
     "slug": "crank-slider",
     "year": 2005,
     "superCategory": "Combate",
-    "category": "Middleweight",
+    "category": "Middle",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -707,7 +707,7 @@
     "slug": "adamowski",
     "year": 2004,
     "superCategory": "Combate",
-    "category": "Middleweight",
+    "category": "Middle",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -723,7 +723,7 @@
     "slug": "pikachu",
     "year": 2003,
     "superCategory": "Combate",
-    "category": "Middleweight",
+    "category": "Middle",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -739,7 +739,7 @@
     "slug": "heleonor",
     "year": 2002,
     "superCategory": "Combate",
-    "category": "Middleweight",
+    "category": "Middle",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -755,7 +755,7 @@
     "slug": "mata-cachorro",
     "year": 2002,
     "superCategory": "Combate",
-    "category": "Middleweight",
+    "category": "Middle",
     "active": false,
     "trophies": {
       "gold": 0,
@@ -771,7 +771,7 @@
     "slug": "cuervo",
     "year": 2001,
     "superCategory": "Combate",
-    "category": "Middleweight",
+    "category": "Middle",
     "active": false,
     "trophies": {
       "gold": 0,

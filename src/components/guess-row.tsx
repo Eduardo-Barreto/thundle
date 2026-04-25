@@ -25,10 +25,10 @@ export function GuessRow({ result, rowDelay }: GuessRowProps) {
             <img
               src={result.typographyUrl}
               alt={result.robotName}
-              className="relative z-10 max-h-[60%] max-w-[80%] object-contain drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]"
+              className="relative z-10 max-h-[60%] max-w-[80%] object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]"
             />
           ) : (
-            <span className="relative z-10 px-1 text-center font-mono text-[11px] font-bold text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] md:text-xs">
+            <span className="relative z-10 px-1 text-center font-mono text-[11px] font-bold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] md:text-xs">
               {result.robotName}
             </span>
           )}
