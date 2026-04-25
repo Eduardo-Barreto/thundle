@@ -26,9 +26,9 @@ export function useGame(dateStr?: string) {
       guessNames.map((name) => {
         const robot = robots.find((r) => r.name === name)
         if (!robot) throw new Error(`Robot not found: ${name}`)
-        return compareGuess(robot, answer)
+        return compareGuess(robot, answer, date)
       }),
-    [guessNames, answer],
+    [guessNames, answer, date],
   )
 
   const guessedNames = useMemo(() => new Set(guessNames), [guessNames])

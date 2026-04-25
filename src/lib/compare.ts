@@ -1,4 +1,5 @@
 import gameConfig from "@/config/game.json" with { type: "json" }
+import { getTodayStr } from "@/lib/daily-robot"
 import type { Robot, CellResult, GuessResult } from "@/types"
 
 function getNestedValue(obj: Robot, path: string): unknown {
@@ -31,12 +32,15 @@ function compareAttribute(
   return { status: "wrong" }
 }
 
-export function compareGuess(guess: Robot, answer: Robot): GuessResult {
+export function compareGuess(guess: Robot, answer: Robot, dateStr?: string): GuessResult {
+  const isFuture = dateStr ? dateStr > getTodayStr() : false
   const attributes = gameConfig.attributes
   const cells: CellResult[] = Object.entries(attributes).map(([key, config]) => {
     const guessVal = getNestedValue(guess, key)
     const answerVal = getNestedValue(answer, key)
-    const { status, direction } = compareAttribute(guessVal, answerVal, config.type)
+    const { status, direction } = isFuture
+      ? { status: "wrong" as const, direction: undefined }
+      : compareAttribute(guessVal, answerVal, config.type)
 
     let displayValue: string | number | boolean
     if (typeof guessVal === "boolean") {
@@ -48,7 +52,7 @@ export function compareGuess(guess: Robot, answer: Robot): GuessResult {
     return { attribute: key, value: displayValue, status, direction }
   })
 
-  const isCorrect = cells.every((c) => c.status === "correct")
+  const isCorrect = !isFuture && cells.every((c) => c.status === "correct")
   return {
     robotName: guess.name,
     imageUrl: guess.imageUrl,
