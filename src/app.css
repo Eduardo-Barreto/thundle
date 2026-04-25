@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-thunder-yellow: #FFE500;
+  --color-thunder-navy: #1B1B4B;
+
+  --color-surface: #111111;
+  --color-elevated: #181818;
+
+  --color-t1: #E5E5E5;
+  --color-t2: #A3A3A3;
+  --color-t3: #525252;
+
+  --color-ok: #4ADE80;
+  --color-ok-bg: #0C2E1A;
+  --color-ok-border: #166E3B;
+
+  --color-partial: #FCD34D;
+  --color-partial-bg: #302810;
+  --color-partial-border: #6B5218;
+
+  --color-wrong: #FB7185;
+  --color-wrong-bg: #301014;
+  --color-wrong-border: #6B2030;
+
+  --font-mono: "Space Mono", monospace;
+  --font-sans: "Space Grotesk", system-ui, sans-serif;
+}
+
+@keyframes tile-in {
+  0%   { opacity: 0; transform: rotateX(70deg) scale(0.94); }
+  50%  { transform: rotateX(-3deg) scale(1.01); }
+  100% { opacity: 1; transform: rotateX(0) scale(1); }
+}
+
+@keyframes row-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dd-in {
+  from { opacity: 0; transform: scale(0.98) translateY(-2px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
