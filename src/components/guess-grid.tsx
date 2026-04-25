@@ -10,8 +10,8 @@ const COLUMN_LABELS = ["Robô", ...Object.values(gameConfig.attributes).map((a) 
 
 export function GuessGrid({ results }: GuessGridProps) {
   return (
-    <section aria-label="Tentativas" className="flex flex-col gap-[5px]">
-      <div className="overflow-x-auto">
+    <section aria-label="Tentativas">
+      <div className="flex flex-col gap-3 overflow-x-auto md:gap-4">
         {results.length > 0 && (
           <div
             className="grid grid-cols-[100px_repeat(7,minmax(80px,1fr))] gap-[5px] pb-0.5 md:grid-cols-[120px_repeat(7,minmax(100px,1fr))]"
