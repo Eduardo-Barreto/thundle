@@ -1,5 +1,7 @@
 import type { Robot } from "@/types"
 
+const EPOCH = "2026-04-25"
+
 function djb2(str: string): number {
   let hash = 5381
   for (let i = 0; i < str.length; i++) {
@@ -23,8 +25,17 @@ export function getTodayStr(): string {
 }
 
 export function getPuzzleNumber(dateStr: string): number {
-  const epoch = new Date("2026-05-01")
+  const epoch = new Date(EPOCH)
   const current = new Date(dateStr)
   const diffDays = Math.floor((current.getTime() - epoch.getTime()) / (1000 * 60 * 60 * 24))
-  return Math.max(1, diffDays + 1)
+  return diffDays + 1
+}
+
+export function getDateFromPuzzleNumber(puzzleNumber: number): string {
+  const epoch = new Date(EPOCH)
+  epoch.setDate(epoch.getDate() + puzzleNumber - 1)
+  const y = epoch.getFullYear()
+  const m = String(epoch.getMonth() + 1).padStart(2, "0")
+  const d = String(epoch.getDate()).padStart(2, "0")
+  return `${y}-${m}-${d}`
 }

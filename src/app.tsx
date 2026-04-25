@@ -9,12 +9,42 @@ import { SearchInput } from "@/components/search-input"
 import { StatsModal } from "@/components/stats-modal"
 import { WinOverlay } from "@/components/win-overlay"
 import { useGame } from "@/hooks/use-game"
-import { getTodayStr } from "@/lib/daily-robot"
+import { getDateFromPuzzleNumber, getPuzzleNumber, getTodayStr } from "@/lib/daily-robot"
+
+function getInitialDate(): string {
+  const params = new URLSearchParams(window.location.search)
+  const puzzleParam = params.get("p")
+  if (puzzleParam) {
+    const num = Number(puzzleParam)
+    if (!Number.isNaN(num)) {
+      return getDateFromPuzzleNumber(num)
+    }
+  }
+  return getTodayStr()
+}
+
+function updateUrl(dateStr: string) {
+  const todayStr = getTodayStr()
+  const puzzleNumber = getPuzzleNumber(dateStr)
+  const url = new URL(window.location.href)
+  if (dateStr === todayStr) {
+    url.searchParams.delete("p")
+  } else {
+    url.searchParams.set("p", String(puzzleNumber))
+  }
+  window.history.replaceState(null, "", url)
+}
 
 export function App() {
   const [showStats, setShowStats] = useState(false)
   const [showPuzzles, setShowPuzzles] = useState(false)
-  const [selectedDate, setSelectedDate] = useState(getTodayStr)
+  const [selectedDate, setSelectedDate] = useState(getInitialDate)
+
+  function handleSelectDate(d: string) {
+    setSelectedDate(d)
+    setShowPuzzles(false)
+    updateUrl(d)
+  }
 
   return (
     <div className="text-t1 min-h-dvh bg-[#0A0A0A] font-sans">
@@ -27,13 +57,7 @@ export function App() {
       />
       {showStats && <StatsModal onClose={() => setShowStats(false)} />}
       {showPuzzles && (
-        <PuzzlePickerModal
-          onClose={() => setShowPuzzles(false)}
-          onSelectDate={(d) => {
-            setSelectedDate(d)
-            setShowPuzzles(false)
-          }}
-        />
+        <PuzzlePickerModal onClose={() => setShowPuzzles(false)} onSelectDate={handleSelectDate} />
       )}
     </div>
   )
