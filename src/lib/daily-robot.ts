@@ -1,7 +1,7 @@
 import type { Robot } from "@/types"
 
 const EPOCH = "2026-04-25"
-const SEED = 1337420
+const SEED = 105
 
 function mulberry32(seed: number): () => number {
   let s = seed
