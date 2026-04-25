@@ -75,13 +75,20 @@ export function WinOverlay({ answer, puzzleNumber, results, usedHint, onClose }:
         )}
 
         {/* Robot image */}
-        {answer.imageUrl && (
+        {answer.imageUrl ? (
           <img
             src={answer.imageUrl}
             alt={answer.name}
             className="max-h-44 w-full rounded-xl object-cover"
             style={{ animation: "win-element 400ms cubic-bezier(0.23,1,0.32,1) 300ms both" }}
           />
+        ) : (
+          <div
+            className="bg-surface text-t3 flex h-32 w-full items-center justify-center rounded-xl font-mono text-sm"
+            style={{ animation: "win-element 400ms cubic-bezier(0.23,1,0.32,1) 300ms both" }}
+          >
+            sem foto disponível
+          </div>
         )}
 
         {/* Robot specs — technical label grid */}

@@ -7,6 +7,8 @@ type GuessRowProps = {
 }
 
 export function GuessRow({ result, isLatest }: GuessRowProps) {
+  const hasImage = Boolean(result.imageUrl)
+
   return (
     <div
       className="grid grid-cols-[100px_repeat(7,minmax(80px,1fr))] gap-2 md:grid-cols-[160px_repeat(7,minmax(120px,1fr))]"
@@ -14,8 +16,18 @@ export function GuessRow({ result, isLatest }: GuessRowProps) {
     >
       <div className="sticky left-0 z-20 overflow-visible bg-[#0A0A0A]">
         <div className="relative flex min-h-[72px] items-center justify-center overflow-hidden rounded-[10px] md:min-h-[120px]">
-          <img src={result.imageUrl} alt="" className="absolute inset-0 size-full object-cover" />
-          <div className="absolute inset-0 bg-black/50" />
+          {hasImage ? (
+            <>
+              <img
+                src={result.imageUrl}
+                alt=""
+                className="absolute inset-0 size-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/50" />
+            </>
+          ) : (
+            <div className="bg-surface absolute inset-0" />
+          )}
           {result.typographyUrl ? (
             <img
               src={result.typographyUrl}
@@ -23,7 +35,7 @@ export function GuessRow({ result, isLatest }: GuessRowProps) {
               className="relative z-10 max-h-[60%] max-w-[80%] object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]"
             />
           ) : (
-            <span className="relative z-10 px-1 text-center font-mono text-[11px] font-bold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] md:text-xs">
+            <span className="relative z-10 px-2 text-center font-mono text-[11px] font-bold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] md:text-sm">
               {result.robotName}
             </span>
           )}

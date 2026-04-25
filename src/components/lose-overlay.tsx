@@ -94,13 +94,20 @@ export function LoseOverlay({
               )}
             </div>
 
-            {answer.imageUrl && (
+            {answer.imageUrl ? (
               <img
                 src={answer.imageUrl}
                 alt={answer.name}
                 className="max-h-36 w-full rounded-xl object-cover"
                 style={{ animation: "win-element 400ms cubic-bezier(0.23,1,0.32,1) 400ms both" }}
               />
+            ) : (
+              <div
+                className="bg-surface text-t3 flex h-28 w-full items-center justify-center rounded-xl font-mono text-sm"
+                style={{ animation: "win-element 400ms cubic-bezier(0.23,1,0.32,1) 400ms both" }}
+              >
+                sem foto disponível
+              </div>
             )}
 
             {answer.description && (
