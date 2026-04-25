@@ -15,11 +15,8 @@ export function GuessRow({ result, rowDelay }: GuessRowProps) {
       }}
     >
       {/* Robot card — darkened photo bg + centered typography (like thunderatz.org) */}
-      <div className="sticky left-0 z-20 rounded-lg bg-[#0A0A0A] pr-[5px]">
-        <div
-          className="relative flex min-h-[72px] items-center justify-center overflow-hidden rounded-lg md:min-h-[100px]"
-          style={{ boxShadow: "6px 0 12px rgba(0,0,0,0.4), 2px 0 4px rgba(0,0,0,0.3)" }}
-        >
+      <div className="sticky left-0 z-20 rounded-lg bg-[#0A0A0A]/80 pr-[5px] backdrop-blur-md">
+        <div className="relative flex min-h-[72px] items-center justify-center overflow-hidden rounded-lg shadow-[3px_0_8px_rgba(0,0,0,0.25)] md:min-h-[100px]">
           <img src={result.imageUrl} alt="" className="absolute inset-0 size-full object-cover" />
           {/* Dark overlay — 50% like thunderatz.org */}
           <div className="absolute inset-0 bg-black/50" />
