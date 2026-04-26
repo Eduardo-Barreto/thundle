@@ -12,6 +12,7 @@ export function generateShareText(
   usedHint: boolean,
   won: boolean,
   streak: number,
+  isToday: boolean,
   isFuture?: boolean,
 ): string {
   const num = puzzleNumber >= 0 ? String(puzzleNumber).padStart(3, "0") : String(puzzleNumber)
@@ -20,7 +21,7 @@ export function generateShareText(
   const streakMark = won && streak > 0 ? ` 🔥 ${streak}` : ""
   const futureMark = !won && isFuture ? " 🤡" : ""
 
-  const url = puzzleNumber === 1 ? "thundle.io" : `thundle.io?p=${puzzleNumber}`
+  const url = isToday ? "thundle.io" : `thundle.io?p=${puzzleNumber}`
   const header = `${url} #${num}${hintMark} ${score}${streakMark}${futureMark}`
 
   const rows = results.map((r) => r.cells.map((c) => EMOJI[c.status]).join(""))

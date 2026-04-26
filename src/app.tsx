@@ -76,6 +76,7 @@ function GameScreen({
   const game = useGame(dateStr)
   const [showOverlay, setShowOverlay] = useState(true)
   const gameOver = game.completed || game.lost
+  const isToday = dateStr === getTodayStr()
 
   return (
     <div className="relative mx-auto max-w-6xl px-4 pb-12 md:px-6">
@@ -108,6 +109,7 @@ function GameScreen({
           puzzleNumber={game.puzzleNumber}
           results={game.results}
           usedHint={game.usedHint}
+          isToday={isToday}
           onClose={() => setShowOverlay(false)}
         />
       )}
@@ -118,6 +120,7 @@ function GameScreen({
           results={game.results}
           usedHint={game.usedHint}
           isFuture={game.isFuture}
+          isToday={isToday}
           onClose={() => setShowOverlay(false)}
         />
       )}

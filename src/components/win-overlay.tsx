@@ -9,16 +9,31 @@ type WinOverlayProps = {
   puzzleNumber: number
   results: GuessResult[]
   usedHint: boolean
+  isToday: boolean
   onClose: () => void
 }
 
-export function WinOverlay({ answer, puzzleNumber, results, usedHint, onClose }: WinOverlayProps) {
+export function WinOverlay({
+  answer,
+  puzzleNumber,
+  results,
+  usedHint,
+  isToday,
+  onClose,
+}: WinOverlayProps) {
   const stats = loadStats()
   const [copied, setCopied] = useState(false)
   const totalTrophies = answer.trophies.gold + answer.trophies.silver + answer.trophies.bronze
 
   async function handleShare() {
-    const text = generateShareText(puzzleNumber, results, usedHint, true, stats.currentStreak)
+    const text = generateShareText(
+      puzzleNumber,
+      results,
+      usedHint,
+      true,
+      stats.currentStreak,
+      isToday,
+    )
     const ok = await copyToClipboard(text)
     if (ok) {
       setCopied(true)

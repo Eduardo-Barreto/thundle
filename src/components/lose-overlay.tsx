@@ -9,6 +9,7 @@ type LoseOverlayProps = {
   results: GuessResult[]
   usedHint: boolean
   isFuture: boolean
+  isToday: boolean
   onClose: () => void
 }
 
@@ -18,12 +19,13 @@ export function LoseOverlay({
   results,
   usedHint,
   isFuture,
+  isToday,
   onClose,
 }: LoseOverlayProps) {
   const [copied, setCopied] = useState(false)
 
   async function handleShare() {
-    const text = generateShareText(puzzleNumber, results, usedHint, false, 0, isFuture)
+    const text = generateShareText(puzzleNumber, results, usedHint, false, 0, isToday, isFuture)
     const ok = await copyToClipboard(text)
     if (ok) {
       setCopied(true)
