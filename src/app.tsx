@@ -56,12 +56,26 @@ export function App() {
   return (
     <div className="text-t1 min-h-dvh bg-[#0A0A0A] font-sans">
       <Background />
-      <GameScreen
-        key={selectedDate}
-        dateStr={selectedDate}
-        onOpenPuzzles={() => setShowPuzzles(true)}
-        onOpenStats={() => setShowStats(true)}
-      />
+      {!showTimeTraveler && (
+        <GameScreen
+          key={selectedDate}
+          dateStr={selectedDate}
+          onOpenPuzzles={() => setShowPuzzles(true)}
+          onOpenStats={() => setShowStats(true)}
+        />
+      )}
+      {showTimeTraveler && (
+        <div className="relative mx-auto max-w-6xl px-4 pb-12 md:px-6">
+          <Header
+            puzzleNumber={0}
+            onOpenPuzzles={() => {
+              setShowTimeTraveler(false)
+              setShowPuzzles(true)
+            }}
+            onOpenStats={() => setShowStats(true)}
+          />
+        </div>
+      )}
       {showStats && <StatsModal onClose={() => setShowStats(false)} />}
       {showPuzzles && (
         <PuzzlePickerModal onClose={() => setShowPuzzles(false)} onSelectDate={handleSelectDate} />
