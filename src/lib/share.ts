@@ -2,8 +2,9 @@ import type { GuessResult } from "@/types"
 
 const EMOJI = {
   correct: "🟩",
-  partial: "🟨",
   wrong: "🟥",
+  up: "⬆️",
+  down: "⬇️",
 } as const
 
 export function generateShareText(
@@ -24,7 +25,16 @@ export function generateShareText(
   const url = isToday ? "thundle.io" : `thundle.io?p=${puzzleNumber}`
   const header = `${url} #${num}${hintMark} ${score}${streakMark}${futureMark}`
 
-  const rows = results.map((r) => r.cells.map((c) => EMOJI[c.status]).join(""))
+  const rows = results.map((r) =>
+    r.cells
+      .map((c) => {
+        if (c.status === "correct") return EMOJI.correct
+        if (c.status === "partial" && c.direction === "up") return EMOJI.up
+        if (c.status === "partial" && c.direction === "down") return EMOJI.down
+        return EMOJI.wrong
+      })
+      .join(""),
+  )
 
   return [header, "", ...rows].join("\n")
 }
