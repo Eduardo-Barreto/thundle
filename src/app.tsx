@@ -12,16 +12,20 @@ import { WinOverlay } from "@/components/win-overlay"
 import { useGame } from "@/hooks/use-game"
 import { getDateFromPuzzleNumber, getPuzzleNumber, getTodayStr } from "@/lib/daily-robot"
 
-function getInitialDate(): string {
+function getInitialDate(): { date: string; wasFuture: boolean } {
   const params = new URLSearchParams(window.location.search)
   const puzzleParam = params.get("p")
   if (puzzleParam) {
     const num = Number(puzzleParam)
     if (!Number.isNaN(num)) {
-      return getDateFromPuzzleNumber(num)
+      const dateStr = getDateFromPuzzleNumber(num)
+      if (dateStr > getTodayStr()) {
+        return { date: getTodayStr(), wasFuture: true }
+      }
+      return { date: dateStr, wasFuture: false }
     }
   }
-  return getTodayStr()
+  return { date: getTodayStr(), wasFuture: false }
 }
 
 function updateUrl(dateStr: string) {
@@ -37,9 +41,11 @@ function updateUrl(dateStr: string) {
 }
 
 export function App() {
+  const [initial] = useState(getInitialDate)
   const [showStats, setShowStats] = useState(false)
   const [showPuzzles, setShowPuzzles] = useState(false)
-  const [selectedDate, setSelectedDate] = useState(getInitialDate)
+  const [showTimeTraveler, setShowTimeTraveler] = useState(initial.wasFuture)
+  const [selectedDate, setSelectedDate] = useState(initial.date)
 
   function handleSelectDate(d: string) {
     setSelectedDate(d)
@@ -60,6 +66,37 @@ export function App() {
       {showPuzzles && (
         <PuzzlePickerModal onClose={() => setShowPuzzles(false)} onSelectDate={handleSelectDate} />
       )}
+      {showTimeTraveler && (
+        <TimeTravelerModal
+          onOpenPuzzles={() => {
+            setShowTimeTraveler(false)
+            setShowPuzzles(true)
+          }}
+        />
+      )}
+    </div>
+  )
+}
+
+function TimeTravelerModal({ onOpenPuzzles }: { onOpenPuzzles: () => void }) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4 backdrop-blur-sm">
+      <div
+        className="bg-surface flex w-full max-w-sm flex-col items-center gap-6 rounded-2xl border border-white/6 p-8"
+        style={{ animation: "win-card 500ms cubic-bezier(0.23,1,0.32,1) both" }}
+      >
+        <p className="text-center text-4xl">🕰️</p>
+        <h2 className="text-center font-mono text-xl font-bold">Viajante do tempo?</h2>
+        <p className="text-t2 text-center text-sm leading-relaxed">
+          Esse puzzle ainda não existe. Volte quando chegar o dia certo!
+        </p>
+        <button
+          onClick={onOpenPuzzles}
+          className="bg-thunder-navy text-thunder-yellow focus-visible:outline-thunder-yellow w-full cursor-pointer rounded-lg px-5 py-3 font-mono text-xs font-bold tracking-wider uppercase transition-all duration-160 ease-[cubic-bezier(0.23,1,0.32,1)] hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-97"
+        >
+          Ver puzzles anteriores
+        </button>
+      </div>
     </div>
   )
 }
@@ -119,7 +156,7 @@ function GameScreen({
           puzzleNumber={game.puzzleNumber}
           results={game.results}
           usedHint={game.usedHint}
-          isFuture={game.isFuture}
+          isFuture={false}
           isToday={isToday}
           onClose={() => setShowOverlay(false)}
         />
