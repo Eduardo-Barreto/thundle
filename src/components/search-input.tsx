@@ -68,6 +68,7 @@ export function SearchInput({ robots, guessedNames, disabled, onSelect }: Search
               <div
                 key={r.robot.name}
                 role="option"
+                tabIndex={-1}
                 aria-selected={i === activeIndex}
                 aria-disabled={isUsed}
                 onMouseEnter={() => setActiveIndex(i)}
@@ -94,7 +95,11 @@ export function SearchInput({ robots, guessedNames, disabled, onSelect }: Search
                 >
                   &gt;
                 </span>
-                <span dangerouslySetInnerHTML={{ __html: r.highlighted }} />
+                <span>
+                  {r.segments.map((seg, j) =>
+                    seg.match ? <mark key={j}>{seg.text}</mark> : <span key={j}>{seg.text}</span>,
+                  )}
+                </span>
               </div>
             )
           })}

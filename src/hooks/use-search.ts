@@ -3,9 +3,30 @@ import { useState, useMemo, useCallback } from "react"
 
 import type { Robot } from "@/types"
 
+export type HighlightSegment = { text: string; match: boolean }
+
 type SearchResult = {
   robot: Robot
-  highlighted: string
+  segments: HighlightSegment[]
+}
+
+function buildSegments(target: string, indexes: readonly number[]): HighlightSegment[] {
+  if (indexes.length === 0) return [{ text: target, match: false }]
+  const matchSet = new Set(indexes)
+  const segments: HighlightSegment[] = []
+  let buffer = ""
+  let bufferMatch = matchSet.has(0)
+  for (let i = 0; i < target.length; i++) {
+    const isMatch = matchSet.has(i)
+    if (isMatch !== bufferMatch && buffer) {
+      segments.push({ text: buffer, match: bufferMatch })
+      buffer = ""
+    }
+    buffer += target[i]
+    bufferMatch = isMatch
+  }
+  if (buffer) segments.push({ text: buffer, match: bufferMatch })
+  return segments
 }
 
 export function useSearch(robots: Robot[], guessedNames: Set<string>) {
@@ -21,7 +42,7 @@ export function useSearch(robots: Robot[], guessedNames: Set<string>) {
     })
     return matches.map((m) => ({
       robot: m.obj,
-      highlighted: m.highlight("<mark>", "</mark>") ?? m.obj.name,
+      segments: buildSegments(m.obj.name, m.indexes),
     }))
   }, [query, robots])
 
