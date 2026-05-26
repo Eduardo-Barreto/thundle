@@ -1,4 +1,6 @@
 import gameConfig from "@/config/game.json" with { type: "json" }
+import { formatAttributeValue } from "@/lib/format"
+import { getNestedValue } from "@/lib/nested-value"
 import type { Robot } from "@/types"
 
 type HintBarProps = {
@@ -8,23 +10,13 @@ type HintBarProps = {
   onRequestHint: () => void
 }
 
-function getNestedValue(obj: Robot, path: string): unknown {
-  return path.split(".").reduce<unknown>((acc, key) => {
-    if (acc && typeof acc === "object" && key in acc) {
-      return (acc as Record<string, unknown>)[key]
-    }
-    return undefined
-  }, obj)
-}
-
 export function HintBar({ usedHint, hintAttribute, answer, onRequestHint }: HintBarProps) {
   const hintConfig = hintAttribute
     ? gameConfig.attributes[hintAttribute as keyof typeof gameConfig.attributes]
     : undefined
 
   const hintValue = hintAttribute ? getNestedValue(answer, hintAttribute) : undefined
-  const displayValue =
-    typeof hintValue === "boolean" ? (hintValue ? "Sim" : "N\u00e3o") : String(hintValue ?? "")
+  const displayValue = formatAttributeValue(hintValue)
 
   return (
     <div className="mb-7 flex items-center justify-center gap-3 md:mb-10 md:gap-4">

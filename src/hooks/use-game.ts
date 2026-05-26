@@ -4,11 +4,38 @@ import gameConfig from "@/config/game.json" with { type: "json" }
 import robotsData from "@/config/robots.json" with { type: "json" }
 import { compareGuess } from "@/lib/compare"
 import { getDailyRobot, getTodayStr, getPuzzleNumber } from "@/lib/daily-robot"
-import { loadGame, saveGame, recordWin } from "@/lib/storage"
-import type { Robot, GuessResult } from "@/types"
+import { loadGame, saveGame, recordGameEnd } from "@/lib/storage"
+import type { Robot, GuessResult, GameState } from "@/types"
 
 const robots = robotsData as Robot[]
 const MAX_GUESSES = 10
+
+function pickRandomHint(): string | undefined {
+  const eligible: string[] = []
+  for (const [key, cfg] of Object.entries(gameConfig.attributes)) {
+    if (cfg.hintEligible) eligible.push(key)
+  }
+  if (eligible.length === 0) return undefined
+  return eligible[Math.floor(Math.random() * eligible.length)]
+}
+
+type InitialGameState = Pick<GameState, "guesses" | "usedHint" | "hintAttribute" | "completed"> & {
+  lost: boolean
+}
+
+function initialGameState(date: string): InitialGameState {
+  const saved = loadGame(date)
+  if (!saved)
+    return { guesses: [], usedHint: false, hintAttribute: undefined, completed: false, lost: false }
+  const lost = !saved.completed && saved.guesses.length >= MAX_GUESSES
+  return {
+    guesses: saved.guesses,
+    usedHint: saved.usedHint,
+    hintAttribute: saved.hintAttribute,
+    completed: saved.completed,
+    lost,
+  }
+}
 
 export function useGame(dateStr?: string) {
   const date = dateStr ?? getTodayStr()
@@ -16,15 +43,8 @@ export function useGame(dateStr?: string) {
   const isFuture = date > getTodayStr()
   const answer = useMemo(() => getDailyRobot(robots, date), [date])
 
-  const saved = loadGame(date)
-
-  const [guessNames, setGuessNames] = useState<string[]>(saved?.guesses ?? [])
-  const [usedHint, setUsedHint] = useState(saved?.usedHint ?? false)
-  const [hintAttribute, setHintAttribute] = useState<string | undefined>(saved?.hintAttribute)
-  const [completed, setCompleted] = useState(saved?.completed ?? false)
-  const [lost, setLost] = useState(
-    saved?.completed === false && (saved?.guesses.length ?? 0) >= MAX_GUESSES,
-  )
+  const [state, setState] = useState<InitialGameState>(() => initialGameState(date))
+  const { guesses: guessNames, usedHint, hintAttribute, completed, lost } = state
 
   const results: GuessResult[] = useMemo(
     () =>
@@ -41,25 +61,20 @@ export function useGame(dateStr?: string) {
   const submitGuess = useCallback(
     (robotName: string) => {
       if (completed || lost || guessedNames.has(robotName)) return
-
-      const newGuesses = [...guessNames, robotName]
-      setGuessNames(newGuesses)
-
       const robot = robots.find((r) => r.name === robotName)
       if (!robot) return
 
+      const newGuesses = [...guessNames, robotName]
       const result = compareGuess(robot, answer, date)
       const isWin = result.isCorrect
       const isLoss = !isWin && newGuesses.length >= MAX_GUESSES
 
-      if (isWin) {
-        setCompleted(true)
-        recordWin(date, newGuesses.length)
-      }
-
-      if (isLoss) {
-        setLost(true)
-      }
+      setState((prev) => ({
+        ...prev,
+        guesses: newGuesses,
+        completed: isWin || prev.completed,
+        lost: isLoss || prev.lost,
+      }))
 
       saveGame(date, {
         guesses: newGuesses,
@@ -67,23 +82,20 @@ export function useGame(dateStr?: string) {
         hintAttribute,
         completed: isWin,
       })
+
+      if (isWin || isLoss) {
+        recordGameEnd(date, { won: isWin, guessCount: newGuesses.length })
+      }
     },
     [completed, lost, guessedNames, guessNames, answer, date, usedHint, hintAttribute],
   )
 
   const requestHint = useCallback(() => {
     if (usedHint) return
-
-    const eligible: string[] = []
-    for (const [key, cfg] of Object.entries(gameConfig.attributes)) {
-      if (cfg.hintEligible) eligible.push(key)
-    }
-
-    const picked = eligible[Math.floor(Math.random() * eligible.length)]
+    const picked = pickRandomHint()
     if (!picked) return
 
-    setUsedHint(true)
-    setHintAttribute(picked)
+    setState((prev) => ({ ...prev, usedHint: true, hintAttribute: picked }))
 
     saveGame(date, {
       guesses: guessNames,

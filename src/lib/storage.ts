@@ -1,7 +1,9 @@
+import { getPreviousDateStr } from "@/lib/daily-robot"
 import type { LocalState, GameState, Stats } from "@/types"
 
 const STORAGE_KEY = "thundle"
 const MAX_GAME_AGE_DAYS = 30
+const MS_PER_DAY = 1000 * 60 * 60 * 24
 
 const DEFAULT_STATS: Stats = {
   gamesPlayed: 0,
@@ -25,14 +27,22 @@ function isStorageAvailable(): boolean {
 
 function read(): LocalState {
   if (!isStorageAvailable()) {
-    return { games: {}, stats: DEFAULT_STATS }
+    return { games: {}, stats: { ...DEFAULT_STATS, guessDistribution: {} } }
   }
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    if (!raw) return { games: {}, stats: DEFAULT_STATS }
-    return JSON.parse(raw) as LocalState
+    if (!raw) return { games: {}, stats: { ...DEFAULT_STATS, guessDistribution: {} } }
+    const parsed = JSON.parse(raw) as Partial<LocalState>
+    return {
+      games: parsed.games ?? {},
+      stats: {
+        ...DEFAULT_STATS,
+        ...parsed.stats,
+        guessDistribution: parsed.stats?.guessDistribution ?? {},
+      },
+    }
   } catch {
-    return { games: {}, stats: DEFAULT_STATS }
+    return { games: {}, stats: { ...DEFAULT_STATS, guessDistribution: {} } }
   }
 }
 
@@ -41,11 +51,17 @@ function write(state: LocalState): void {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
 }
 
+function dateAgeDays(dateStr: string): number {
+  const [y, m, d] = dateStr.split("-").map(Number)
+  if (!y || !m || !d) return Infinity
+  const date = new Date(y, m - 1, d).getTime()
+  return (Date.now() - date) / MS_PER_DAY
+}
+
 function cleanOldGames(state: LocalState): LocalState {
-  const cutoff = Date.now() - MAX_GAME_AGE_DAYS * 24 * 60 * 60 * 1000
   const games: Record<string, GameState> = {}
   for (const [date, game] of Object.entries(state.games)) {
-    if (new Date(date).getTime() >= cutoff) {
+    if (dateAgeDays(date) <= MAX_GAME_AGE_DAYS) {
       games[date] = game
     }
   }
@@ -53,8 +69,7 @@ function cleanOldGames(state: LocalState): LocalState {
 }
 
 export function loadGame(dateStr: string): GameState | undefined {
-  const state = read()
-  return state.games[dateStr]
+  return read().games[dateStr]
 }
 
 export function saveGame(dateStr: string, game: GameState): void {
@@ -75,27 +90,31 @@ function getBucket(guesses: number): string {
   return "11+"
 }
 
-export function recordWin(dateStr: string, guessCount: number): void {
+type GameEndOutcome = { won: boolean; guessCount: number }
+
+export function recordGameEnd(dateStr: string, outcome: GameEndOutcome): Stats {
   const state = cleanOldGames(read())
-  const stats = state.stats
+  const stats: Stats = { ...state.stats, guessDistribution: { ...state.stats.guessDistribution } }
 
-  stats.gamesPlayed += 1
-  stats.gamesWon += 1
+  const previousGamesPlayed = stats.gamesPlayed
+  const previousTotalGuesses = stats.averageGuesses * previousGamesPlayed
 
-  const yesterday = new Date(dateStr)
-  yesterday.setDate(yesterday.getDate() - 1)
-  const yesterdayStr = yesterday.toISOString().slice(0, 10)
-  const playedYesterday = state.games[yesterdayStr]?.completed
+  stats.gamesPlayed = previousGamesPlayed + 1
+  if (outcome.won) {
+    stats.gamesWon += 1
+    const yesterdayWon = state.games[getPreviousDateStr(dateStr)]?.completed === true
+    stats.currentStreak = yesterdayWon ? stats.currentStreak + 1 : 1
+    stats.maxStreak = Math.max(stats.maxStreak, stats.currentStreak)
+    const bucket = getBucket(outcome.guessCount)
+    stats.guessDistribution[bucket] = (stats.guessDistribution[bucket] ?? 0) + 1
+  } else {
+    stats.currentStreak = 0
+  }
 
-  stats.currentStreak = playedYesterday ? stats.currentStreak + 1 : 1
-  stats.maxStreak = Math.max(stats.maxStreak, stats.currentStreak)
-
-  const totalGuesses = stats.averageGuesses * (stats.gamesPlayed - 1) + guessCount
+  const totalGuesses = previousTotalGuesses + outcome.guessCount
   stats.averageGuesses = Math.round((totalGuesses / stats.gamesPlayed) * 10) / 10
-
-  const bucket = getBucket(guessCount)
-  stats.guessDistribution[bucket] = (stats.guessDistribution[bucket] ?? 0) + 1
 
   state.stats = stats
   write(state)
+  return stats
 }
