@@ -1,4 +1,4 @@
-import { getTodayStr } from "@/lib/daily-robot"
+import { getRecentDateStrs, getTodayStr } from "@/lib/daily-robot"
 import { loadGame } from "@/lib/storage"
 
 type PuzzlePickerModalProps = {
@@ -6,14 +6,11 @@ type PuzzlePickerModalProps = {
   onSelectDate: (dateStr: string) => void
 }
 
+const RECENT_PUZZLES_COUNT = 30
+
 export function PuzzlePickerModal({ onClose, onSelectDate }: PuzzlePickerModalProps) {
   const today = getTodayStr()
-  const days: string[] = []
-  for (let i = 29; i >= 0; i--) {
-    const d = new Date()
-    d.setDate(d.getDate() - i)
-    days.push(d.toISOString().slice(0, 10))
-  }
+  const days = getRecentDateStrs(RECENT_PUZZLES_COUNT)
 
   return (
     <div
@@ -41,7 +38,7 @@ export function PuzzlePickerModal({ onClose, onSelectDate }: PuzzlePickerModalPr
             const game = loadGame(dateStr)
             const isToday = dateStr === today
             const isDone = game?.completed
-            const dayNum = new Date(dateStr).getDate()
+            const dayNum = Number(dateStr.slice(-2))
 
             return (
               <button
