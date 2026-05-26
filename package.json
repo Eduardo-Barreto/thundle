@@ -8,6 +8,8 @@
     "fmt": "oxfmt src/ index.html vite.config.ts tsconfig.json package.json",
     "fmt:check": "oxfmt --check src/ index.html vite.config.ts tsconfig.json package.json",
     "knip": "knip",
+    "doctor": "react-doctor . --verbose",
+    "verify": "bun run lint && bun run fmt:check && bun run knip && bun run build && bun run doctor",
     "prepare": "husky"
   },
   "dependencies": {
@@ -26,6 +28,7 @@
     "lint-staged": "^16.4.0",
     "oxfmt": "^0.46.0",
     "oxlint": "^1.61.0",
+    "react-doctor": "^0.2.8",
     "tailwindcss": "^4.2.4",
     "typescript": "^6.0.3",
     "vite": "^8.0.10"
