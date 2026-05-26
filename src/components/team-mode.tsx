@@ -1,13 +1,27 @@
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 
 import { copyToClipboard } from "@/lib/share"
+import {
+  TEAM_MAX_ATTEMPTS as MAX_ATTEMPTS,
+  TEAM_WORD_LENGTH as WORD_LENGTH,
+  computeKeyStatuses,
+  scoreGuess,
+  isWinningGuess,
+  type LetterStatus,
+  type ScoredGuess,
+} from "@/lib/team-mode-scoring"
 
-const ANSWER = "THUNDERATZ"
-const WORD_LENGTH = ANSWER.length
-const MAX_ATTEMPTS = 6
+const KEYBOARD_ROWS: string[][] = [
+  ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
+  ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
+  ["ENTER", "Z", "X", "C", "V", "B", "N", "M", "BACKSPACE"],
+]
 
-type LetterStatus = "correct" | "partial" | "wrong"
-type ScoredGuess = { letters: string[]; statuses: LetterStatus[] }
+const KEY_STYLES: Record<LetterStatus, string> = {
+  correct: "bg-ok-bg text-ok",
+  partial: "bg-partial-bg text-partial",
+  wrong: "bg-wrong-bg text-wrong opacity-60",
+}
 
 const TILE_STYLES: Record<LetterStatus, string> = {
   correct: "bg-ok-bg text-ok",
@@ -21,36 +35,11 @@ const SHARE_EMOJI: Record<LetterStatus, string> = {
   wrong: "⬛",
 }
 
-function buildShareText(guesses: ScoredGuess[], won: boolean): string {
+function buildTeamShareText(guesses: ScoredGuess[], won: boolean): string {
   const score = won ? `${guesses.length}/${MAX_ATTEMPTS}` : `X/${MAX_ATTEMPTS}`
   const header = `thundle.io/team ${score}`
   const rows = guesses.map((g) => g.statuses.map((s) => SHARE_EMOJI[s]).join(""))
   return [header, "", ...rows].join("\n")
-}
-
-function scoreGuess(guess: string): ScoredGuess {
-  const statuses: LetterStatus[] = Array.from({ length: WORD_LENGTH }, () => "wrong")
-  const consumed = Array.from({ length: WORD_LENGTH }, () => false)
-
-  for (let i = 0; i < WORD_LENGTH; i++) {
-    if (guess[i] === ANSWER[i]) {
-      statuses[i] = "correct"
-      consumed[i] = true
-    }
-  }
-
-  for (let i = 0; i < WORD_LENGTH; i++) {
-    if (statuses[i] === "correct") continue
-    for (let j = 0; j < WORD_LENGTH; j++) {
-      if (!consumed[j] && guess[i] === ANSWER[j]) {
-        statuses[i] = "partial"
-        consumed[j] = true
-        break
-      }
-    }
-  }
-
-  return { letters: guess.split(""), statuses }
 }
 
 export function TeamMode() {
@@ -58,7 +47,7 @@ export function TeamMode() {
   const [current, setCurrent] = useState("")
   const [shake, setShake] = useState(false)
 
-  const won = guesses.some((g) => g.statuses.every((s) => s === "correct"))
+  const won = guesses.some(isWinningGuess)
   const lost = !won && guesses.length >= MAX_ATTEMPTS
   const finished = won || lost
 
@@ -128,7 +117,46 @@ export function TeamMode() {
 
       <Grid guesses={guesses} current={current} shake={shake} />
 
+      {!finished && <Keyboard guesses={guesses} onKey={handleKey} />}
+
       {finished && <Reveal won={won} guesses={guesses} onReset={resetGame} />}
+    </div>
+  )
+}
+
+type KeyboardProps = { guesses: ScoredGuess[]; onKey: (key: string) => void }
+
+function Keyboard({ guesses, onKey }: KeyboardProps) {
+  const statuses = useMemo(() => computeKeyStatuses(guesses), [guesses])
+
+  return (
+    <div className="mt-6 flex flex-col gap-1.5 md:mt-8 md:gap-2">
+      {KEYBOARD_ROWS.map((row) => (
+        <div key={row.join("")} className="flex justify-center gap-1 md:gap-1.5">
+          {row.map((key) => {
+            const isWord = key !== "ENTER" && key !== "BACKSPACE"
+            const status = isWord ? statuses[key] : undefined
+            const label = key === "BACKSPACE" ? "⌫" : key
+            return (
+              <button
+                key={key}
+                type="button"
+                aria-label={key === "BACKSPACE" ? "Apagar" : key === "ENTER" ? "Enter" : key}
+                onClick={() => onKey(key)}
+                className={`flex h-12 min-w-0 flex-1 cursor-pointer items-center justify-center rounded-md font-mono text-xs font-bold uppercase transition-all duration-100 ease-[cubic-bezier(0.23,1,0.32,1)] select-none active:scale-95 md:h-14 md:text-sm ${
+                  isWord ? "max-w-[40px] md:max-w-[44px]" : "flex-[1.4] text-[10px] md:text-xs"
+                } ${
+                  status
+                    ? KEY_STYLES[status]
+                    : "bg-elevated text-t1 border border-white/6 hover:bg-white/8"
+                }`}
+              >
+                {label}
+              </button>
+            )
+          })}
+        </div>
+      ))}
     </div>
   )
 }
@@ -211,7 +239,7 @@ function Reveal({
   const [copied, setCopied] = useState(false)
 
   async function handleShare() {
-    const ok = await copyToClipboard(buildShareText(guesses, won))
+    const ok = await copyToClipboard(buildTeamShareText(guesses, won))
     if (ok) {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
