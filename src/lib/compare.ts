@@ -1,15 +1,8 @@
 import gameConfig from "@/config/game.json" with { type: "json" }
 import { getTodayStr } from "@/lib/daily-robot"
+import { formatAttributeValue } from "@/lib/format"
+import { getNestedValue } from "@/lib/nested-value"
 import type { Robot, CellResult, GuessResult } from "@/types"
-
-function getNestedValue(obj: Robot, path: string): unknown {
-  return path.split(".").reduce<unknown>((acc, key) => {
-    if (acc && typeof acc === "object" && key in acc) {
-      return (acc as Record<string, unknown>)[key]
-    }
-    return undefined
-  }, obj)
-}
 
 function compareAttribute(
   guessVal: unknown,
@@ -42,14 +35,7 @@ export function compareGuess(guess: Robot, answer: Robot, dateStr?: string): Gue
       ? { status: "wrong" as const, direction: undefined }
       : compareAttribute(guessVal, answerVal, config.type)
 
-    let displayValue: string | number | boolean
-    if (typeof guessVal === "boolean") {
-      displayValue = guessVal ? "Sim" : "Não"
-    } else {
-      displayValue = guessVal as string | number
-    }
-
-    return { attribute: key, value: displayValue, status, direction }
+    return { attribute: key, value: formatAttributeValue(guessVal), status, direction }
   })
 
   const isCorrect = !isFuture && cells.every((c) => c.status === "correct")
