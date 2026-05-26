@@ -3,6 +3,7 @@ dist/
 .vite/
 *.local
 .DS_Store
+.omc/
 
 # Dev tools
 .playwright-cli/
