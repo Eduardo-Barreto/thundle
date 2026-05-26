@@ -3,7 +3,7 @@ import { useState, useMemo, useCallback } from "react"
 
 import type { Robot } from "@/types"
 
-export type HighlightSegment = { text: string; match: boolean }
+type HighlightSegment = { text: string; match: boolean }
 
 type SearchResult = {
   robot: Robot
