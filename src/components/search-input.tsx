@@ -96,9 +96,14 @@ export function SearchInput({ robots, guessedNames, disabled, onSelect }: Search
                   &gt;
                 </span>
                 <span>
-                  {r.segments.map((seg, j) =>
-                    seg.match ? <mark key={j}>{seg.text}</mark> : <span key={j}>{seg.text}</span>,
-                  )}
+                  {r.segments.map((seg, j) => {
+                    const key = `${j}:${seg.text}`
+                    return seg.match ? (
+                      <mark key={key}>{seg.text}</mark>
+                    ) : (
+                      <span key={key}>{seg.text}</span>
+                    )
+                  })}
                 </span>
               </div>
             )
