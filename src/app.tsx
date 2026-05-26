@@ -8,6 +8,7 @@ import { LoseOverlay } from "@/components/lose-overlay"
 import { PuzzlePickerModal } from "@/components/puzzle-picker-modal"
 import { SearchInput } from "@/components/search-input"
 import { StatsModal } from "@/components/stats-modal"
+import { TeamMode } from "@/components/team-mode"
 import { WinOverlay } from "@/components/win-overlay"
 import { useGame } from "@/hooks/use-game"
 import { getDateFromPuzzleNumber, getPuzzleNumber, getTodayStr } from "@/lib/daily-robot"
@@ -41,6 +42,18 @@ function updateUrl(dateStr: string) {
 }
 
 export function App() {
+  if (window.location.pathname === "/team") {
+    return (
+      <div className="text-t1 min-h-dvh bg-[#0A0A0A] font-sans">
+        <Background />
+        <TeamMode />
+      </div>
+    )
+  }
+  return <NormalApp />
+}
+
+function NormalApp() {
   const [initial] = useState(getInitialDate)
   const [showStats, setShowStats] = useState(false)
   const [showPuzzles, setShowPuzzles] = useState(false)
