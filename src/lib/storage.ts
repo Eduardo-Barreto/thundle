@@ -67,12 +67,6 @@ export function loadStats(): Stats {
   return read().stats
 }
 
-export function saveStats(stats: Stats): void {
-  const state = read()
-  state.stats = stats
-  write(state)
-}
-
 function getBucket(guesses: number): string {
   if (guesses === 1) return "1"
   if (guesses <= 3) return "2-3"

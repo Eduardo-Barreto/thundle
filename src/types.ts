@@ -1,4 +1,4 @@
-export type Trophies = {
+type Trophies = {
   gold: number
   silver: number
   bronze: number
@@ -16,22 +16,6 @@ export type Robot = {
   logoUrl?: string
   typographyUrl?: string
   description?: string
-}
-
-export type SuperCategoryConfig = {
-  label: string
-  categories: string[]
-}
-
-export type AttributeConfig = {
-  label: string
-  type: "number" | "boolean" | "superCategory" | "category" | "trophies"
-  hintEligible: boolean
-}
-
-export type GameConfig = {
-  superCategories: Record<string, SuperCategoryConfig>
-  attributes: Record<string, AttributeConfig>
 }
 
 export type CellResult = {
