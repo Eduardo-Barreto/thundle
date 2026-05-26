@@ -52,12 +52,9 @@ export function HintBar({ usedHint, hintAttribute, answer, onRequestHint }: Hint
         Dica
       </button>
       {usedHint && hintConfig && (
-        <div
-          role="status"
-          className="border-thunder-navy/80 bg-thunder-navy text-t2 rounded-md border px-3 py-2 font-mono text-xs font-bold tracking-wider uppercase md:text-sm"
-        >
+        <output className="border-thunder-navy/80 bg-thunder-navy text-t2 rounded-md border px-3 py-2 font-mono text-xs font-bold tracking-wider uppercase md:text-sm">
           {hintConfig.label} &rarr; <span className="text-t1">{displayValue}</span>
-        </div>
+        </output>
       )}
     </div>
   )
