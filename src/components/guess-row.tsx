@@ -44,8 +44,8 @@ export function GuessRow({ result, isLatest }: GuessRowProps) {
           className="pointer-events-none absolute inset-y-0 left-full z-[5]"
           style={{
             width: "14px",
-            backdropFilter: "blur(14px)",
-            WebkitBackdropFilter: "blur(14px)",
+            backdropFilter: "blur(8px)",
+            WebkitBackdropFilter: "blur(8px)",
             maskImage: "linear-gradient(to right, rgba(0,0,0,0.9), transparent)",
             WebkitMaskImage: "linear-gradient(to right, rgba(0,0,0,0.9), transparent)",
             background: "linear-gradient(to right, rgba(10,10,10,0.5), transparent)",
