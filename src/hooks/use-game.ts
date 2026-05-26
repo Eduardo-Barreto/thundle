@@ -74,9 +74,10 @@ export function useGame(dateStr?: string) {
   const requestHint = useCallback(() => {
     if (usedHint) return
 
-    const eligible = Object.entries(gameConfig.attributes)
-      .filter(([_, cfg]) => cfg.hintEligible)
-      .map(([key]) => key)
+    const eligible: string[] = []
+    for (const [key, cfg] of Object.entries(gameConfig.attributes)) {
+      if (cfg.hintEligible) eligible.push(key)
+    }
 
     const picked = eligible[Math.floor(Math.random() * eligible.length)]
     if (!picked) return
