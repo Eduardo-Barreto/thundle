@@ -185,7 +185,7 @@ export function WinOverlay({
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-elevated overflow-hidden rounded-lg border border-white/6 px-2 py-2 text-center">
+    <div className="bg-elevated overflow-hidden rounded-lg border border-white/6 p-2 text-center">
       <p className="text-t3 font-mono text-[8px] font-bold tracking-widest uppercase">{label}</p>
       <p className="text-t1 mt-0.5 font-mono text-[10px] leading-tight font-bold break-words">
         {value}
