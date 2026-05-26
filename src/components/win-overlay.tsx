@@ -65,6 +65,7 @@ export function WinOverlay({
         style={{ animation: "win-card 500ms cubic-bezier(0.23,1,0.32,1) 100ms both" }}
       >
         <button
+          type="button"
           onClick={onClose}
           aria-label="Fechar"
           className="text-t3 hover:text-t2 absolute top-4 right-4 cursor-pointer transition-colors"
@@ -170,6 +171,7 @@ export function WinOverlay({
             </div>
           </div>
           <button
+            type="button"
             onClick={handleShare}
             className="bg-thunder-navy text-thunder-yellow focus-visible:outline-thunder-yellow w-full cursor-pointer rounded-lg px-5 py-3 font-mono text-xs font-bold tracking-wider uppercase transition-all duration-160 ease-[cubic-bezier(0.23,1,0.32,1)] hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-97"
           >

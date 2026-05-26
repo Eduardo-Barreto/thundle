@@ -29,6 +29,7 @@ export function HintBar({ usedHint, hintAttribute, answer, onRequestHint }: Hint
   return (
     <div className="mb-7 flex items-center justify-center gap-3 md:mb-10 md:gap-4">
       <button
+        type="button"
         onClick={onRequestHint}
         disabled={usedHint}
         aria-label="Pedir dica"

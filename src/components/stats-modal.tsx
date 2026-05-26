@@ -20,6 +20,7 @@ export function StatsModal({ onClose }: StatsModalProps) {
             Estatísticas
           </h2>
           <button
+            type="button"
             onClick={onClose}
             aria-label="Fechar"
             className="text-t3 hover:text-t2 cursor-pointer"

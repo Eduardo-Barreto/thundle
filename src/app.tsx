@@ -105,6 +105,7 @@ function TimeTravelerModal({ onOpenPuzzles }: { onOpenPuzzles: () => void }) {
           Esse puzzle ainda não existe. Volte quando chegar o dia certo!
         </p>
         <button
+          type="button"
           onClick={onOpenPuzzles}
           className="bg-thunder-navy text-thunder-yellow focus-visible:outline-thunder-yellow w-full cursor-pointer rounded-lg px-5 py-3 font-mono text-xs font-bold tracking-wider uppercase transition-all duration-160 ease-[cubic-bezier(0.23,1,0.32,1)] hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-97"
         >
@@ -178,6 +179,7 @@ function GameScreen({
       {gameOver && !showOverlay && (
         <div className="fixed right-4 bottom-4 z-30 md:right-6 md:bottom-6">
           <button
+            type="button"
             onClick={() => setShowOverlay(true)}
             className="bg-thunder-navy text-thunder-yellow focus-visible:outline-thunder-yellow cursor-pointer rounded-lg px-4 py-2.5 font-mono text-xs font-bold tracking-wider uppercase shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-160 ease-[cubic-bezier(0.23,1,0.32,1)] hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-97 md:px-5 md:text-sm"
           >

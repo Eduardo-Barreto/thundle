@@ -28,6 +28,7 @@ export function PuzzlePickerModal({ onClose, onSelectDate }: PuzzlePickerModalPr
             Puzzles anteriores
           </h2>
           <button
+            type="button"
             onClick={onClose}
             aria-label="Fechar"
             className="text-t3 hover:text-t2 cursor-pointer"
@@ -45,6 +46,7 @@ export function PuzzlePickerModal({ onClose, onSelectDate }: PuzzlePickerModalPr
             return (
               <button
                 key={dateStr}
+                type="button"
                 onClick={() => {
                   onSelectDate(dateStr)
                   onClose()

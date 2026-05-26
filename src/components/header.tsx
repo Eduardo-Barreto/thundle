@@ -45,6 +45,7 @@ function IconButton({
 }) {
   return (
     <button
+      type="button"
       aria-label={label}
       title={label}
       onClick={onClick}
