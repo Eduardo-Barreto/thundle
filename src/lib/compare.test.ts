@@ -83,6 +83,21 @@ describe("compareGuess", () => {
     }
   })
 
+  test("different robots with identical attributes do not count as a win", () => {
+    const guess = makeRobot({ name: "Heleonor", year: 2002, category: "Middle", active: false })
+    const answer = makeRobot({
+      name: "Mata Cachorro",
+      year: 2002,
+      category: "Middle",
+      active: false,
+    })
+    const result = compareGuess(guess, answer)
+    expect(result.isCorrect).toBe(false)
+    for (const cell of result.cells) {
+      expect(cell.status).toBe("correct")
+    }
+  })
+
   test("result attaches guess imageUrl and typographyUrl", () => {
     const guess = makeRobot({ name: "G", imageUrl: "img.png", typographyUrl: "type.svg" })
     const answer = makeRobot({ name: "A" })

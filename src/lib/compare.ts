@@ -38,7 +38,7 @@ export function compareGuess(guess: Robot, answer: Robot, dateStr?: string): Gue
     return { attribute: key, value: formatAttributeValue(guessVal), status, direction }
   })
 
-  const isCorrect = !isFuture && cells.every((c) => c.status === "correct")
+  const isCorrect = !isFuture && guess.name === answer.name
   return {
     robotName: guess.name,
     imageUrl: guess.imageUrl,
