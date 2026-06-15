@@ -40,6 +40,14 @@ export type GameState = {
   completed: boolean
 }
 
+export type ImageGameVariant = "blur" | "zoom"
+
+export type ImageGameState = {
+  guesses: string[]
+  completed: boolean
+  lost: boolean
+}
+
 export type Stats = {
   gamesPlayed: number
   gamesWon: number
@@ -51,5 +59,7 @@ export type Stats = {
 
 export type LocalState = {
   games: Record<string, GameState>
+  imageGames: Record<ImageGameVariant, Record<string, ImageGameState>>
   stats: Stats
+  imageStats: Record<ImageGameVariant, Stats>
 }

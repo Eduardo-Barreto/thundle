@@ -1,7 +1,20 @@
 import { describe, expect, test } from "bun:test"
 
-import { copyToClipboard, generateShareText } from "@/lib/share"
+import { copyToClipboard, generateImageShareText, generateShareText } from "@/lib/share"
 import type { GuessResult } from "@/types"
+
+function imageShare(overrides: Partial<Parameters<typeof generateImageShareText>[0]> = {}) {
+  return generateImageShareText({
+    puzzleNumber: 5,
+    guessCount: 3,
+    won: true,
+    isToday: true,
+    path: "desfoque",
+    label: "Desfoque",
+    streak: 0,
+    ...overrides,
+  })
+}
 
 function row(statuses: Array<"correct" | "partial" | "wrong">, dir?: "up" | "down"): GuessResult {
   return {
@@ -67,6 +80,44 @@ describe("generateShareText", () => {
     const lines = text.split("\n")
     expect(lines[1]).toBe("")
     expect(lines.length).toBe(4)
+  })
+})
+
+describe("generateImageShareText", () => {
+  test("win uses guessCount/9 and the mode path + label", () => {
+    const text = imageShare({ guessCount: 3, won: true })
+    expect(text).toContain("thundle.io/desfoque")
+    expect(text).toContain("#005")
+    expect(text).toContain("Desfoque 3/9")
+  })
+
+  test("loss uses X/9", () => {
+    expect(imageShare({ won: false })).toContain("X/9")
+  })
+
+  test("URL includes ?p when not today", () => {
+    expect(imageShare({ isToday: false, puzzleNumber: 7 })).toContain("thundle.io/desfoque?p=7")
+  })
+
+  test("win renders 9 tiles across three rows ending on the green guess", () => {
+    const lines = imageShare({ guessCount: 3, won: true }).split("\n")
+    expect(lines[1]).toBe("")
+    const grid = lines.slice(2).join("")
+    expect([...grid].filter((c) => c === "🟥")).toHaveLength(2)
+    expect([...grid].filter((c) => c === "🟩")).toHaveLength(1)
+    expect(lines.slice(2)).toHaveLength(3)
+  })
+
+  test("loss renders nine red tiles and no green", () => {
+    const grid = imageShare({ won: false }).split("\n").slice(2).join("")
+    expect([...grid].filter((c) => c === "🟥")).toHaveLength(9)
+    expect(grid).not.toContain("🟩")
+  })
+
+  test("streak marker only on win with streak > 0", () => {
+    expect(imageShare({ won: true, streak: 4 })).toContain("🔥 4")
+    expect(imageShare({ won: true, streak: 0 })).not.toContain("🔥")
+    expect(imageShare({ won: false, streak: 5 })).not.toContain("🔥")
   })
 })
 

@@ -1,6 +1,15 @@
 import { beforeEach, describe, expect, test } from "bun:test"
 
-import { loadGame, loadStats, recordGameEnd, saveGame } from "@/lib/storage"
+import {
+  loadGame,
+  loadImageGame,
+  loadImageStats,
+  loadStats,
+  recordGameEnd,
+  recordImageGameEnd,
+  saveGame,
+  saveImageGame,
+} from "@/lib/storage"
 
 beforeEach(() => {
   localStorage.clear()
@@ -103,5 +112,63 @@ describe("recordGameEnd — loss", () => {
   test("loss does not increment distribution", () => {
     recordGameEnd("2026-05-24", { won: false, guessCount: 10 })
     expect(loadStats().guessDistribution["7-10"]).toBeUndefined()
+  })
+})
+
+describe("loadImageGame / saveImageGame", () => {
+  test("returns undefined for unknown date", () => {
+    expect(loadImageGame("blur", "2026-05-24")).toBeUndefined()
+  })
+
+  test("round-trips a per-variant image game record", () => {
+    saveImageGame("blur", "2026-05-24", { guesses: ["A", "B"], completed: false, lost: false })
+    expect(loadImageGame("blur", "2026-05-24")).toEqual({
+      guesses: ["A", "B"],
+      completed: false,
+      lost: false,
+    })
+  })
+
+  test("variants keep separate records for the same date", () => {
+    saveImageGame("blur", "2026-05-24", { guesses: ["A"], completed: true, lost: false })
+    saveImageGame("zoom", "2026-05-24", { guesses: ["X", "Y"], completed: false, lost: true })
+    expect(loadImageGame("blur", "2026-05-24")?.completed).toBe(true)
+    expect(loadImageGame("zoom", "2026-05-24")?.lost).toBe(true)
+  })
+
+  test("saving an image game leaves the classic game untouched", () => {
+    saveGame("2026-05-24", { guesses: ["A"], usedHint: false, completed: true })
+    saveImageGame("blur", "2026-05-24", { guesses: ["B"], completed: false, lost: false })
+    expect(loadGame("2026-05-24")?.completed).toBe(true)
+  })
+})
+
+describe("recordImageGameEnd", () => {
+  test("records into the variant's own stats, not classic", () => {
+    recordImageGameEnd("blur", "2026-05-24", { won: true, guessCount: 2 })
+    expect(loadImageStats("blur").gamesWon).toBe(1)
+    expect(loadStats().gamesPlayed).toBe(0)
+  })
+
+  test("keeps blur and zoom stats independent", () => {
+    recordImageGameEnd("blur", "2026-05-24", { won: true, guessCount: 1 })
+    recordImageGameEnd("zoom", "2026-05-24", { won: false, guessCount: 9 })
+    expect(loadImageStats("blur").gamesWon).toBe(1)
+    expect(loadImageStats("zoom").gamesWon).toBe(0)
+    expect(loadImageStats("zoom").gamesPlayed).toBe(1)
+  })
+
+  test("streak continuity follows the same variant's prior day", () => {
+    saveImageGame("blur", "2026-05-24", { guesses: ["A"], completed: true, lost: false })
+    recordImageGameEnd("blur", "2026-05-24", { won: true, guessCount: 1 })
+    const stats = recordImageGameEnd("blur", "2026-05-25", { won: true, guessCount: 2 })
+    expect(stats.currentStreak).toBe(2)
+  })
+
+  test("a win in another variant does not extend this variant's streak", () => {
+    saveImageGame("zoom", "2026-05-24", { guesses: ["A"], completed: true, lost: false })
+    recordImageGameEnd("zoom", "2026-05-24", { won: true, guessCount: 1 })
+    const stats = recordImageGameEnd("blur", "2026-05-25", { won: true, guessCount: 2 })
+    expect(stats.currentStreak).toBe(1)
   })
 })

@@ -1,11 +1,32 @@
-import { loadStats } from "@/lib/storage"
+import { useState } from "react"
+
+import { IMAGE_MODE_META } from "@/lib/image-modes"
+import type { GameMode } from "@/lib/routing"
+import { loadImageStats, loadStats } from "@/lib/storage"
+import type { Stats } from "@/types"
 
 type StatsModalProps = {
+  mode: GameMode
   onClose: () => void
 }
 
-export function StatsModal({ onClose }: StatsModalProps) {
-  const stats = loadStats()
+const TABS: { mode: GameMode; label: string }[] = [
+  { mode: "classic", label: "Clássico" },
+  { mode: "blur", label: IMAGE_MODE_META.blur.label },
+  { mode: "zoom", label: IMAGE_MODE_META.zoom.label },
+]
+
+const BUCKETS = ["1", "2-3", "4-6", "7-10", "11+"]
+
+function statsForMode(mode: GameMode): Stats {
+  return mode === "classic" ? loadStats() : loadImageStats(mode)
+}
+
+export function StatsModal({ mode, onClose }: StatsModalProps) {
+  const [selectedTab, setSelectedTab] = useState<GameMode | null>(null)
+  const activeMode = selectedTab ?? mode
+  const stats = statsForMode(activeMode)
+  const maxBucket = Math.max(1, ...Object.values(stats.guessDistribution))
 
   return (
     <div
@@ -28,6 +49,21 @@ export function StatsModal({ onClose }: StatsModalProps) {
             ✕
           </button>
         </div>
+        <div className="mb-6 grid grid-cols-3 gap-1 rounded-lg border border-white/6 bg-black/20 p-1 font-mono text-[10px] font-bold tracking-wider uppercase">
+          {TABS.map((tab) => (
+            <button
+              key={tab.mode}
+              type="button"
+              onClick={() => setSelectedTab(tab.mode)}
+              aria-pressed={activeMode === tab.mode}
+              className={`cursor-pointer rounded-md px-3 py-2 transition-all duration-160 ease-[cubic-bezier(0.23,1,0.32,1)] ${
+                activeMode === tab.mode ? "bg-thunder-yellow text-black" : "text-t3 hover:text-t2"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
         <div className="mb-6 grid grid-cols-4 gap-4 text-center">
           {[
             { value: stats.gamesPlayed, label: "Jogos" },
@@ -43,10 +79,9 @@ export function StatsModal({ onClose }: StatsModalProps) {
         </div>
         <div className="space-y-2">
           <p className="text-t3 font-mono text-[9px] tracking-wider uppercase">Distribuição</p>
-          {["1", "2-3", "4-6", "7-10", "11+"].map((bucket) => {
+          {BUCKETS.map((bucket) => {
             const count = stats.guessDistribution[bucket] ?? 0
-            const max = Math.max(1, ...Object.values(stats.guessDistribution))
-            const pct = (count / max) * 100
+            const pct = (count / maxBucket) * 100
             return (
               <div key={bucket} className="flex items-center gap-2">
                 <span className="text-t3 w-8 text-right font-mono text-xs">{bucket}</span>

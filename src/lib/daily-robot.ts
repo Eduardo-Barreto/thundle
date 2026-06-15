@@ -1,7 +1,9 @@
-import type { Robot } from "@/types"
+import type { ImageGameVariant, Robot } from "@/types"
 
 const EPOCH = "2026-04-25"
 const SEED = 105
+const IMAGE_SEED = 1427
+export const IMAGE_VARIANTS: readonly ImageGameVariant[] = ["blur", "zoom"]
 const MS_PER_DAY = 1000 * 60 * 60 * 24
 
 function parseDateLocal(dateStr: string): Date {
@@ -47,6 +49,31 @@ export function getDailyRobot(robots: Robot[], dateStr: string): Robot {
   const name = shuffled[cycleIndex]!
   const robot = robots.find((r) => r.name === name)
   if (!robot) throw new Error(`Robot not found for daily slot: ${name}`)
+  return robot
+}
+
+function getImageRobotPool(robots: Robot[]): Robot[] {
+  return robots.filter((r) => r.imageUrl.trim().length > 0)
+}
+
+export function getDailyImageRobot(
+  robots: Robot[],
+  dateStr: string,
+  variant: ImageGameVariant,
+): Robot {
+  const pool = getImageRobotPool(robots)
+  if (pool.length === 0) throw new Error("No robots with images configured")
+  const names = pool.map((r) => r.name).sort()
+  // Each variant gets its own permutation and advances one robot per day, so a
+  // single variant covers the whole pool over `pool.length` days instead of
+  // striding by the variant count (which would parity-lock it to a subset).
+  const variantSeed = IMAGE_SEED + IMAGE_VARIANTS.indexOf(variant) * 7919
+  const shuffled = shuffleWithSeed(names, variantSeed)
+  const dayIndex = getPuzzleNumber(dateStr) - 1
+  const cycleIndex = ((dayIndex % shuffled.length) + shuffled.length) % shuffled.length
+  const name = shuffled[cycleIndex]!
+  const robot = pool.find((r) => r.name === name)
+  if (!robot) throw new Error(`Robot not found for image slot: ${name}`)
   return robot
 }
 
