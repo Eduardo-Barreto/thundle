@@ -9,6 +9,10 @@ dist/
 .playwright-cli/
 scripts/.venv/
 
+# Playwright e2e artifacts
+test-results/
+playwright-report/
+
 # Design artifacts (not source code)
 docs/refs/
 docs/mockups/

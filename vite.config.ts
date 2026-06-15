@@ -22,4 +22,9 @@ export default defineConfig({
     tsconfigPaths: true,
   },
   base: "/",
+  server: {
+    port: Number(process.env.PORT) || 5173,
+    host: process.env.HOST || "localhost",
+    allowedHosts: ["barreto-server"],
+  },
 })
