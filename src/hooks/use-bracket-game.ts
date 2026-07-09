@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 
 import robotsData from "@/config/robots.json" with { type: "json" }
 import { fetchBracket, fetchCategoryRobots, type CategoryRobot } from "@/lib/bracket-api"
@@ -131,10 +131,15 @@ export function useBracketGame(
     persist(new Map())
   }, [confirmed, persist])
 
+  // Ref, não estado: dois cliques em Confirmar no mesmo frame veriam ambos
+  // confirmed=false e registrariam as estatísticas duas vezes.
+  const confirmingRef = useRef(false)
+
   const confirm = useCallback(() => {
-    if (confirmed || remote.status !== "ready" || !propagation) return
+    if (confirmingRef.current || confirmed || remote.status !== "ready" || !propagation) return
     const pending = propagation.slots.filter((s) => s.active && !picks.has(s.position))
     if (pending.length > 0) return
+    confirmingRef.current = true
     const score = scorePicks(remote.window, picks, remote.graph)
     const nextResult: BracketResult = {
       won: score.championCorrect,
