@@ -1,6 +1,7 @@
 import type { CategoryRobot } from "@/lib/bracket-api"
 import { resolveRobotImage } from "@/lib/bracket-images"
 import {
+  namesMatch,
   resolveWinner,
   type BracketGraph,
   type BracketWindow,
@@ -30,7 +31,9 @@ function slotResult(
   const pick = picks.get(windowSlot.position)
   if (!pick) return "wrong"
   const real = resolveWinner(graph, windowSlot.position)
-  return real === pick ? "correct" : "wrong"
+  // namesMatch, não ===: o vencedor real pode vir de outro campo da API com o
+  // nome truncado ("Raijū R" vs "Raijū RC") — o scoring já compara assim.
+  return namesMatch(real, pick) ? "correct" : "wrong"
 }
 
 function RobotRow({
@@ -133,12 +136,12 @@ function MatchCard({
           name={name}
           picked={Boolean(name && pick === name)}
           clickable={Boolean(clickable && name)}
-          result={name && (pick === name || realWinner === name) ? result : undefined}
+          result={name && (pick === name || namesMatch(realWinner, name)) ? result : undefined}
           image={name ? resolveRobotImage(name, thundleRobots, apiRobots).src : null}
           onClick={() => name && onPick(slot.position, name)}
         />
       ))}
-      {confirmed && realWinner && pick !== realWinner && (
+      {confirmed && realWinner && !namesMatch(pick, realWinner) && (
         <p className="text-t3 px-2 pb-1 font-mono text-[9px] tracking-wider uppercase">
           venceu: {realWinner}
         </p>
