@@ -1,32 +1,49 @@
 import { useState } from "react"
 
+import { BRACKET_TRACK_META, BRACKET_TRACKS } from "@/lib/bracket-modes"
 import { IMAGE_MODE_META } from "@/lib/image-modes"
 import type { GameMode } from "@/lib/routing"
-import { loadImageStats, loadStats } from "@/lib/storage"
-import type { Stats } from "@/types"
+import { loadBracketStats, loadImageStats, loadStats } from "@/lib/storage"
+import type { BracketTrack, ImageGameVariant, Stats } from "@/types"
+
+type StatsTabKey = "classic" | ImageGameVariant | `bracket-${BracketTrack}`
 
 type StatsModalProps = {
   mode: GameMode
+  track?: BracketTrack
   onClose: () => void
 }
 
-const TABS: { mode: GameMode; label: string }[] = [
-  { mode: "classic", label: "Clássico" },
-  { mode: "blur", label: IMAGE_MODE_META.blur.label },
-  { mode: "zoom", label: IMAGE_MODE_META.zoom.label },
+const TABS: { key: StatsTabKey; label: string }[] = [
+  { key: "classic", label: "Clássico" },
+  { key: "blur", label: IMAGE_MODE_META.blur.label },
+  { key: "zoom", label: IMAGE_MODE_META.zoom.label },
+  ...BRACKET_TRACKS.map((track) => ({
+    key: `bracket-${track}` as const,
+    label: BRACKET_TRACK_META[track].label,
+  })),
 ]
 
 const BUCKETS = ["1", "2-3", "4-6", "7-10", "11+"]
 
-function statsForMode(mode: GameMode): Stats {
-  return mode === "classic" ? loadStats() : loadImageStats(mode)
+function statsForTab(key: StatsTabKey): Stats {
+  if (key === "classic") return loadStats()
+  if (key === "bracket-combate") return loadBracketStats("combate")
+  if (key === "bracket-sumo") return loadBracketStats("sumo")
+  return loadImageStats(key)
 }
 
-export function StatsModal({ mode, onClose }: StatsModalProps) {
-  const [selectedTab, setSelectedTab] = useState<GameMode | null>(null)
-  const activeMode = selectedTab ?? mode
-  const stats = statsForMode(activeMode)
+function initialTab(mode: GameMode, track: BracketTrack | undefined): StatsTabKey {
+  if (mode === "bracket") return `bracket-${track ?? "combate"}`
+  return mode
+}
+
+export function StatsModal({ mode, track, onClose }: StatsModalProps) {
+  const [selectedTab, setSelectedTab] = useState<StatsTabKey | null>(null)
+  const activeTab = selectedTab ?? initialTab(mode, track)
+  const stats = statsForTab(activeTab)
   const maxBucket = Math.max(1, ...Object.values(stats.guessDistribution))
+  const distributionLabel = activeTab.startsWith("bracket-") ? "Acertos" : "Distribuição"
 
   return (
     <div
@@ -52,12 +69,12 @@ export function StatsModal({ mode, onClose }: StatsModalProps) {
         <div className="mb-6 grid grid-cols-3 gap-1 rounded-lg border border-white/6 bg-black/20 p-1 font-mono text-[10px] font-bold tracking-wider uppercase">
           {TABS.map((tab) => (
             <button
-              key={tab.mode}
+              key={tab.key}
               type="button"
-              onClick={() => setSelectedTab(tab.mode)}
-              aria-pressed={activeMode === tab.mode}
+              onClick={() => setSelectedTab(tab.key)}
+              aria-pressed={activeTab === tab.key}
               className={`cursor-pointer rounded-md px-3 py-2 transition-all duration-160 ease-[cubic-bezier(0.23,1,0.32,1)] ${
-                activeMode === tab.mode ? "bg-thunder-yellow text-black" : "text-t3 hover:text-t2"
+                activeTab === tab.key ? "bg-thunder-yellow text-black" : "text-t3 hover:text-t2"
               }`}
             >
               {tab.label}
@@ -78,7 +95,9 @@ export function StatsModal({ mode, onClose }: StatsModalProps) {
           ))}
         </div>
         <div className="space-y-2">
-          <p className="text-t3 font-mono text-[9px] tracking-wider uppercase">Distribuição</p>
+          <p className="text-t3 font-mono text-[9px] tracking-wider uppercase">
+            {distributionLabel}
+          </p>
           {BUCKETS.map((bucket) => {
             const count = stats.guessDistribution[bucket] ?? 0
             const pct = (count / maxBucket) * 100
