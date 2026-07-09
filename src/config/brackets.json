@@ -1,0 +1,1628 @@
+{
+  "pinned": {
+    "combate": {
+      "2026-07-09": "rcx-cpbr16/lightweight"
+    },
+    "sumo": {}
+  },
+  "combate": [
+    {
+      "eventSlug": "esquenta-rsm-2026",
+      "eventName": "Esquenta RSM",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 22,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "hacktudo-2018",
+      "eventName": "HACKTUDO",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 40,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "hacktudo-2018",
+      "eventName": "HACKTUDO",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 60,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "hacktudo-2019",
+      "eventName": "URC HackTudo 2019",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 47,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "hacktudo-2019",
+      "eventName": "URC HackTudo 2019",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 67,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "hacktudo-2019",
+      "eventName": "URC HackTudo 2019",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 28,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "hacktudo-2019",
+      "eventName": "URC HackTudo 2019",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 14,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2018",
+      "eventName": "IronCup 2018",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 22,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2018",
+      "eventName": "IronCup 2018",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 34,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2019",
+      "eventName": "IRONCup 2019",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 48,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2019",
+      "eventName": "IRONCup 2019",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 66,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2020",
+      "eventName": "IRONCup 2020",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 66,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2020",
+      "eventName": "IRONCup 2020",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 82,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2020",
+      "eventName": "IRONCup 2020",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 40,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2022",
+      "eventName": "IRONCup 2022",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 18,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2022",
+      "eventName": "IRONCup 2022",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 28,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2022",
+      "eventName": "IRONCup 2022",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 20,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2023",
+      "eventName": "IRONCup 2023",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 52,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2023",
+      "eventName": "IRONCup 2023",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 54,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2023",
+      "eventName": "IRONCup 2023",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 36,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2024",
+      "eventName": "IRONCup 2024",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 46,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2024",
+      "eventName": "IRONCup 2024",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 64,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2024",
+      "eventName": "IRONCup 2024",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 66,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2025",
+      "eventName": "IRONCup 2025",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 70,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2025",
+      "eventName": "IRONCup 2025",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 76,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2025",
+      "eventName": "IRONCup 2025",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 78,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2026",
+      "eventName": "IRONCup 2026",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 80,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2026",
+      "eventName": "IRONCup 2026",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 90,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2026",
+      "eventName": "IRONCup 2026",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 72,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2022",
+      "eventName": "RoboChallenge Brasil",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 36,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2022",
+      "eventName": "RoboChallenge Brasil",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 36,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2022",
+      "eventName": "RoboChallenge Brasil",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 20,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2023",
+      "eventName": "RoboChallenge Brasil 2023",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 26,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2023",
+      "eventName": "RoboChallenge Brasil 2023",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 36,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2023",
+      "eventName": "RoboChallenge Brasil 2023",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 40,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2024",
+      "eventName": "RoboChallenge Brasil 2024",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 46,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2024",
+      "eventName": "RoboChallenge Brasil 2024",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 56,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2024",
+      "eventName": "RoboChallenge Brasil 2024",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 50,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2025",
+      "eventName": "RoboChallenge Brasil 2025",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 62,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2025",
+      "eventName": "RoboChallenge Brasil 2025",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 60,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2025",
+      "eventName": "RoboChallenge Brasil 2025",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 50,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr14",
+      "eventName": "RCX - CPBR14",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 60,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr14",
+      "eventName": "RCX - CPBR14",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 96,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr14",
+      "eventName": "RCX - CPBR14",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 40,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr14",
+      "eventName": "RCX - CPBR14",
+      "categoryRef": "featherweight",
+      "categoryName": "Featherweight - 13,6kg / 30lb",
+      "matchCount": 24,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr14",
+      "eventName": "RCX - CPBR14",
+      "categoryRef": "hobbyweight",
+      "categoryName": "Hobbyweight - 5,44kg / 12lb",
+      "matchCount": 24,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr14",
+      "eventName": "RCX - CPBR14",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 16,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr15",
+      "eventName": "RCX - CPBR15",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 90,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr15",
+      "eventName": "RCX - CPBR15",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 124,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr15",
+      "eventName": "RCX - CPBR15",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 64,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr15",
+      "eventName": "RCX - CPBR15",
+      "categoryRef": "featherweight",
+      "categoryName": "Featherweight - 13,6kg / 30lb",
+      "matchCount": 36,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr15",
+      "eventName": "RCX - CPBR15",
+      "categoryRef": "hobbyweight",
+      "categoryName": "Hobbyweight - 5,44kg / 12lb",
+      "matchCount": 42,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr15",
+      "eventName": "RCX - CPBR15",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 12,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr16",
+      "eventName": "RCX - CPBR16",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 122,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr16",
+      "eventName": "RCX - CPBR16",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 164,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr16",
+      "eventName": "RCX - CPBR16",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 124,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr16",
+      "eventName": "RCX - CPBR16",
+      "categoryRef": "featherweight",
+      "categoryName": "Featherweight - 13,6kg / 30lb",
+      "matchCount": 44,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr16",
+      "eventName": "RCX - CPBR16",
+      "categoryRef": "hobbyweight",
+      "categoryName": "Hobbyweight - 5,44kg / 12lb",
+      "matchCount": 42,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr16",
+      "eventName": "RCX - CPBR16",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 12,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbsb7",
+      "eventName": "RCX - CPBR17",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 72,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbsb7",
+      "eventName": "RCX - CPBR17",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 60,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbsb7",
+      "eventName": "RCX - CPBR17",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 70,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbsb7",
+      "eventName": "RCX - CPBR17",
+      "categoryRef": "featherweight",
+      "categoryName": "Featherweight - 13,6kg / 30lb",
+      "matchCount": 18,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbsb7",
+      "eventName": "RCX - CPBR17",
+      "categoryRef": "hobbyweight",
+      "categoryName": "Hobbyweight - 5,44kg / 12lb",
+      "matchCount": 26,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbsb7",
+      "eventName": "RCX - CPBR17",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 12,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "riw-2024",
+      "eventName": "RIW Robotics Challenge",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 12,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "riw-2024",
+      "eventName": "RIW Robotics Challenge",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 14,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "riw-2024",
+      "eventName": "RIW Robotics Challenge",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 18,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "roadsec-sp-2016",
+      "eventName": "Roadsec SP 2016",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 31,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "roadsec-sp-2017",
+      "eventName": "Roadsec SP 2017",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 28,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "roadsec-sp-2017",
+      "eventName": "Roadsec SP 2017",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 30,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "robogames-2017",
+      "eventName": "RoboGames 2017",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 48,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "robogames-2018",
+      "eventName": "RoboGames 2018",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 46,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "robogames-2023",
+      "eventName": "RoboGames 2023",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 12,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "robogames-2024",
+      "eventName": "RoboGames 2024",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 16,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2022",
+      "eventName": "RSM Challenge 2022",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 42,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2022",
+      "eventName": "RSM Challenge 2022",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 36,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2022",
+      "eventName": "RSM Challenge 2022",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 18,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2023",
+      "eventName": "RSM Challenge 2023",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 44,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2023",
+      "eventName": "RSM Challenge 2023",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 50,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2023",
+      "eventName": "RSM Challenge 2023",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 56,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2024",
+      "eventName": "RSM Challenge Internacional 2024",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 54,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2024",
+      "eventName": "RSM Challenge Internacional 2024",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 54,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2024",
+      "eventName": "RSM Challenge Internacional 2024",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 58,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2025",
+      "eventName": "RSM Challenge Internacional 2025",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 140,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2025",
+      "eventName": "RSM Challenge Internacional 2025",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 116,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2025",
+      "eventName": "RSM Challenge Internacional 2025",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 116,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2026",
+      "eventName": "RSM Challenge Internacional 2026",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 128,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2026",
+      "eventName": "RSM Challenge Internacional 2026",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 106,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2026",
+      "eventName": "RSM Challenge Internacional 2026",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 112,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2026",
+      "eventName": "RSM Challenge Internacional 2026",
+      "categoryRef": "hobbyweight",
+      "categoryName": "Hobbyweight - 5,44kg / 12lb",
+      "matchCount": 16,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "sc3",
+      "eventName": "Summer Challenge 3ª Edição",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 14,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "sc3",
+      "eventName": "Summer Challenge 3ª Edição",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 50,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "sc3",
+      "eventName": "Summer Challenge 3ª Edição",
+      "categoryRef": "featherweight",
+      "categoryName": "Featherweight - 13,6kg / 30lb",
+      "matchCount": 32,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "sc3",
+      "eventName": "Summer Challenge 3ª Edição",
+      "categoryRef": "hobbyweight",
+      "categoryName": "Hobbyweight - 5,44kg / 12lb",
+      "matchCount": 28,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "sc3",
+      "eventName": "Summer Challenge 3ª Edição",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 14,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "techarena-2025",
+      "eventName": "Tech Arena 2025",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 48,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "techarena-2025",
+      "eventName": "Tech Arena 2025",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 30,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "techarena-2025",
+      "eventName": "Tech Arena 2025",
+      "categoryRef": "fairyweight",
+      "categoryName": "Fairyweight - 150g",
+      "matchCount": 62,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "techarena-2025",
+      "eventName": "Tech Arena 2025",
+      "categoryRef": "hobbyweight",
+      "categoryName": "Hobbyweight - 5,44kg / 12lb",
+      "matchCount": 16,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "urc-2017",
+      "eventName": "URC 2017",
+      "categoryRef": "featherweight",
+      "categoryName": "Featherweight - 13,6kg / 30lb",
+      "matchCount": 26,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "urc-2017",
+      "eventName": "URC 2017",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 14,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "urc-ccxp-2017",
+      "eventName": "URC CCXP 2017",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 14,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc11",
+      "eventName": "Winter Challenge 11ª Edição",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 27,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc11",
+      "eventName": "Winter Challenge 11ª Edição",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 62,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc11",
+      "eventName": "Winter Challenge 11ª Edição",
+      "categoryRef": "featherweight",
+      "categoryName": "Featherweight - 13,6kg / 30lb",
+      "matchCount": 40,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc11",
+      "eventName": "Winter Challenge 11ª Edição",
+      "categoryRef": "hobbyweight",
+      "categoryName": "Hobbyweight - 5,44kg / 12lb",
+      "matchCount": 50,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc11",
+      "eventName": "Winter Challenge 11ª Edição",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 17,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc12",
+      "eventName": "Winter Challenge 12ª Edição",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 33,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc12",
+      "eventName": "Winter Challenge 12ª Edição",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 76,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc12",
+      "eventName": "Winter Challenge 12ª Edição",
+      "categoryRef": "featherweight",
+      "categoryName": "Featherweight - 13,6kg / 30lb",
+      "matchCount": 42,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc12",
+      "eventName": "Winter Challenge 12ª Edição",
+      "categoryRef": "hobbyweight",
+      "categoryName": "Hobbyweight - 5,44kg / 12lb",
+      "matchCount": 56,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc12",
+      "eventName": "Winter Challenge 12ª Edição",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 26,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc13",
+      "eventName": "Winter Challenge 13ª Edição",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 42,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc13",
+      "eventName": "Winter Challenge 13ª Edição",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 84,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc13",
+      "eventName": "Winter Challenge 13ª Edição",
+      "categoryRef": "featherweight",
+      "categoryName": "Featherweight - 13,6kg / 30lb",
+      "matchCount": 36,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc13",
+      "eventName": "Winter Challenge 13ª Edição",
+      "categoryRef": "hobbyweight",
+      "categoryName": "Hobbyweight - 5,44kg / 12lb",
+      "matchCount": 64,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc13",
+      "eventName": "Winter Challenge 13ª Edição",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 22,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc14",
+      "eventName": "Winter Challenge 14ª Edição",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 82,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc14",
+      "eventName": "Winter Challenge 14ª Edição",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 116,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc14",
+      "eventName": "Winter Challenge 14ª Edição",
+      "categoryRef": "featherweight",
+      "categoryName": "Featherweight - 13,6kg / 30lb",
+      "matchCount": 36,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc14",
+      "eventName": "Winter Challenge 14ª Edição",
+      "categoryRef": "hobbyweight",
+      "categoryName": "Hobbyweight - 5,44kg / 12lb",
+      "matchCount": 72,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc14",
+      "eventName": "Winter Challenge 14ª Edição",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 28,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wcx",
+      "eventName": "Winter Challenge 10ª Edição",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 60,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wcx",
+      "eventName": "Winter Challenge 10ª Edição",
+      "categoryRef": "featherweight",
+      "categoryName": "Featherweight - 13,6kg / 30lb",
+      "matchCount": 39,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wcx",
+      "eventName": "Winter Challenge 10ª Edição",
+      "categoryRef": "hobbyweight",
+      "categoryName": "Hobbyweight - 5,44kg / 12lb",
+      "matchCount": 54,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wcx",
+      "eventName": "Winter Challenge 10ª Edição",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 15,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wcxv",
+      "eventName": "Winter Challenge Concórdia",
+      "categoryRef": "antweight",
+      "categoryName": "Antweight - 454g / 1lb",
+      "matchCount": 64,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wcxv",
+      "eventName": "Winter Challenge Concórdia",
+      "categoryRef": "beetleweight",
+      "categoryName": "Beetleweight - 1,36kg / 3lb",
+      "matchCount": 104,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wcxv",
+      "eventName": "Winter Challenge Concórdia",
+      "categoryRef": "featherweight",
+      "categoryName": "Featherweight - 13,6kg / 30lb",
+      "matchCount": 56,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wcxv",
+      "eventName": "Winter Challenge Concórdia",
+      "categoryRef": "hobbyweight",
+      "categoryName": "Hobbyweight - 5,44kg / 12lb",
+      "matchCount": 60,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wcxv",
+      "eventName": "Winter Challenge Concórdia",
+      "categoryRef": "lightweight",
+      "categoryName": "Lightweight - 27,2kg / 60lb",
+      "matchCount": 26,
+      "hasDoubleElim": true
+    }
+  ],
+  "sumo": [
+    {
+      "eventSlug": "esquenta-rsm-2026",
+      "eventName": "Esquenta RSM",
+      "categoryRef": "mini-17",
+      "categoryName": "Mini - 500g (Auto)",
+      "matchCount": 31,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "esquenta-rsm-2026",
+      "eventName": "Esquenta RSM",
+      "categoryRef": "mini-43",
+      "categoryName": "Mini - 500g (R/C)",
+      "matchCount": 31,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2018",
+      "eventName": "IronCup 2018",
+      "categoryRef": "mini-17",
+      "categoryName": "Mini - 500g (Auto)",
+      "matchCount": 20,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2019",
+      "eventName": "IRONCup 2019",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 17,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2019",
+      "eventName": "IRONCup 2019",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 17,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2019",
+      "eventName": "IRONCup 2019",
+      "categoryRef": "mini-17",
+      "categoryName": "Mini - 500g (Auto)",
+      "matchCount": 55,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2020",
+      "eventName": "IRONCup 2020",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 24,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2020",
+      "eventName": "IRONCup 2020",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 27,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2020",
+      "eventName": "IRONCup 2020",
+      "categoryRef": "mini-17",
+      "categoryName": "Mini - 500g (Auto)",
+      "matchCount": 98,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2022",
+      "eventName": "IRONCup 2022",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 23,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2022",
+      "eventName": "IRONCup 2022",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 32,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2022",
+      "eventName": "IRONCup 2022",
+      "categoryRef": "mini-17",
+      "categoryName": "Mini - 500g (Auto)",
+      "matchCount": 75,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2022",
+      "eventName": "IRONCup 2022",
+      "categoryRef": "mini-43",
+      "categoryName": "Mini - 500g (R/C)",
+      "matchCount": 36,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2023",
+      "eventName": "IRONCup 2023",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 12,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2023",
+      "eventName": "IRONCup 2023",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 14,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2023",
+      "eventName": "IRONCup 2023",
+      "categoryRef": "mini-43",
+      "categoryName": "Mini - 500g (R/C)",
+      "matchCount": 28,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2024",
+      "eventName": "IRONCup 2024",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 30,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2024",
+      "eventName": "IRONCup 2024",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 31,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2024",
+      "eventName": "IRONCup 2024",
+      "categoryRef": "mini-43",
+      "categoryName": "Mini - 500g (R/C)",
+      "matchCount": 67,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2025",
+      "eventName": "IRONCup 2025",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 17,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2025",
+      "eventName": "IRONCup 2025",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 23,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2026",
+      "eventName": "IRONCup 2026",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 21,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "ironcup-2026",
+      "eventName": "IRONCup 2026",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 35,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2023",
+      "eventName": "RoboChallenge Brasil 2023",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 19,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2023",
+      "eventName": "RoboChallenge Brasil 2023",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 22,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2023",
+      "eventName": "RoboChallenge Brasil 2023",
+      "categoryRef": "mini-17",
+      "categoryName": "Mini - 500g (Auto)",
+      "matchCount": 54,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2023",
+      "eventName": "RoboChallenge Brasil 2023",
+      "categoryRef": "mini-43",
+      "categoryName": "Mini - 500g (R/C)",
+      "matchCount": 45,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2024",
+      "eventName": "RoboChallenge Brasil 2024",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 18,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2024",
+      "eventName": "RoboChallenge Brasil 2024",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 29,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2025",
+      "eventName": "RoboChallenge Brasil 2025",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 23,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2025",
+      "eventName": "RoboChallenge Brasil 2025",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 27,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcbr-2025",
+      "eventName": "RoboChallenge Brasil 2025",
+      "categoryRef": "mini-17",
+      "categoryName": "Mini - 500g (Auto)",
+      "matchCount": 116,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr14",
+      "eventName": "RCX - CPBR14",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 29,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr14",
+      "eventName": "RCX - CPBR14",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 36,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr15",
+      "eventName": "RCX - CPBR15",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 34,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr15",
+      "eventName": "RCX - CPBR15",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 32,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr15",
+      "eventName": "RCX - CPBR15",
+      "categoryRef": "mini-17",
+      "categoryName": "Mini - 500g (Auto)",
+      "matchCount": 115,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbr15",
+      "eventName": "RCX - CPBR15",
+      "categoryRef": "mini-43",
+      "categoryName": "Mini - 500g (R/C)",
+      "matchCount": 52,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbsb7",
+      "eventName": "RCX - CPBR17",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 14,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbsb7",
+      "eventName": "RCX - CPBR17",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 24,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rcx-cpbsb7",
+      "eventName": "RCX - CPBR17",
+      "categoryRef": "mini-17",
+      "categoryName": "Mini - 500g (Auto)",
+      "matchCount": 70,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "riw-2024",
+      "eventName": "RIW Robotics Challenge",
+      "categoryRef": "mini-17",
+      "categoryName": "Mini - 500g (Auto)",
+      "matchCount": 46,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "riw-2024",
+      "eventName": "RIW Robotics Challenge",
+      "categoryRef": "mini-43",
+      "categoryName": "Mini - 500g (R/C)",
+      "matchCount": 30,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2023",
+      "eventName": "RSM Challenge 2023",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 29,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2023",
+      "eventName": "RSM Challenge 2023",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 39,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2023",
+      "eventName": "RSM Challenge 2023",
+      "categoryRef": "mini-43",
+      "categoryName": "Mini - 500g (R/C)",
+      "matchCount": 88,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2024",
+      "eventName": "RSM Challenge Internacional 2024",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 38,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2024",
+      "eventName": "RSM Challenge Internacional 2024",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 42,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2025",
+      "eventName": "RSM Challenge Internacional 2025",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 27,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2025",
+      "eventName": "RSM Challenge Internacional 2025",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 31,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2025",
+      "eventName": "RSM Challenge Internacional 2025",
+      "categoryRef": "mini-17",
+      "categoryName": "Mini - 500g (Auto)",
+      "matchCount": 63,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2025",
+      "eventName": "RSM Challenge Internacional 2025",
+      "categoryRef": "mini-43",
+      "categoryName": "Mini - 500g (R/C)",
+      "matchCount": 63,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2026",
+      "eventName": "RSM Challenge Internacional 2026",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 25,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2026",
+      "eventName": "RSM Challenge Internacional 2026",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 39,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "rsm-2026",
+      "eventName": "RSM Challenge Internacional 2026",
+      "categoryRef": "mini-43",
+      "categoryName": "Mini - 500g (R/C)",
+      "matchCount": 201,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "sc3",
+      "eventName": "Summer Challenge 3ª Edição",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 16,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "sc3",
+      "eventName": "Summer Challenge 3ª Edição",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 24,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc11",
+      "eventName": "Winter Challenge 11ª Edição",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 50,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc11",
+      "eventName": "Winter Challenge 11ª Edição",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 47,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc12",
+      "eventName": "Winter Challenge 12ª Edição",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 48,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc12",
+      "eventName": "Winter Challenge 12ª Edição",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 32,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc12",
+      "eventName": "Winter Challenge 12ª Edição",
+      "categoryRef": "mini",
+      "categoryName": "Mini - 500g (Auto)",
+      "matchCount": 86,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc13",
+      "eventName": "Winter Challenge 13ª Edição",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 55,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc13",
+      "eventName": "Winter Challenge 13ª Edição",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 40,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc13",
+      "eventName": "Winter Challenge 13ª Edição",
+      "categoryRef": "mini",
+      "categoryName": "Mini - 500g (Auto)",
+      "matchCount": 67,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wc14",
+      "eventName": "Winter Challenge 14ª Edição",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 48,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wcx",
+      "eventName": "Winter Challenge 10ª Edição",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 54,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wcx",
+      "eventName": "Winter Challenge 10ª Edição",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 52,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wcxv",
+      "eventName": "Winter Challenge Concórdia",
+      "categoryRef": "3kg-auto",
+      "categoryName": "3kg (Auto)",
+      "matchCount": 42,
+      "hasDoubleElim": true
+    },
+    {
+      "eventSlug": "wcxv",
+      "eventName": "Winter Challenge Concórdia",
+      "categoryRef": "3kg-r-c",
+      "categoryName": "3kg (R/C)",
+      "matchCount": 36,
+      "hasDoubleElim": true
+    }
+  ]
+}

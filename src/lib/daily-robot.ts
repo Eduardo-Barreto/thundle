@@ -30,7 +30,7 @@ function mulberry32(seed: number): () => number {
   }
 }
 
-function shuffleWithSeed(arr: readonly string[], seed: number): string[] {
+export function shuffleWithSeed(arr: readonly string[], seed: number): string[] {
   const shuffled = [...arr]
   const rng = mulberry32(seed)
   for (let i = shuffled.length - 1; i > 0; i--) {

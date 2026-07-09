@@ -9,6 +9,7 @@
     "fmt:check": "oxfmt --check src/ index.html vite.config.ts tsconfig.json package.json",
     "knip": "knip",
     "doctor": "react-doctor . --verbose",
+    "manifest:brackets": "bun scripts/generate-bracket-manifest.ts",
     "test": "bun test",
     "test:e2e": "playwright test",
     "verify": "bun run lint && bun run fmt:check && bun run knip && bun run build && bun run test && bun run doctor",
