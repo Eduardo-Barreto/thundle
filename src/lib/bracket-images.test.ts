@@ -59,3 +59,22 @@ describe("resolveRobotImage", () => {
     })
   })
 })
+
+describe("resolveRobotImage — roster prefix safety", () => {
+  test("does not hand a prefix-roster robot's photo to a different robot", () => {
+    const thundle = [
+      robot({ name: "Adam", imageUrl: "adam.png" }),
+      robot({ name: "Adam Jr", imageUrl: "adam-jr.png" }),
+    ]
+    const category: CategoryRobot[] = [
+      { name: "Adam Jr", team: null, team_id: null, image_url: null, rank: null },
+    ]
+    expect(resolveRobotImage("Adam Jr", thundle, category).src).toBe("adam-jr.png")
+    expect(
+      resolveRobotImage("Adam Jr", [robot({ name: "Adam", imageUrl: "adam.png" })], category),
+    ).toEqual({
+      src: null,
+      source: "none",
+    })
+  })
+})
