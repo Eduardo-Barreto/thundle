@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test"
 
-import { getModeFromPath } from "@/lib/routing"
+import { getModeFromPath, getTrackFromSearch } from "@/lib/routing"
 
 describe("getModeFromPath", () => {
   test("maps known mode paths, ignoring trailing slashes", () => {
@@ -13,5 +13,19 @@ describe("getModeFromPath", () => {
   test("unknown paths fall back to classic", () => {
     expect(getModeFromPath("/team")).toBe("classic")
     expect(getModeFromPath("/nope")).toBe("classic")
+  })
+})
+
+describe("bracket routing", () => {
+  test("getModeFromPath resolves /bracket with and without trailing slash", () => {
+    expect(getModeFromPath("/bracket")).toBe("bracket")
+    expect(getModeFromPath("/bracket/")).toBe("bracket")
+  })
+
+  test("getTrackFromSearch accepts only known tracks", () => {
+    expect(getTrackFromSearch("?t=sumo")).toBe("sumo")
+    expect(getTrackFromSearch("?t=combate")).toBe("combate")
+    expect(getTrackFromSearch("?t=xadrez")).toBeUndefined()
+    expect(getTrackFromSearch("")).toBeUndefined()
   })
 })
