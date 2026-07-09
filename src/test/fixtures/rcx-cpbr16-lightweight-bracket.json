@@ -1,0 +1,243 @@
+{
+  "event_slug": "rcx-cpbr16",
+  "category_id": 10,
+  "has_double_elimination": true,
+  "matches": [
+    {
+      "position": 1,
+      "side": "losers",
+      "cell_robot_a": "Cáragor",
+      "cell_robot_b": "Federal M.T.",
+      "cell_winner": null,
+      "cell_loser_dropped": "Federal M.T.",
+      "detail": {
+        "category_id": 10,
+        "position": 1,
+        "winner": "Federal M.T.",
+        "win_reason": "Judges",
+        "year": 2018,
+        "class_name": "Lightweight - 27,2kg / 60lb",
+        "left": { "robot": "Cáragor", "team": "Trincabotz CEFET-MG", "country": "BR", "score": 16 },
+        "right": { "robot": "Federal M.T.", "team": "Uai!rrior", "country": "BR", "score": 17 }
+      }
+    },
+    {
+      "position": 2,
+      "side": "losers",
+      "cell_robot_a": "Cáragor",
+      "cell_robot_b": "Ragnar",
+      "cell_winner": null,
+      "cell_loser_dropped": "Cáragor",
+      "detail": {
+        "category_id": 10,
+        "position": 2,
+        "winner": "Cáragor",
+        "win_reason": "KO",
+        "year": 2018,
+        "class_name": "Lightweight - 27,2kg / 60lb",
+        "left": {
+          "robot": "Cáragor",
+          "team": "Trincabotz CEFET-MG",
+          "country": "BR",
+          "score": null
+        },
+        "right": { "robot": "Ragnar", "team": "TROIA", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 3,
+      "side": "losers",
+      "cell_robot_a": "Touro Light",
+      "cell_robot_b": "Cáragor",
+      "cell_winner": null,
+      "cell_loser_dropped": "Cáragor",
+      "detail": {
+        "category_id": 10,
+        "position": 3,
+        "winner": "Cáragor",
+        "win_reason": "KO",
+        "year": 2007,
+        "class_name": "Lightweight - 27,2kg / 60lb",
+        "left": { "robot": "Touro Light", "team": "RioBotz", "country": "BR", "score": null },
+        "right": {
+          "robot": "Cáragor",
+          "team": "Trincabotz CEFET-MG",
+          "country": "BR",
+          "score": null
+        }
+      }
+    },
+    {
+      "position": 4,
+      "side": "losers",
+      "cell_robot_a": "Ragnar",
+      "cell_robot_b": "Asterion",
+      "cell_winner": null,
+      "cell_loser_dropped": "Ragnar",
+      "detail": {
+        "category_id": 10,
+        "position": 4,
+        "winner": "Ragnar",
+        "win_reason": "KO",
+        "year": 2018,
+        "class_name": "Lightweight - 27,2kg / 60lb",
+        "left": { "robot": "Ragnar", "team": "TROIA", "country": "BR", "score": null },
+        "right": {
+          "robot": "Asterion",
+          "team": "Trincabotz CEFET-MG",
+          "country": "BR",
+          "score": null
+        }
+      }
+    },
+    {
+      "position": 5,
+      "side": "losers",
+      "cell_robot_a": "Touro Light",
+      "cell_robot_b": "Agora Sei",
+      "cell_winner": null,
+      "cell_loser_dropped": "Touro Light",
+      "detail": {
+        "category_id": 10,
+        "position": 5,
+        "winner": "Touro Light",
+        "win_reason": "Forfeit",
+        "year": 2007,
+        "class_name": "Lightweight - 27,2kg / 60lb",
+        "left": { "robot": "Touro Light", "team": "RioBotz", "country": "BR", "score": null },
+        "right": { "robot": "Agora Sei", "team": "Imperial Botz", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 7,
+      "side": "winners",
+      "cell_robot_a": "K-torze",
+      "cell_robot_b": "Touro Light",
+      "cell_winner": "K-torze",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 10,
+        "position": 7,
+        "winner": "K-torze",
+        "win_reason": "Judges",
+        "year": 2014,
+        "class_name": "Lightweight - 27,2kg / 60lb",
+        "left": { "robot": "K-torze", "team": "ThundeRatz", "country": "BR", "score": 24 },
+        "right": { "robot": "Touro Light", "team": "RioBotz", "country": "BR", "score": 9 }
+      }
+    },
+    {
+      "position": 8,
+      "side": "winners",
+      "cell_robot_a": "Asterion",
+      "cell_robot_b": "Agora Sei",
+      "cell_winner": "Asterion",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 10,
+        "position": 8,
+        "winner": "Asterion",
+        "win_reason": "Judges",
+        "year": 2016,
+        "class_name": "Lightweight - 27,2kg / 60lb",
+        "left": {
+          "robot": "Asterion",
+          "team": "Trincabotz CEFET-MG",
+          "country": "BR",
+          "score": 21
+        },
+        "right": { "robot": "Agora Sei", "team": "Imperial Botz", "country": "BR", "score": 12 }
+      }
+    },
+    {
+      "position": 9,
+      "side": "winners",
+      "cell_robot_a": "Federal M.T.",
+      "cell_robot_b": "Ragnar",
+      "cell_winner": "Federal M.T.",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 10,
+        "position": 9,
+        "winner": "Federal M.T.",
+        "win_reason": "Judges",
+        "year": 2012,
+        "class_name": "Lightweight - 27,2kg / 60lb",
+        "left": { "robot": "Federal M.T.", "team": "Uai!rrior", "country": "BR", "score": 17 },
+        "right": { "robot": "Ragnar", "team": "TROIA", "country": "BR", "score": 16 }
+      }
+    },
+    {
+      "position": 11,
+      "side": "winners",
+      "cell_robot_a": "K-torze",
+      "cell_robot_b": "Asterion",
+      "cell_winner": "K-torze",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 10,
+        "position": 11,
+        "winner": "K-torze",
+        "win_reason": "Judges",
+        "year": 2014,
+        "class_name": "Lightweight - 27,2kg / 60lb",
+        "left": { "robot": "K-torze", "team": "ThundeRatz", "country": "BR", "score": 26 },
+        "right": { "robot": "Asterion", "team": "Trincabotz CEFET-MG", "country": "BR", "score": 7 }
+      }
+    },
+    {
+      "position": 12,
+      "side": "winners",
+      "cell_robot_a": "Federal M.T.",
+      "cell_robot_b": "Cáragor",
+      "cell_winner": "Federal M.T.",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 10,
+        "position": 12,
+        "winner": "Federal M.T.",
+        "win_reason": "Judges",
+        "year": 2012,
+        "class_name": "Lightweight - 27,2kg / 60lb",
+        "left": { "robot": "Federal M.T.", "team": "Uai!rrior", "country": "BR", "score": 26 },
+        "right": { "robot": "Cáragor", "team": "Trincabotz CEFET-MG", "country": "BR", "score": 7 }
+      }
+    },
+    {
+      "position": 13,
+      "side": "winners",
+      "cell_robot_a": "K-torze",
+      "cell_robot_b": "Federal M.T.",
+      "cell_winner": "K-torze",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 10,
+        "position": 13,
+        "winner": "K-torze",
+        "win_reason": "KO",
+        "year": 2014,
+        "class_name": "Lightweight - 27,2kg / 60lb",
+        "left": { "robot": "K-torze", "team": "ThundeRatz", "country": "BR", "score": null },
+        "right": { "robot": "Federal M.T.", "team": "Uai!rrior", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 14,
+      "side": "losers",
+      "cell_robot_a": "Federal M.T.",
+      "cell_robot_b": "K-torze",
+      "cell_winner": "Federal M.T.",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 10,
+        "position": 14,
+        "winner": "K-torze",
+        "win_reason": "KO",
+        "year": 2014,
+        "class_name": "Lightweight - 27,2kg / 60lb",
+        "left": { "robot": "K-torze", "team": "ThundeRatz", "country": "BR", "score": null },
+        "right": { "robot": "Federal M.T.", "team": "Uai!rrior", "country": "BR", "score": null }
+      }
+    }
+  ]
+}

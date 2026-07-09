@@ -1,0 +1,558 @@
+{
+  "event_slug": "rcbr-2025",
+  "category_id": 21,
+  "has_double_elimination": true,
+  "matches": [
+    {
+      "position": 1,
+      "side": "losers",
+      "cell_robot_a": "Tim Maia",
+      "cell_robot_b": "Dragonite RC",
+      "cell_winner": null,
+      "cell_loser_dropped": "Tim Maia",
+      "detail": {
+        "category_id": 21,
+        "position": 1,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2025,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Tim Maia", "team": "Instituto RSM", "country": "BR", "score": null },
+        "right": { "robot": "Dragonite RC", "team": "KIMAUÁNISSO", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 2,
+      "side": "losers",
+      "cell_robot_a": "Tim Maia",
+      "cell_robot_b": "Frank (RC)",
+      "cell_winner": null,
+      "cell_loser_dropped": "Tim Maia",
+      "detail": {
+        "category_id": 21,
+        "position": 2,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2025,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Tim Maia", "team": "Instituto RSM", "country": "BR", "score": null },
+        "right": { "robot": "Frank (RC)", "team": "KIMAUÁNISSO", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 3,
+      "side": "losers",
+      "cell_robot_a": "Nekomata - RC",
+      "cell_robot_b": "Tim Maia",
+      "cell_winner": null,
+      "cell_loser_dropped": "Tim Maia",
+      "detail": {
+        "category_id": 21,
+        "position": 3,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2025,
+        "class_name": "3kg (R/C)",
+        "left": {
+          "robot": "Nekomata - RC",
+          "team": "Equipe Paralela",
+          "country": "BR",
+          "score": null
+        },
+        "right": { "robot": "Tim Maia", "team": "Instituto RSM", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 4,
+      "side": "losers",
+      "cell_robot_a": "Galena RC",
+      "cell_robot_b": "Frank (RC)",
+      "cell_winner": null,
+      "cell_loser_dropped": "Frank (RC)",
+      "detail": {
+        "category_id": 21,
+        "position": 4,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2021,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Galena RC", "team": "ThundeRatz", "country": "BR", "score": null },
+        "right": { "robot": "Frank (RC)", "team": "KIMAUÁNISSO", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 5,
+      "side": "losers",
+      "cell_robot_a": "Raijū RC",
+      "cell_robot_b": "Nekomata - RC",
+      "cell_winner": null,
+      "cell_loser_dropped": "Nekomata - RC",
+      "detail": {
+        "category_id": 21,
+        "position": 5,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2019,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Raijū RC", "team": "Raijū", "country": "BR", "score": null },
+        "right": {
+          "robot": "Nekomata - RC",
+          "team": "Equipe Paralela",
+          "country": "BR",
+          "score": null
+        }
+      }
+    },
+    {
+      "position": 6,
+      "side": "losers",
+      "cell_robot_a": "Galena RC",
+      "cell_robot_b": "Kamex",
+      "cell_winner": null,
+      "cell_loser_dropped": "Galena RC",
+      "detail": {
+        "category_id": 21,
+        "position": 6,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2021,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Galena RC", "team": "ThundeRatz", "country": "BR", "score": null },
+        "right": { "robot": "Kamex", "team": "Equipe Paralela", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 7,
+      "side": "losers",
+      "cell_robot_a": "Raijū RC",
+      "cell_robot_b": "Supernova ☆",
+      "cell_winner": null,
+      "cell_loser_dropped": "Raijū R",
+      "detail": {
+        "category_id": 21,
+        "position": 7,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2019,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Raijū RC", "team": "Raijū", "country": "BR", "score": null },
+        "right": { "robot": "Supernova ☆", "team": "ASTRA", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 8,
+      "side": "losers",
+      "cell_robot_a": "Atena",
+      "cell_robot_b": "Nekomata - RC",
+      "cell_winner": null,
+      "cell_loser_dropped": "Nekomata - RC",
+      "detail": {
+        "category_id": 21,
+        "position": 8,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2019,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Atena", "team": "MinervaBots", "country": "BR", "score": null },
+        "right": {
+          "robot": "Nekomata - RC",
+          "team": "Equipe Paralela",
+          "country": "BR",
+          "score": null
+        }
+      }
+    },
+    {
+      "position": 9,
+      "side": "losers",
+      "cell_robot_a": "Galena RC",
+      "cell_robot_b": "Pedregulho",
+      "cell_winner": null,
+      "cell_loser_dropped": "Galena RC",
+      "detail": {
+        "category_id": 21,
+        "position": 9,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2021,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Galena RC", "team": "ThundeRatz", "country": "BR", "score": null },
+        "right": { "robot": "Pedregulho", "team": "ThundeRatz", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 10,
+      "side": "losers",
+      "cell_robot_a": "Kamex",
+      "cell_robot_b": "Popossauro 3kg RC",
+      "cell_winner": null,
+      "cell_loser_dropped": "Kamex",
+      "detail": {
+        "category_id": 21,
+        "position": 10,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2024,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Kamex", "team": "Equipe Paralela", "country": "BR", "score": null },
+        "right": {
+          "robot": "Popossauro 3kg RC",
+          "team": "Instituto RSM",
+          "country": "BR",
+          "score": null
+        }
+      }
+    },
+    {
+      "position": 12,
+      "side": "losers",
+      "cell_robot_a": "Atena",
+      "cell_robot_b": "Artemis RC",
+      "cell_winner": null,
+      "cell_loser_dropped": "Atena",
+      "detail": {
+        "category_id": 21,
+        "position": 12,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2019,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Atena", "team": "MinervaBots", "country": "BR", "score": null },
+        "right": { "robot": "Artemis RC", "team": "OMEGABOTZ", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 14,
+      "side": "losers",
+      "cell_robot_a": "Suassuna",
+      "cell_robot_b": "Kamex",
+      "cell_winner": null,
+      "cell_loser_dropped": "Kamex",
+      "detail": {
+        "category_id": 21,
+        "position": 14,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2025,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Suassuna", "team": "Caatronics", "country": "BR", "score": null },
+        "right": { "robot": "Kamex", "team": "Equipe Paralela", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 16,
+      "side": "winners",
+      "cell_robot_a": "Raijū RC",
+      "cell_robot_b": "Popossauro 3kg RC",
+      "cell_winner": "Popossauro 3kg RC",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 16,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2019,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Raijū RC", "team": "Raijū", "country": "BR", "score": null },
+        "right": {
+          "robot": "Popossauro 3kg RC",
+          "team": "Instituto RSM",
+          "country": "BR",
+          "score": null
+        }
+      }
+    },
+    {
+      "position": 17,
+      "side": "winners",
+      "cell_robot_a": "Atena",
+      "cell_robot_b": "Frank (RC)",
+      "cell_winner": "Frank (RC)",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 17,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2019,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Atena", "team": "MinervaBots", "country": "BR", "score": null },
+        "right": { "robot": "Frank (RC)", "team": "KIMAUÁNISSO", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 18,
+      "side": "winners",
+      "cell_robot_a": "Pedregulho",
+      "cell_robot_b": "Artemis RC",
+      "cell_winner": "Pedregulho",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 18,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2025,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Pedregulho", "team": "ThundeRatz", "country": "BR", "score": null },
+        "right": { "robot": "Artemis RC", "team": "OMEGABOTZ", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 20,
+      "side": "winners",
+      "cell_robot_a": "Nekomata - RC",
+      "cell_robot_b": "Galena RC",
+      "cell_winner": "Nekomata - RC",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 20,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2025,
+        "class_name": "3kg (R/C)",
+        "left": {
+          "robot": "Nekomata - RC",
+          "team": "Equipe Paralela",
+          "country": "BR",
+          "score": null
+        },
+        "right": { "robot": "Galena RC", "team": "ThundeRatz", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 21,
+      "side": "winners",
+      "cell_robot_a": "Supernova ☆",
+      "cell_robot_b": "Suassuna",
+      "cell_winner": "Supernova ☆",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 21,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2025,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Supernova ☆", "team": "ASTRA", "country": "BR", "score": null },
+        "right": { "robot": "Suassuna", "team": "Caatronics", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 22,
+      "side": "winners",
+      "cell_robot_a": "Kamex",
+      "cell_robot_b": "Dragonite RC",
+      "cell_winner": "Dragonite RC",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 22,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2024,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Kamex", "team": "Equipe Paralela", "country": "BR", "score": null },
+        "right": { "robot": "Dragonite RC", "team": "KIMAUÁNISSO", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 23,
+      "side": "winners",
+      "cell_robot_a": "Coelho Escovado",
+      "cell_robot_b": "Popossauro 3kg RC",
+      "cell_winner": "Coelho Escovado",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 23,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2023,
+        "class_name": "3kg (R/C)",
+        "left": {
+          "robot": "Coelho Escovado",
+          "team": "Equipe Paralela",
+          "country": "BR",
+          "score": null
+        },
+        "right": {
+          "robot": "Popossauro 3kg RC",
+          "team": "Instituto RSM",
+          "country": "BR",
+          "score": null
+        }
+      }
+    },
+    {
+      "position": 24,
+      "side": "winners",
+      "cell_robot_a": "Frank (RC)",
+      "cell_robot_b": "Pedregulho",
+      "cell_winner": "Frank (RC)",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 24,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2019,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Frank (RC)", "team": "KIMAUÁNISSO", "country": "BR", "score": null },
+        "right": { "robot": "Pedregulho", "team": "ThundeRatz", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 25,
+      "side": "winners",
+      "cell_robot_a": "Tim Maia",
+      "cell_robot_b": "Nekomata - RC",
+      "cell_winner": "Tim Maia",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 25,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2025,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Tim Maia", "team": "Instituto RSM", "country": "BR", "score": null },
+        "right": {
+          "robot": "Nekomata - RC",
+          "team": "Equipe Paralela",
+          "country": "BR",
+          "score": null
+        }
+      }
+    },
+    {
+      "position": 26,
+      "side": "winners",
+      "cell_robot_a": "Supernova ☆",
+      "cell_robot_b": "Dragonite RC",
+      "cell_winner": "Dragonite RC",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 26,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2025,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Supernova ☆", "team": "ASTRA", "country": "BR", "score": null },
+        "right": { "robot": "Dragonite RC", "team": "KIMAUÁNISSO", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 27,
+      "side": "winners",
+      "cell_robot_a": "Coelho Escovado",
+      "cell_robot_b": "Frank (RC)",
+      "cell_winner": "Coelho Escovado",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 27,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2023,
+        "class_name": "3kg (R/C)",
+        "left": {
+          "robot": "Coelho Escovado",
+          "team": "Equipe Paralela",
+          "country": "BR",
+          "score": null
+        },
+        "right": { "robot": "Frank (RC)", "team": "KIMAUÁNISSO", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 28,
+      "side": "winners",
+      "cell_robot_a": "Tim Maia",
+      "cell_robot_b": "Dragonite RC",
+      "cell_winner": "Dragonite RC",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 28,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2025,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Tim Maia", "team": "Instituto RSM", "country": "BR", "score": null },
+        "right": { "robot": "Dragonite RC", "team": "KIMAUÁNISSO", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 29,
+      "side": "winners",
+      "cell_robot_a": "Coelho Escovado",
+      "cell_robot_b": "Dragonite RC",
+      "cell_winner": "Coelho Escovado",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 29,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2023,
+        "class_name": "3kg (R/C)",
+        "left": {
+          "robot": "Coelho Escovado",
+          "team": "Equipe Paralela",
+          "country": "BR",
+          "score": null
+        },
+        "right": { "robot": "Dragonite RC", "team": "KIMAUÁNISSO", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 30,
+      "side": "losers",
+      "cell_robot_a": "Tim Maia",
+      "cell_robot_b": "Coelho Escovado",
+      "cell_winner": "Tim Maia",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 30,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2023,
+        "class_name": "3kg (R/C)",
+        "left": {
+          "robot": "Coelho Escovado",
+          "team": "Equipe Paralela",
+          "country": "BR",
+          "score": null
+        },
+        "right": { "robot": "Tim Maia", "team": "Instituto RSM", "country": "BR", "score": null }
+      }
+    },
+    {
+      "position": 31,
+      "side": "winners",
+      "cell_robot_a": "Tim Maia",
+      "cell_robot_b": "Coelho Escovado",
+      "cell_winner": "Tim Maia",
+      "cell_loser_dropped": null,
+      "detail": {
+        "category_id": 21,
+        "position": 31,
+        "winner": null,
+        "win_reason": "Unknown",
+        "year": 2025,
+        "class_name": "3kg (R/C)",
+        "left": { "robot": "Tim Maia", "team": "Instituto RSM", "country": "BR", "score": null },
+        "right": {
+          "robot": "Coelho Escovado",
+          "team": "Equipe Paralela",
+          "country": "BR",
+          "score": null
+        }
+      }
+    }
+  ]
+}
