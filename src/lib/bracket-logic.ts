@@ -305,6 +305,17 @@ function inferLosersWinner(graph: BracketGraph, m: ApiBracketMatch): string | nu
   return null
 }
 
+/** Real participants of a match, for the post-confirm reveal. */
+export function matchParticipants(
+  graph: BracketGraph,
+  position: number,
+): [string | null, string | null] {
+  const m = graph.matches.get(position)
+  if (!m) return [null, null]
+  const [a, b] = pairOf(m)
+  return [a || null, b || null]
+}
+
 export function resolveWinner(graph: BracketGraph, position: number): string | null {
   const m = graph.matches.get(position)
   if (!m) return null
@@ -459,12 +470,16 @@ export function computeWindow(graph: BracketGraph): BracketWindow {
     return { kind: "given", robot: name }
   }
 
+  // A semifinal da losers é a partida imediatamente anterior à losers final
+  // na corrente da janela — não toda partida vencida pelo campeão da losers.
+  const finalIndex = losersWindowPositions.indexOf(losersFinalPosition)
+  const losersSemiPosition = finalIndex > 0 ? losersWindowPositions[finalIndex - 1] : undefined
+
   for (const p of losersWindowPositions) {
     const [a, b] = pairOf(graph.matches.get(p)!)
     let role: WindowRole = "losers-entry"
     if (p === losersFinalPosition) role = "losers-final"
-    else if (namesMatch(resolveWinner(graph, p), resolveWinner(graph, losersFinalPosition)))
-      role = "losers-semifinal"
+    else if (p === losersSemiPosition) role = "losers-semifinal"
     slots.push({
       position: p,
       side: "losers",

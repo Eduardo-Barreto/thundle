@@ -2,7 +2,7 @@ import { useState, type ComponentType } from "react"
 
 import { Background } from "@/components/background"
 import { BracketBoard } from "@/components/bracket-board"
-import { BracketResultOverlay } from "@/components/bracket-result-overlay"
+import { BracketResultPanel } from "@/components/bracket-result-panel"
 import { GuessGrid } from "@/components/guess-grid"
 import { Header } from "@/components/header"
 import { HintBar } from "@/components/hint-bar"
@@ -408,7 +408,6 @@ function BracketGameContent({
   const [override] = useState(getBracketOverride)
   const [options] = useState(() => (override ? { entryOverride: override } : {}))
   const game = useBracketGame(dateStr, track, options)
-  const [showOverlay, setShowOverlay] = useState(true)
   const isToday = dateStr === getTodayStr()
   const otherTrack: BracketTrack = track === "combate" ? "sumo" : "combate"
 
@@ -491,11 +490,9 @@ function BracketGameContent({
               </button>
             </div>
           )}
-          {game.confirmed && game.result && showOverlay && (
-            <BracketResultOverlay
+          {game.confirmed && game.result && (
+            <BracketResultPanel
               track={track}
-              eventName={game.entry.eventName}
-              categoryName={game.entry.categoryName}
               champion={game.remote.graph.champion}
               result={game.result}
               shareRounds={shareRoundsFor(
@@ -504,7 +501,6 @@ function BracketGameContent({
                 game.remote.graph,
                 game.propagation.resetActive,
               )}
-              championCorrect={game.result.won}
               puzzleNumber={game.puzzleNumber}
               isToday={isToday}
               streak={loadBracketStats(track).currentStreak}
@@ -513,11 +509,7 @@ function BracketGameContent({
               otherTrackDone={trackStatus(otherTrack, dateStr) === "done"}
               combinedEntries={combinedEntriesFor(dateStr)}
               onSwitchTrack={() => onSelectTrack(otherTrack)}
-              onClose={() => setShowOverlay(false)}
             />
-          )}
-          {game.confirmed && !showOverlay && (
-            <ReopenResultButton onClick={() => setShowOverlay(true)} />
           )}
         </>
       )}

@@ -68,7 +68,7 @@ test("no results are visible before confirming", async ({ page }) => {
   await expect(board.getByText("venceu:")).toHaveCount(0)
 })
 
-test("picking every match enables confirm; confirming reveals the result overlay", async ({
+test("picking every match enables confirm; confirming reveals the board and panel", async ({
   page,
 }) => {
   await page.goto(BRACKET_URL)
@@ -83,14 +83,15 @@ test("picking every match enables confirm; confirming reveals the result overlay
   await expect(confirm).toBeEnabled()
   await confirm.click()
 
-  const overlay = page.getByRole("dialog")
-  await expect(overlay).toBeVisible()
-  await expect(overlay.getByText(/previsões/)).toBeVisible()
-  await expect(overlay.getByText("K-torze")).toBeVisible()
+  // Reveal inline: painel de resultado + chave real marcada no board.
+  await expect(page.getByText("Campeão real")).toBeVisible()
+  await expect(page.getByText(/previsões/)).toBeVisible()
+  await expect(page.getByText("K-torze").first()).toBeVisible()
+  await expect(board.getByText("✓").first()).toBeVisible()
 
   // Persistência: recarregar mantém o resultado confirmado.
   await page.reload()
-  await expect(page.getByRole("dialog")).toBeVisible()
+  await expect(page.getByText("Campeão real")).toBeVisible()
 })
 
 test("clear resets picks and pending count returns", async ({ page }) => {
