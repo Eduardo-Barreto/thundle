@@ -73,7 +73,9 @@ export async function fetchBracket(
   const cached = readCache<BracketResponse>(key)
   if (cached) return cached
 
-  const res = await fetch(`${API_BASE}/v1/events/${eventSlug}/categories/${categoryRef}/bracket`)
+  const res = await fetch(
+    `${API_BASE}/v1/events/${encodeURIComponent(eventSlug)}/categories/${encodeURIComponent(categoryRef)}/bracket`,
+  )
   if (!res.ok) throw new Error(`bracket fetch failed: ${res.status}`)
   const data = (await res.json()) as BracketResponse
   writeCache(key, data)
@@ -88,7 +90,9 @@ export async function fetchCategoryRobots(
   const cached = readCache<CategoryRobot[]>(key)
   if (cached) return cached
 
-  const res = await fetch(`${API_BASE}/v1/events/${eventSlug}/categories/${categoryRef}/robots`)
+  const res = await fetch(
+    `${API_BASE}/v1/events/${encodeURIComponent(eventSlug)}/categories/${encodeURIComponent(categoryRef)}/robots`,
+  )
   if (!res.ok) throw new Error(`robots fetch failed: ${res.status}`)
   const body = (await res.json()) as { data: CategoryRobot[] }
   writeCache(key, body.data)

@@ -120,6 +120,15 @@ async function main() {
   pools.combate.sort(sortById)
   pools.sumo.sort(sortById)
 
+  for (const track of ["combate", "sumo"] as const) {
+    const ids = new Set(pools[track].map((e) => `${e.eventSlug}/${e.categoryRef}`))
+    for (const [date, id] of Object.entries(existing.pinned[track] ?? {})) {
+      if (!ids.has(id)) {
+        console.warn(`! pin ${track}/${date} -> ${id} não está no pool regenerado`)
+      }
+    }
+  }
+
   const manifest = { pinned: existing.pinned, combate: pools.combate, sumo: pools.sumo }
   await Bun.write(OUTPUT, `${JSON.stringify(manifest, null, 2)}\n`)
   console.log(

@@ -28,9 +28,10 @@ const BUCKETS = ["1", "2-3", "4-6", "7-10", "11+"]
 
 function statsForTab(key: StatsTabKey): Stats {
   if (key === "classic") return loadStats()
-  if (key === "bracket-combate") return loadBracketStats("combate")
-  if (key === "bracket-sumo") return loadBracketStats("sumo")
-  return loadImageStats(key)
+  if (key.startsWith("bracket-")) {
+    return loadBracketStats(key.slice("bracket-".length) as BracketTrack)
+  }
+  return loadImageStats(key as ImageGameVariant)
 }
 
 function initialTab(mode: GameMode, track: BracketTrack | undefined): StatsTabKey {
