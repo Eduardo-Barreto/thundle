@@ -1,9 +1,11 @@
 {
   "pinned": {
     "combate": {
-      "2026-07-09": "rcx-cpbr16/lightweight"
+      "2026-07-12": "rcx-cpbr16/lightweight"
     },
-    "sumo": {}
+    "sumo": {
+      "2026-07-12": "rcx-cpbsb7/3kg-auto"
+    }
   },
   "combate": [
     {

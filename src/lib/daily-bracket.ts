@@ -48,6 +48,14 @@ export function pickDailyBracket(
   return pool.find((e) => bracketEntryId(e) === id)!
 }
 
+/** Entry do manifest por id "eventSlug/categoryRef", em qualquer track. */
+export function findBracketEntry(id: string): BracketManifestEntry | undefined {
+  return (
+    manifest.combate.find((e) => bracketEntryId(e) === id) ??
+    manifest.sumo.find((e) => bracketEntryId(e) === id)
+  )
+}
+
 export function getBracketPool(track: BracketTrack): readonly BracketManifestEntry[] {
   return manifest[track]
 }

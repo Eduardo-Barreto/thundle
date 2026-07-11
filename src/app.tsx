@@ -22,7 +22,12 @@ import { useGame } from "@/hooks/use-game"
 import { useImageGame } from "@/hooks/use-image-game"
 import { BRACKET_TRACK_META, BRACKET_TRACKS } from "@/lib/bracket-modes"
 import { shareRoundsFor } from "@/lib/bracket-share"
-import { bracketEntryId, getBracketPool, type BracketManifestEntry } from "@/lib/daily-bracket"
+import {
+  bracketEntryId,
+  findBracketEntry,
+  getBracketPool,
+  type BracketManifestEntry,
+} from "@/lib/daily-bracket"
 import { getDateFromPuzzleNumber, getPuzzleNumber, getTodayStr } from "@/lib/daily-robot"
 import { IMAGE_MODE_META } from "@/lib/image-modes"
 import {
@@ -88,14 +93,18 @@ function getBracketOverride(): BracketManifestEntry | undefined {
   if (!raw) return undefined
   const [eventSlug, categoryRef] = raw.split("/")
   if (!eventSlug || !categoryRef) return undefined
-  return {
-    eventSlug,
-    eventName: eventSlug,
-    categoryRef,
-    categoryName: categoryRef,
-    matchCount: 0,
-    hasDoubleElim: true,
-  }
+  // Entry real do manifest quando existir (nome do evento/categoria corretos);
+  // placeholder com slugs só para chaves fora do pool (fixtures de e2e).
+  return (
+    findBracketEntry(raw) ?? {
+      eventSlug,
+      eventName: eventSlug,
+      categoryRef,
+      categoryName: categoryRef,
+      matchCount: 0,
+      hasDoubleElim: true,
+    }
+  )
 }
 
 // Modo de teste (`?test=1`, dev-only): mostra um botão flutuante que troca o

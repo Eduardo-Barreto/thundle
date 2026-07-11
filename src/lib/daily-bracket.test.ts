@@ -12,9 +12,9 @@ describe("getDailyBracket", () => {
     }
   })
 
-  test("pinned date overrides the seeded pick", () => {
-    const entry = getDailyBracket("2026-07-09", "combate")
-    expect(bracketEntryId(entry)).toBe("rcx-cpbr16/lightweight")
+  test("pinned dates override the seeded pick on both tracks", () => {
+    expect(bracketEntryId(getDailyBracket("2026-07-12", "combate"))).toBe("rcx-cpbr16/lightweight")
+    expect(bracketEntryId(getDailyBracket("2026-07-12", "sumo"))).toBe("rcx-cpbsb7/3kg-auto")
   })
 
   test("cycles through the pool without throwing across many days", () => {

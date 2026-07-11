@@ -56,7 +56,9 @@ test("bracket route renders the mode with track selector and event header", asyn
     "aria-pressed",
     "true",
   )
-  await expect(page.getByText("rcx-cpbr16 · lightweight")).toBeVisible()
+  // O override resolve a entry real do manifest, então o header mostra o
+  // nome do evento e da categoria, não os slugs.
+  await expect(page.getByText("RCX - CPBR16 · Lightweight - 27,2kg / 60lb")).toBeVisible()
   await expect(page.getByRole("region", { name: "Chave da competição" })).toBeVisible()
 })
 
