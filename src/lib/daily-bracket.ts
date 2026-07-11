@@ -11,7 +11,7 @@ export type BracketManifestEntry = {
   hasDoubleElim: boolean
 }
 
-export type BracketManifest = {
+type BracketManifest = {
   pinned: Record<BracketTrack, Record<string, string>>
   combate: BracketManifestEntry[]
   sumo: BracketManifestEntry[]
