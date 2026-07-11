@@ -62,20 +62,63 @@ function layoutWindow(win: BracketWindow): Layout {
   const losersLabelY = winnersBottom + LANE_GAP - 24
   const losersY = winnersBottom + LANE_GAP
 
-  losers.forEach((windowSlot, index) => {
-    slots.push({ windowSlot, x: index * COL_W, y: losersY })
-    const next = losers[index + 1]
-    if (next) edges.push({ from: windowSlot.position, to: next.position })
-  })
+  // A losers NÃO é uma corrente linear: partidas paralelas convergem (duas
+  // entries alimentando a semifinal, como num bracket de verdade). As colunas
+  // vêm da profundidade de dependência real (winner-of dentro da lane) e o y
+  // de cada partida centraliza entre as que a alimentam.
+  const losersSet = new Set(losers.map((s) => s.position))
+  const feedersOf = (slot: WindowSlot): number[] =>
+    [slot.a, slot.b]
+      .filter((src) => src.kind === "winner-of" && losersSet.has(src.position))
+      .map((src) => (src as { position: number }).position)
+
+  const depths = new Map<number, number>()
+  const depthOf = (slot: WindowSlot): number => {
+    const known = depths.get(slot.position)
+    if (known !== undefined) return known
+    const feeders = feedersOf(slot)
+    const depth =
+      feeders.length === 0
+        ? 0
+        : 1 + Math.max(...feeders.map((p) => depthOf(losers.find((l) => l.position === p)!)))
+    depths.set(slot.position, depth)
+    return depth
+  }
+  for (const slot of losers) depthOf(slot)
+
+  const losersPos = new Map<number, { x: number; y: number }>()
+  const columnBottom = new Map<number, number>()
+  const maxDepth = Math.max(0, ...losers.map((s) => depths.get(s.position) ?? 0))
+  for (let depth = 0; depth <= maxDepth; depth++) {
+    for (const slot of losers) {
+      if (depths.get(slot.position) !== depth) continue
+      const feeders = feedersOf(slot)
+      let y: number
+      if (feeders.length === 0) {
+        y = (columnBottom.get(depth) ?? losersY - CARD_H - V_GAP) + CARD_H + V_GAP
+      } else {
+        const ys = feeders.map((p) => losersPos.get(p)!.y)
+        y = ys.reduce((a, b) => a + b, 0) / ys.length
+        const bottom = columnBottom.get(depth)
+        if (bottom !== undefined && y < bottom + CARD_H + 12) y = bottom + CARD_H + V_GAP
+      }
+      losersPos.set(slot.position, { x: depth * COL_W, y })
+      columnBottom.set(depth, y)
+      slots.push({ windowSlot: slot, x: depth * COL_W, y })
+      for (const from of feeders) edges.push({ from, to: slot.position })
+    }
+  }
+
+  const losersFinal = losers.find((s) => s.role === "losers-final") ?? losers.at(-1)
 
   if (grandFinal) {
-    const losersEndX = losers.length > 0 ? (losers.length - 1) * COL_W : 0
+    const losersEndX = losers.length > 0 ? Math.max(...[...losersPos.values()].map((v) => v.x)) : 0
     const x = Math.max(gfX, losersEndX + COL_W)
     // A grand final senta entre a winners final e a losers final.
-    const y = losers.length > 0 ? (semiMidY + losersY) / 2 : semiMidY
+    const losersFinalY = losersFinal ? losersPos.get(losersFinal.position)!.y : losersY
+    const y = losers.length > 0 ? (semiMidY + losersFinalY) / 2 : semiMidY
     slots.push({ windowSlot: grandFinal, x, y })
     if (winnersFinal) edges.push({ from: winnersFinal.position, to: grandFinal.position })
-    const losersFinal = losers.at(-1)
     if (losersFinal) edges.push({ from: losersFinal.position, to: grandFinal.position })
     if (reset) {
       slots.push({ windowSlot: reset, x: x + COL_W, y })
@@ -84,7 +127,7 @@ function layoutWindow(win: BracketWindow): Layout {
   }
 
   const width = Math.max(...slots.map((s) => s.x)) + CARD_W + 8
-  const height = losersY + CARD_H + 8
+  const height = Math.max(...slots.map((s) => s.y)) + CARD_H + 8
   return { slots, edges, width, height, losersLabelY }
 }
 
