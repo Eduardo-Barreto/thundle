@@ -19,6 +19,7 @@ type CombinedEntry = {
 
 type BracketResultPanelProps = {
   track: BracketTrack
+  competition: string
   champion: string | null
   result: BracketResult
   shareRounds: boolean[][]
@@ -34,6 +35,7 @@ type BracketResultPanelProps = {
 
 export function BracketResultPanel({
   track,
+  competition,
   champion,
   result,
   shareRounds,
@@ -88,6 +90,7 @@ export function BracketResultPanel({
                 puzzleNumber,
                 trackParam: track,
                 trackLabel: BRACKET_TRACK_META[track].label,
+                competition,
                 rounds: shareRounds,
                 championCorrect: result.won,
                 won: result.won,

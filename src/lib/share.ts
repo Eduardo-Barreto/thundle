@@ -89,6 +89,7 @@ type BracketShareInput = {
   puzzleNumber: number
   trackParam: string
   trackLabel: string
+  competition: string
   rounds: boolean[][]
   championCorrect: boolean
   won: boolean
@@ -105,6 +106,7 @@ export function generateBracketShareText({
   puzzleNumber,
   trackParam,
   trackLabel,
+  competition,
   rounds,
   championCorrect,
   won,
@@ -121,7 +123,7 @@ export function generateBracketShareText({
     .map((round) => round.map((ok) => (ok ? EMOJI.correct : EMOJI.wrong)).join(""))
     .join(" · ")
 
-  return [header, "", grid].join("\n")
+  return [header, competition, "", grid].join("\n")
 }
 
 type CombinedBracketEntry = {

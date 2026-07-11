@@ -169,6 +169,7 @@ function bracketShare(overrides: Partial<Parameters<typeof generateBracketShareT
     puzzleNumber: 76,
     trackParam: "combate",
     trackLabel: "Combate",
+    competition: "RCX - CPBR16 · Lightweight - 27,2kg / 60lb",
     rounds: [[true, true], [true, false], [true]],
     championCorrect: true,
     won: true,
@@ -182,6 +183,8 @@ describe("generateBracketShareText", () => {
   test("today omits puzzle param and shows score with champion mark", () => {
     const text = bracketShare()
     expect(text).toContain("thundle.io/bracket?t=combate #076")
+    expect(text.split("\n")[1]).toBe("RCX - CPBR16 · Lightweight - 27,2kg / 60lb")
+    expect(text.split("\n")[2]).toBe("")
     expect(text).toContain("4/5")
     expect(text).toContain("🏆")
     expect(text).toContain("🟩🟩 · 🟩🟥 · 🟩")

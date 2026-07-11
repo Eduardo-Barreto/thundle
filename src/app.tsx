@@ -553,6 +553,7 @@ function BracketGameContent({
           {game.confirmed && game.result && (
             <BracketResultPanel
               track={track}
+              competition={`${game.entry.eventName} · ${game.entry.categoryName}`}
               champion={game.remote.graph.champion}
               result={game.result}
               shareRounds={shareRoundsFor(
