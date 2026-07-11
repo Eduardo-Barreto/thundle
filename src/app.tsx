@@ -22,7 +22,7 @@ import { useGame } from "@/hooks/use-game"
 import { useImageGame } from "@/hooks/use-image-game"
 import { BRACKET_TRACK_META, BRACKET_TRACKS } from "@/lib/bracket-modes"
 import { shareRoundsFor } from "@/lib/bracket-share"
-import type { BracketManifestEntry } from "@/lib/daily-bracket"
+import { bracketEntryId, getBracketPool, type BracketManifestEntry } from "@/lib/daily-bracket"
 import { getDateFromPuzzleNumber, getPuzzleNumber, getTodayStr } from "@/lib/daily-robot"
 import { IMAGE_MODE_META } from "@/lib/image-modes"
 import {
@@ -96,6 +96,48 @@ function getBracketOverride(): BracketManifestEntry | undefined {
     matchCount: 0,
     hasDoubleElim: true,
   }
+}
+
+// Modo de teste (`?test=1`, dev-only): mostra um botão flutuante que troca o
+// puzzle atual — robô da resposta nos modos de robô, competição no bracket —
+// recarregando com o override correspondente e sem tocar no localStorage.
+function isTestMode(): boolean {
+  if (!import.meta.env.DEV) return false
+  return new URLSearchParams(window.location.search).get("test") === "1"
+}
+
+function swapTestPuzzle(mode: GameMode, track: BracketTrack): void {
+  const url = new URL(window.location.href)
+  url.searchParams.set("test", "1")
+  if (mode === "bracket") {
+    const pool = getBracketPool(track)
+    const entry = pool[Math.floor(Math.random() * pool.length)]
+    if (!entry) return
+    url.searchParams.set("bracket", bracketEntryId(entry))
+  } else {
+    const pool =
+      mode === "classic"
+        ? (robotsData as Robot[])
+        : (robotsData as Robot[]).filter((r) => r.imageUrl.trim().length > 0)
+    const robot = pool[Math.floor(Math.random() * pool.length)]
+    if (!robot) return
+    url.searchParams.set("answer", robot.name)
+  }
+  window.location.assign(url)
+}
+
+function TestSwapButton({ mode, track }: { mode: GameMode; track: BracketTrack }) {
+  return (
+    <div className="fixed bottom-4 left-4 z-30 md:bottom-6 md:left-6">
+      <button
+        type="button"
+        onClick={() => swapTestPuzzle(mode, track)}
+        className="text-t2 hover:text-t1 cursor-pointer rounded-lg border border-dashed border-white/20 bg-black/60 px-4 py-2.5 font-mono text-xs font-bold tracking-wider uppercase backdrop-blur-sm transition-colors"
+      >
+        Trocar (test)
+      </button>
+    </div>
+  )
 }
 
 export function App() {
@@ -244,6 +286,7 @@ function GameScreen({
           onSelectTrack={onSelectTrack}
         />
       )}
+      {isTestMode() && <TestSwapButton mode={mode} track={track} />}
     </div>
   )
 }
@@ -289,7 +332,12 @@ function ReopenResultButton({ onClick }: { onClick: () => void }) {
 }
 
 function ClassicGameContent({ dateStr }: { dateStr: string }) {
-  const game = useGame(dateStr)
+  const override = getAnswerOverride()
+  const [options] = useState(() => ({
+    ...(override ? { answerOverride: override } : {}),
+    ...(isTestMode() ? { disablePersistence: true } : {}),
+  }))
+  const game = useGame(dateStr, options)
   const [showOverlay, setShowOverlay] = useState(true)
   const gameOver = game.completed || game.lost
   const isToday = dateStr === getTodayStr()
@@ -406,7 +454,10 @@ function BracketGameContent({
 }) {
   // Estável entre renders: um objeto novo por render refaria o fetch em loop.
   const [override] = useState(getBracketOverride)
-  const [options] = useState(() => (override ? { entryOverride: override } : {}))
+  const [options] = useState(() => ({
+    ...(override ? { entryOverride: override } : {}),
+    ...(isTestMode() ? { disablePersistence: true } : {}),
+  }))
   const game = useBracketGame(dateStr, track, options)
   const isToday = dateStr === getTodayStr()
   const otherTrack: BracketTrack = track === "combate" ? "sumo" : "combate"
@@ -519,7 +570,11 @@ function BracketGameContent({
 
 function ImageGameContent({ dateStr, variant }: { dateStr: string; variant: ImageGameVariant }) {
   const override = getAnswerOverride()
-  const game = useImageGame(dateStr, variant, override ? { answerOverride: override } : {})
+  const [options] = useState(() => ({
+    ...(override ? { answerOverride: override } : {}),
+    ...(isTestMode() ? { disablePersistence: true } : {}),
+  }))
+  const game = useImageGame(dateStr, variant, options)
   const [showOverlay, setShowOverlay] = useState(true)
   const gameOver = game.completed || game.lost
   const isToday = dateStr === getTodayStr()

@@ -93,6 +93,7 @@ type RowView = {
   picked: boolean
   clickable: boolean
   isRealWinner: boolean
+  isWrongPick: boolean
   image: string | null
 }
 
@@ -131,9 +132,11 @@ function Connectors({ layout }: { layout: Layout }) {
 function RobotRow({ row, onClick }: { row: RowView; onClick: () => void }) {
   const stateClasses = row.isRealWinner
     ? "border-ok/60 bg-ok/10"
-    : row.picked
-      ? "border-thunder-yellow/70 bg-thunder-yellow/8"
-      : "border-transparent"
+    : row.isWrongPick
+      ? "border-wrong/60 bg-wrong/10"
+      : row.picked
+        ? "border-thunder-yellow/70 bg-thunder-yellow/8"
+        : "border-transparent"
 
   if (!row.name) {
     return (
@@ -165,11 +168,12 @@ function RobotRow({ row, onClick }: { row: RowView; onClick: () => void }) {
         <div className="size-5 shrink-0 rounded-sm bg-white/6" />
       )}
       <span
-        className={`truncate font-mono text-[11px] ${row.picked || row.isRealWinner ? "text-t1 font-bold" : "text-t2"}`}
+        className={`truncate font-mono text-[11px] ${row.picked || row.isRealWinner || row.isWrongPick ? "text-t1 font-bold" : "text-t2"}`}
       >
         {row.name}
       </span>
       {row.isRealWinner && <span className="text-ok ml-auto text-[10px]">✓</span>}
+      {row.isWrongPick && <span className="text-wrong ml-auto text-[10px]">✗</span>}
     </button>
   )
 }
@@ -230,8 +234,13 @@ export function BracketBoard({
             picked: Boolean(!confirmed && name && pick === name),
             clickable: Boolean(clickable && name),
             isRealWinner: Boolean(confirmed && name && namesMatch(realWinner, name)),
+            // O palpite perdedor fica vermelho no próprio card — só o verde no
+            // vencedor parece vitória.
+            isWrongPick: Boolean(pickWrong && name && pick && namesMatch(pick, name)),
             image: image(name),
           }))
+
+          const pickVisible = rows.some((row) => row.isWrongPick)
 
           return (
             <div
@@ -252,7 +261,7 @@ export function BracketBoard({
                   onClick={() => row.name && onPick(slot.position, row.name)}
                 />
               ))}
-              {pickWrong && (
+              {pickWrong && !pickVisible && (
                 <p className="text-wrong absolute top-full left-1.5 pt-0.5 font-mono text-[9px] tracking-wider">
                   ✗ seu palpite: {pick ?? "—"}
                 </p>

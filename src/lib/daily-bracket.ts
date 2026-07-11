@@ -48,6 +48,10 @@ export function pickDailyBracket(
   return pool.find((e) => bracketEntryId(e) === id)!
 }
 
+export function getBracketPool(track: BracketTrack): readonly BracketManifestEntry[] {
+  return manifest[track]
+}
+
 export function getDailyBracket(dateStr: string, track: BracketTrack): BracketManifestEntry {
   return pickDailyBracket(manifest, dateStr, track)
 }
