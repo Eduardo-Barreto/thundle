@@ -71,7 +71,7 @@ export function BracketResultPanel({
         <p
           className={`text-right font-mono text-sm font-bold ${result.won ? "text-ok" : "text-wrong"}`}
         >
-          {result.correctCount}/{result.total} previsões
+          {result.correctCount}/{result.total} acertos
           {result.won && <span className="block text-[10px]">campeão ✓</span>}
         </p>
       </div>

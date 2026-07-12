@@ -87,7 +87,7 @@ test("picking every match enables confirm; confirming reveals the board and pane
 
   // Reveal inline: painel de resultado + chave real marcada no board.
   await expect(page.getByText("Campeão real")).toBeVisible()
-  await expect(page.getByText(/previsões/)).toBeVisible()
+  await expect(page.getByText(/acertos/)).toBeVisible()
   await expect(page.getByText("K-torze").first()).toBeVisible()
   await expect(board.getByText("✓").first()).toBeVisible()
 
