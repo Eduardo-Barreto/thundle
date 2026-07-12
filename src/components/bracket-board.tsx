@@ -1,3 +1,5 @@
+import { useMemo } from "react"
+
 import type { CategoryRobot } from "@/lib/bracket-api"
 import { resolveRobotImage } from "@/lib/bracket-images"
 import {
@@ -244,8 +246,20 @@ export function BracketBoard({
 }: BoardProps) {
   const layout = layoutWindow(win)
   const propagated = new Map(slots.map((s) => [s.position, s]))
-  const image = (name: string | null) =>
-    name ? resolveRobotImage(name, thundleRobots, apiRobots).src : null
+  // Cada resolução varre os dois rosters com normalização NFD; sem cache isso
+  // roda milhares de vezes por render a cada pick.
+  const image = useMemo(() => {
+    const cache = new Map<string, string | null>()
+    return (name: string | null) => {
+      if (!name) return null
+      let src = cache.get(name)
+      if (src === undefined) {
+        src = resolveRobotImage(name, thundleRobots, apiRobots).src
+        cache.set(name, src)
+      }
+      return src
+    }
+  }, [thundleRobots, apiRobots])
 
   return (
     <section aria-label="Chave da competição" className="mb-6 overflow-x-auto pb-2">

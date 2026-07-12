@@ -118,7 +118,7 @@ describe("computeWindow", () => {
   test("rcbr window: 2 semis + final + 4 losers + GF + reset", () => {
     const win = computeWindow(rcbrGraph)
     expect(win.positions).toEqual([27, 28, 29, 4, 3, 2, 1, 30, 31])
-    expect(win.possibleReset).toBe(true)
+    expect(win.resetPosition).not.toBeNull()
     expect(win.grandFinalPosition).toBe(30)
     expect(win.resetPosition).toBe(31)
     expect(win.winnersFinalPosition).toBe(29)
@@ -150,7 +150,7 @@ describe("computeWindow", () => {
   test("cpbr window has no reset slot", () => {
     const win = computeWindow(cpbrGraph)
     expect(win.positions).toEqual([11, 12, 13, 4, 3, 2, 1, 14])
-    expect(win.possibleReset).toBe(false)
+    expect(win.resetPosition).toBeNull()
     expect(win.resetPosition).toBeNull()
     expect(win.slots.some((s) => s.role === "grand-final-reset")).toBe(false)
   })

@@ -91,7 +91,6 @@ type BracketShareInput = {
   trackLabel: string
   competition: string
   rounds: boolean[][]
-  championCorrect: boolean
   won: boolean
   isToday: boolean
   streak: number
@@ -108,7 +107,6 @@ export function generateBracketShareText({
   trackLabel,
   competition,
   rounds,
-  championCorrect,
   won,
   isToday,
   streak,
@@ -116,7 +114,8 @@ export function generateBracketShareText({
   const { correct, total } = bracketScore(rounds)
   const base = `thundle.io/bracket?t=${trackParam}`
   const url = isToday ? base : `${base}&p=${puzzleNumber}`
-  const championMark = championCorrect ? " 🏆" : ""
+  // Vencer o dia = acertar o campeão, então o troféu acompanha won.
+  const championMark = won ? " 🏆" : ""
   const header = `${url} #${formatPuzzleNumber(puzzleNumber)} ${trackLabel} ${correct}/${total}${championMark}${streakMarker(won, streak)}`
 
   const grid = rounds
@@ -126,11 +125,11 @@ export function generateBracketShareText({
   return [header, competition, "", grid].join("\n")
 }
 
-type CombinedBracketEntry = {
+export type CombinedBracketEntry = {
   trackLabel: string
   correctCount: number
   total: number
-  championCorrect: boolean
+  won: boolean
 }
 
 export function generateCombinedBracketShareText(
@@ -141,8 +140,7 @@ export function generateCombinedBracketShareText(
   const url = isToday ? "thundle.io/bracket" : `thundle.io/bracket?p=${puzzleNumber}`
   const header = `${url} #${formatPuzzleNumber(puzzleNumber)}`
   const lines = entries.map(
-    (entry) =>
-      `${entry.trackLabel} ${entry.correctCount}/${entry.total}${entry.championCorrect ? " 🏆" : ""}`,
+    (entry) => `${entry.trackLabel} ${entry.correctCount}/${entry.total}${entry.won ? " 🏆" : ""}`,
   )
   return [header, "", ...lines].join("\n")
 }

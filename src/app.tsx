@@ -414,7 +414,7 @@ function combinedEntriesFor(dateStr: string) {
       trackLabel: BRACKET_TRACK_META[t].label,
       correctCount: result.correctCount,
       total: result.total,
-      championCorrect: result.won,
+      won: result.won,
     }
   })
   return entries.every(Boolean) ? (entries as NonNullable<(typeof entries)[number]>[]) : undefined

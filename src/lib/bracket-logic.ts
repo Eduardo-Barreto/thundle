@@ -376,7 +376,6 @@ export interface WindowSlot {
 export interface BracketWindow {
   slots: WindowSlot[]
   positions: number[]
-  possibleReset: boolean
   winnersFinalPosition: number
   losersFinalPosition: number
   grandFinalPosition: number | null
@@ -527,7 +526,6 @@ export function computeWindow(graph: BracketGraph): BracketWindow {
   return {
     slots,
     positions: slots.map((s) => s.position),
-    possibleReset: resetPosition != null,
     winnersFinalPosition,
     losersFinalPosition,
     grandFinalPosition,

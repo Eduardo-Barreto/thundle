@@ -171,7 +171,6 @@ function bracketShare(overrides: Partial<Parameters<typeof generateBracketShareT
     trackLabel: "Combate",
     competition: "RCX - CPBR16 · Lightweight - 27,2kg / 60lb",
     rounds: [[true, true], [true, false], [true]],
-    championCorrect: true,
     won: true,
     isToday: true,
     streak: 0,
@@ -195,18 +194,17 @@ describe("generateBracketShareText", () => {
     expect(text).toContain("thundle.io/bracket?t=combate&p=76")
   })
 
-  test("missed champion drops trophy and win streak shows fire", () => {
-    const text = bracketShare({ championCorrect: false, streak: 3 })
-    expect(text).not.toContain("🏆")
-    expect(text).toContain("🔥 3")
+  test("a lost day drops the trophy; a win streak shows fire", () => {
+    expect(bracketShare({ won: false })).not.toContain("🏆")
+    expect(bracketShare({ streak: 3 })).toContain("🔥 3")
   })
 })
 
 describe("generateCombinedBracketShareText", () => {
   test("lists both tracks with scores", () => {
     const text = generateCombinedBracketShareText(76, true, [
-      { trackLabel: "Combate", correctCount: 2, total: 3, championCorrect: true },
-      { trackLabel: "Sumô", correctCount: 2, total: 2, championCorrect: false },
+      { trackLabel: "Combate", correctCount: 2, total: 3, won: true },
+      { trackLabel: "Sumô", correctCount: 2, total: 2, won: false },
     ])
     expect(text).toContain("thundle.io/bracket #076")
     expect(text).toContain("Combate 2/3 🏆")

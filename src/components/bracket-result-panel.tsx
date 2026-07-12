@@ -7,15 +7,9 @@ import {
   copyToClipboard,
   generateBracketShareText,
   generateCombinedBracketShareText,
+  type CombinedBracketEntry,
 } from "@/lib/share"
 import type { BracketResult, BracketTrack, Robot } from "@/types"
-
-type CombinedEntry = {
-  trackLabel: string
-  correctCount: number
-  total: number
-  championCorrect: boolean
-}
 
 type BracketResultPanelProps = {
   track: BracketTrack
@@ -29,7 +23,7 @@ type BracketResultPanelProps = {
   thundleRobots: Robot[]
   apiRobots: CategoryRobot[]
   otherTrackDone: boolean
-  combinedEntries?: CombinedEntry[]
+  combinedEntries?: CombinedBracketEntry[]
   onSwitchTrack: () => void
 }
 
@@ -92,7 +86,6 @@ export function BracketResultPanel({
                 trackLabel: BRACKET_TRACK_META[track].label,
                 competition,
                 rounds: shareRounds,
-                championCorrect: result.won,
                 won: result.won,
                 isToday,
                 streak,
