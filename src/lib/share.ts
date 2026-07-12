@@ -85,6 +85,66 @@ export function generateImageShareText({
   return [header, "", ...rows].join("\n")
 }
 
+type BracketShareInput = {
+  puzzleNumber: number
+  trackParam: string
+  trackLabel: string
+  competition: string
+  rounds: boolean[][]
+  won: boolean
+  isToday: boolean
+  streak: number
+}
+
+function bracketScore(rounds: boolean[][]): { correct: number; total: number } {
+  const flat = rounds.flat()
+  return { correct: flat.filter(Boolean).length, total: flat.length }
+}
+
+export function generateBracketShareText({
+  puzzleNumber,
+  trackParam,
+  trackLabel,
+  competition,
+  rounds,
+  won,
+  isToday,
+  streak,
+}: BracketShareInput): string {
+  const { correct, total } = bracketScore(rounds)
+  const base = `thundle.io/bracket?t=${trackParam}`
+  const url = isToday ? base : `${base}&p=${puzzleNumber}`
+  // Vencer o dia = acertar o campeão, então o troféu acompanha won.
+  const championMark = won ? " 🏆" : ""
+  const header = `${url} #${formatPuzzleNumber(puzzleNumber)} ${trackLabel} ${correct}/${total}${championMark}${streakMarker(won, streak)}`
+
+  const grid = rounds
+    .map((round) => round.map((ok) => (ok ? EMOJI.correct : EMOJI.wrong)).join(""))
+    .join(" · ")
+
+  return [header, competition, "", grid].join("\n")
+}
+
+export type CombinedBracketEntry = {
+  trackLabel: string
+  correctCount: number
+  total: number
+  won: boolean
+}
+
+export function generateCombinedBracketShareText(
+  puzzleNumber: number,
+  isToday: boolean,
+  entries: CombinedBracketEntry[],
+): string {
+  const url = isToday ? "thundle.io/bracket" : `thundle.io/bracket?p=${puzzleNumber}`
+  const header = `${url} #${formatPuzzleNumber(puzzleNumber)}`
+  const lines = entries.map(
+    (entry) => `${entry.trackLabel} ${entry.correctCount}/${entry.total}${entry.won ? " 🏆" : ""}`,
+  )
+  return [header, "", ...lines].join("\n")
+}
+
 export async function copyToClipboard(text: string): Promise<boolean> {
   try {
     await navigator.clipboard.writeText(text)

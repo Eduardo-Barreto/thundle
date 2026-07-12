@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "name": "Frank (RC)",
+      "team": "KIMAUÁNISSO",
+      "team_id": 267,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/4270/4270_1_L.jpg?20221029194935",
+      "rank": 3
+    },
+    {
+      "name": "Tim Maia",
+      "team": "Instituto RSM",
+      "team_id": 898,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/6914/6914_1_L.jpg?20250821195230",
+      "rank": 4
+    },
+    {
+      "name": "Dragonite RC",
+      "team": "KIMAUÁNISSO",
+      "team_id": 267,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/6922/",
+      "rank": 8
+    },
+    {
+      "name": "Raijū RC",
+      "team": "Raijū",
+      "team_id": 1275,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/4178/4178_1_L.jpg?20250827131204",
+      "rank": 9
+    },
+    {
+      "name": "Coelho Escovado",
+      "team": "Equipe Paralela",
+      "team_id": 926,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/4578/4578_1_L.png?20230209102549",
+      "rank": 10
+    },
+    {
+      "name": "Galena RC",
+      "team": "ThundeRatz",
+      "team_id": 4,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/4077/4077_1_L.jpg?20221031191732",
+      "rank": 25
+    },
+    {
+      "name": "Supernova ☆",
+      "team": "ASTRA",
+      "team_id": 1685,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/6433/",
+      "rank": 28
+    },
+    {
+      "name": "Nekomata - RC",
+      "team": "Equipe Paralela",
+      "team_id": 926,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/6305/6305_1_L.png?20250306121655",
+      "rank": 50
+    },
+    {
+      "name": "Popossauro 3kg RC",
+      "team": "Instituto RSM",
+      "team_id": 898,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/6916/6916_1_L.jpg?20250812213343",
+      "rank": 68
+    },
+    {
+      "name": "Kamex",
+      "team": "Equipe Paralela",
+      "team_id": 926,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/5281/5281_1_L.png?20240207171228",
+      "rank": 75
+    },
+    {
+      "name": "Atena",
+      "team": "MinervaBots",
+      "team_id": 396,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/3441/",
+      "rank": 109
+    },
+    {
+      "name": "Pedregulho",
+      "team": "ThundeRatz",
+      "team_id": 4,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/6793/",
+      "rank": 131
+    },
+    {
+      "name": "Artemis RC",
+      "team": "OMEGABOTZ",
+      "team_id": 17,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/5709/5709_1_L.jpeg?20240827102748",
+      "rank": 139
+    },
+    {
+      "name": "Suassuna",
+      "team": "Caatronics",
+      "team_id": 1658,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/7000/",
+      "rank": 142
+    }
+  ],
+  "count": 14
+}

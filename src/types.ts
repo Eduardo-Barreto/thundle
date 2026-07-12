@@ -48,6 +48,20 @@ export type ImageGameState = {
   lost: boolean
 }
 
+export type BracketTrack = "combate" | "sumo"
+
+export type BracketResult = {
+  won: boolean
+  correctCount: number
+  total: number
+}
+
+export type BracketGameState = {
+  picks: Record<string, string>
+  confirmed: boolean
+  result?: BracketResult
+}
+
 export type Stats = {
   gamesPlayed: number
   gamesWon: number
@@ -60,6 +74,8 @@ export type Stats = {
 export type LocalState = {
   games: Record<string, GameState>
   imageGames: Record<ImageGameVariant, Record<string, ImageGameState>>
+  bracketGames: Record<BracketTrack, Record<string, BracketGameState>>
   stats: Stats
   imageStats: Record<ImageGameVariant, Stats>
+  bracketStats: Record<BracketTrack, Stats>
 }

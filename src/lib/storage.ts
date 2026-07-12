@@ -1,5 +1,14 @@
+import { BRACKET_TRACKS } from "@/lib/bracket-modes"
 import { getPreviousDateStr, IMAGE_VARIANTS } from "@/lib/daily-robot"
-import type { GameState, ImageGameState, ImageGameVariant, LocalState, Stats } from "@/types"
+import type {
+  BracketGameState,
+  BracketTrack,
+  GameState,
+  ImageGameState,
+  ImageGameVariant,
+  LocalState,
+  Stats,
+} from "@/types"
 
 const STORAGE_KEY = "thundle"
 const MAX_GAME_AGE_DAYS = 30
@@ -28,12 +37,26 @@ function defaultImageStats(): Record<ImageGameVariant, Stats> {
   return out
 }
 
+function emptyBracketGames(): Record<BracketTrack, Record<string, BracketGameState>> {
+  const out = {} as Record<BracketTrack, Record<string, BracketGameState>>
+  for (const track of BRACKET_TRACKS) out[track] = {}
+  return out
+}
+
+function defaultBracketStats(): Record<BracketTrack, Stats> {
+  const out = {} as Record<BracketTrack, Stats>
+  for (const track of BRACKET_TRACKS) out[track] = defaultStats()
+  return out
+}
+
 function emptyState(): LocalState {
   return {
     games: {},
     imageGames: emptyImageGames(),
+    bracketGames: emptyBracketGames(),
     stats: defaultStats(),
     imageStats: defaultImageStats(),
+    bracketStats: defaultBracketStats(),
   }
 }
 
@@ -66,11 +89,20 @@ function read(): LocalState {
       imageStats[variant] = mergeStats(parsed.imageStats?.[variant])
     }
 
+    const bracketGames = emptyBracketGames()
+    const bracketStats = defaultBracketStats()
+    for (const track of BRACKET_TRACKS) {
+      bracketGames[track] = parsed.bracketGames?.[track] ?? {}
+      bracketStats[track] = mergeStats(parsed.bracketStats?.[track])
+    }
+
     return {
       games: parsed.games ?? {},
       imageGames,
+      bracketGames,
       stats: mergeStats(parsed.stats),
       imageStats,
+      bracketStats,
     }
   } catch {
     return emptyState()
@@ -102,7 +134,11 @@ function cleanOldGames(state: LocalState): LocalState {
   for (const variant of IMAGE_VARIANTS) {
     imageGames[variant] = pruneByAge(state.imageGames[variant])
   }
-  return { ...state, games: pruneByAge(state.games), imageGames }
+  const bracketGames = emptyBracketGames()
+  for (const track of BRACKET_TRACKS) {
+    bracketGames[track] = pruneByAge(state.bracketGames[track])
+  }
+  return { ...state, games: pruneByAge(state.games), imageGames, bracketGames }
 }
 
 export function loadGame(dateStr: string): GameState | undefined {
@@ -132,12 +168,33 @@ export function saveImageGame(
   write(state)
 }
 
+export function loadBracketGame(
+  track: BracketTrack,
+  dateStr: string,
+): BracketGameState | undefined {
+  return read().bracketGames[track][dateStr]
+}
+
+export function saveBracketGame(
+  track: BracketTrack,
+  dateStr: string,
+  game: BracketGameState,
+): void {
+  const state = cleanOldGames(read())
+  state.bracketGames[track][dateStr] = game
+  write(state)
+}
+
 export function loadStats(): Stats {
   return read().stats
 }
 
 export function loadImageStats(variant: ImageGameVariant): Stats {
   return read().imageStats[variant]
+}
+
+export function loadBracketStats(track: BracketTrack): Stats {
+  return read().bracketStats[track]
 }
 
 function getBucket(guesses: number): string {
@@ -188,4 +245,17 @@ export function recordImageGameEnd(
   state.imageStats[variant] = applyGameEnd(state.imageStats[variant], outcome, yesterdayWon)
   write(state)
   return state.imageStats[variant]
+}
+
+export function recordBracketGameEnd(
+  track: BracketTrack,
+  dateStr: string,
+  outcome: GameEndOutcome,
+): Stats {
+  const state = cleanOldGames(read())
+  const yesterday = state.bracketGames[track][getPreviousDateStr(dateStr)]
+  const yesterdayWon = yesterday?.result?.won === true
+  state.bracketStats[track] = applyGameEnd(state.bracketStats[track], outcome, yesterdayWon)
+  write(state)
+  return state.bracketStats[track]
 }

@@ -1,0 +1,54 @@
+{
+  "data": [
+    {
+      "name": "Federal M.T.",
+      "team": "Uai!rrior",
+      "team_id": 2,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/945/945_1_L.jpg?20230619200754",
+      "rank": 1
+    },
+    {
+      "name": "Cáragor",
+      "team": "Trincabotz CEFET-MG",
+      "team_id": 13,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/2817/2817_1_L.png?20191006221908",
+      "rank": 2
+    },
+    {
+      "name": "Asterion",
+      "team": "Trincabotz CEFET-MG",
+      "team_id": 13,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/2024/2024_1_L.png?20211230181720",
+      "rank": 3
+    },
+    {
+      "name": "K-torze",
+      "team": "ThundeRatz",
+      "team_id": 4,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/1328/1328_1_L.png?20250413195441",
+      "rank": 5
+    },
+    {
+      "name": "Agora Sei",
+      "team": "Imperial Botz",
+      "team_id": 238,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/2056/2056_1_L.jpg?20240710145051",
+      "rank": 10
+    },
+    {
+      "name": "Ragnar",
+      "team": "TROIA",
+      "team_id": 356,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/2679/2679_1_L.jpeg?20250225163504",
+      "rank": 18
+    },
+    {
+      "name": "Touro Light",
+      "team": "RioBotz",
+      "team_id": 3,
+      "image_url": "https://s3-sa-east-1.amazonaws.com/robocore-robos/273/273_1_L.png?20191006214314",
+      "rank": 75
+    }
+  ],
+  "count": 7
+}

@@ -1,6 +1,12 @@
 import { describe, expect, test } from "bun:test"
 
-import { copyToClipboard, generateImageShareText, generateShareText } from "@/lib/share"
+import {
+  copyToClipboard,
+  generateBracketShareText,
+  generateCombinedBracketShareText,
+  generateImageShareText,
+  generateShareText,
+} from "@/lib/share"
 import type { GuessResult } from "@/types"
 
 function imageShare(overrides: Partial<Parameters<typeof generateImageShareText>[0]> = {}) {
@@ -155,5 +161,54 @@ describe("copyToClipboard", () => {
     } finally {
       Object.defineProperty(globalThis, "navigator", { value: original, configurable: true })
     }
+  })
+})
+
+function bracketShare(overrides: Partial<Parameters<typeof generateBracketShareText>[0]> = {}) {
+  return generateBracketShareText({
+    puzzleNumber: 76,
+    trackParam: "combate",
+    trackLabel: "Combate",
+    competition: "RCX - CPBR16 · Lightweight - 27,2kg / 60lb",
+    rounds: [[true, true], [true, false], [true]],
+    won: true,
+    isToday: true,
+    streak: 0,
+    ...overrides,
+  })
+}
+
+describe("generateBracketShareText", () => {
+  test("today omits puzzle param and shows score with champion mark", () => {
+    const text = bracketShare()
+    expect(text).toContain("thundle.io/bracket?t=combate #076")
+    expect(text.split("\n")[1]).toBe("RCX - CPBR16 · Lightweight - 27,2kg / 60lb")
+    expect(text.split("\n")[2]).toBe("")
+    expect(text).toContain("4/5")
+    expect(text).toContain("🏆")
+    expect(text).toContain("🟩🟩 · 🟩🟥 · 🟩")
+  })
+
+  test("archive puzzle keeps t and adds p param", () => {
+    const text = bracketShare({ isToday: false })
+    expect(text).toContain("thundle.io/bracket?t=combate&p=76")
+  })
+
+  test("a lost day drops the trophy; a win streak shows fire", () => {
+    expect(bracketShare({ won: false })).not.toContain("🏆")
+    expect(bracketShare({ streak: 3 })).toContain("🔥 3")
+  })
+})
+
+describe("generateCombinedBracketShareText", () => {
+  test("lists both tracks with scores", () => {
+    const text = generateCombinedBracketShareText(76, true, [
+      { trackLabel: "Combate", correctCount: 2, total: 3, won: true },
+      { trackLabel: "Sumô", correctCount: 2, total: 2, won: false },
+    ])
+    expect(text).toContain("thundle.io/bracket #076")
+    expect(text).toContain("Combate 2/3 🏆")
+    expect(text).toContain("Sumô 2/2")
+    expect(text.split("\n")[2]).toBe("Combate 2/3 🏆")
   })
 })

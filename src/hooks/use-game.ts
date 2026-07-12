@@ -23,8 +23,8 @@ type InitialGameState = Pick<GameState, "guesses" | "usedHint" | "hintAttribute"
   lost: boolean
 }
 
-function initialGameState(date: string): InitialGameState {
-  const saved = loadGame(date)
+function initialGameState(date: string, disablePersistence: boolean): InitialGameState {
+  const saved = disablePersistence ? undefined : loadGame(date)
   if (!saved)
     return { guesses: [], usedHint: false, hintAttribute: undefined, completed: false, lost: false }
   const lost = !saved.completed && saved.guesses.length >= MAX_GUESSES
@@ -37,13 +37,24 @@ function initialGameState(date: string): InitialGameState {
   }
 }
 
-export function useGame(dateStr?: string) {
+type UseGameOptions = {
+  answerOverride?: Robot
+  disablePersistence?: boolean
+}
+
+export function useGame(dateStr?: string, options: UseGameOptions = {}) {
   const date = dateStr ?? getTodayStr()
   const puzzleNumber = getPuzzleNumber(date)
   const isFuture = date > getTodayStr()
-  const answer = useMemo(() => getDailyRobot(robots, date), [date])
+  const disablePersistence = Boolean(options.disablePersistence)
+  const answer = useMemo(
+    () => options.answerOverride ?? getDailyRobot(robots, date),
+    [date, options.answerOverride],
+  )
 
-  const [state, setState] = useState<InitialGameState>(() => initialGameState(date))
+  const [state, setState] = useState<InitialGameState>(() =>
+    initialGameState(date, disablePersistence),
+  )
   const { guesses: guessNames, usedHint, hintAttribute, completed, lost } = state
 
   const results: GuessResult[] = useMemo(
@@ -76,6 +87,8 @@ export function useGame(dateStr?: string) {
         lost: isLoss || prev.lost,
       }))
 
+      if (disablePersistence) return
+
       saveGame(date, {
         guesses: newGuesses,
         usedHint,
@@ -87,7 +100,17 @@ export function useGame(dateStr?: string) {
         recordGameEnd(date, { won: isWin, guessCount: newGuesses.length })
       }
     },
-    [completed, lost, guessedNames, guessNames, answer, date, usedHint, hintAttribute],
+    [
+      completed,
+      lost,
+      guessedNames,
+      guessNames,
+      answer,
+      date,
+      usedHint,
+      hintAttribute,
+      disablePersistence,
+    ],
   )
 
   const requestHint = useCallback(() => {
@@ -97,13 +120,14 @@ export function useGame(dateStr?: string) {
 
     setState((prev) => ({ ...prev, usedHint: true, hintAttribute: picked }))
 
+    if (disablePersistence) return
     saveGame(date, {
       guesses: guessNames,
       usedHint: true,
       hintAttribute: picked,
       completed,
     })
-  }, [usedHint, date, guessNames, completed])
+  }, [usedHint, date, guessNames, completed, disablePersistence])
 
   const remainingGuesses = MAX_GUESSES - guessNames.length
 
